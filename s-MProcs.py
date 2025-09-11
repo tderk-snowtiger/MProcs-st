@@ -15,7 +15,7 @@ medicci = "^m^"
 set_usr(medicci + "" + " " + "" + "[" + "" + new + "" + "]" + "" + " " + "" + "$" + "" + " ")
 print()
 def version():
-    title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-4.2.2.0-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
+    title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-4.3.0.0-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
     title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
     title3 = " All Rights Reserved - Medicci.ca - {P0cket Un1-Ver$e}"
     cdt = datetime.datetime.now()
@@ -113,7 +113,7 @@ def commands():
     print(" version | [blank input] for nano | profile | fsearch")
 
     print()
-    print(" | call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator [oscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), burner-start [burn], CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard")
+    print(" | call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard")
     print()
     print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}")
 
@@ -1883,7 +1883,7 @@ def time_monitor():
     title = input("t-monitor name: ")
     while True:
         try:
-            buffer = int(input("time-buffer in seconds: "))
+            buffer = float(input("time-buffer in seconds: "))
         except ValueError:
             print("Invalid value")
         else:
@@ -1925,7 +1925,7 @@ def s_time_monitor():
     title = input("t-monitor name: ")
     while True:
         try:
-            buffer = int(input("time-buffer in seconds: "))
+            buffer = float(input("time-buffer in seconds: "))
         except ValueError:
             print("Invalid value")
         else:
@@ -3364,10 +3364,41 @@ def oscillator():
         except KeyboardInterrupt:
             print("\nStopped by user.")
 
+def toscillator():
+    print("Ctrl+C to stop")
+    print()
+
+    while True:
+        try:
+            buffer = float(input("time-buffer in seconds: "))
+        except ValueError:
+            print("Invalid value")
+        else:
+            break
+
+    def generate_random_result():
+        meter = ["                              ", "*                             ", " *                            ", "  *                           ", "   *                          ", "    *                         ", "     *                        ", "      *                       ", "       *                      ", "        *                     ", "         *                    ", "          *                   ", "           *                  ", "            *                 ", "             *                ", "              *               ", "               *              ", "                *             ", "                 *            ", "                  *           ", "                   *          ", "                    *         ", "                     *        ", "                      *       ", "                       *      ", "                        *     ", "                         *    ", "                          *   ", "                           *  ", "                            * ", "                             *"]
+        oscill = random.sample(meter, 1)
+        print(oscill)
+
+    def main_loop():
+        while True:
+            time.sleep(buffer)
+            generate_random_result()
+
+    if __name__ == "__main__":
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
 def burner():
     nano = (diction)
     title = input("burn name: ")
     ct = datetime.datetime.now()
+    monitor = "burner-start:"
+    print(usr, monitor, title, ct)
+    print()
     print()
     def generate_random_result():
         ctm = datetime.datetime.now()
@@ -3413,7 +3444,61 @@ def burner():
         except KeyboardInterrupt:
             print("\nStopped by user.")
 
+def tburner():
+    nano = (diction)
+    title = input("burn name: ")
+    while True:
+        try:
+            buffer = float(input("time-buffer in seconds: "))
+        except ValueError:
+            print("Invalid value")
+        else:
+            break
+    ct = datetime.datetime.now()
+    monitor = "burner-start:"
+    print(usr, monitor, title, ct)
+    print()
+    print()
+    def generate_random_result():
+        ctm = datetime.datetime.now()
+        def generate_random_letters():
+            random1 = random.choice(string.ascii_letters)
+            random2 = random.choice(string.ascii_letters)
+            random3 = random.choice(string.ascii_letters)
+            random4 = random.choice(string.ascii_letters)
+            random5 = random.choice(string.ascii_letters)
+            random6 = random.choice(string.ascii_letters)
+            random7 = random.choice(string.ascii_letters)
+            random8 = random.choice(string.ascii_letters)
+            random9 = random.choice(string.ascii_letters)
+            random10 = random.choice(string.ascii_letters)
+            random11 = random.choice(string.ascii_letters)
+            random12 = random.choice(string.ascii_letters)
+            random13 = random.choice(string.ascii_letters)
+            random14 = random.choice(string.ascii_letters)
+            random15 = random.choice(string.ascii_letters)
+            random16 = random.choice(string.ascii_letters)
+            random17 = random.choice(string.ascii_letters)
+            random18 = random.choice(string.ascii_letters)
+            random19 = random.choice(string.ascii_letters)
+            random20 = random.choice(string.ascii_letters)
+            letters = [random1, random2, random3, random4, random5, random6, random7, random8, random9, random10, random11, random12, random13, random14, random15, random16, random17, random18, random19, random20]
+            return letters
+        random_letters = generate_random_letters()
+        sitch  = (round(random.random()*999999999999999,5))
+        kchat = random.sample(nano, random.randint(1,2))
+        print(ctm, random_letters, sitch, kchat)
+    
+    def main_loop():
+        while True:
+            time.sleep(buffer)
+            generate_random_result()
 
+    if __name__ == "__main__":
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
 def choice():
     choice = ''
@@ -3745,8 +3830,14 @@ def choice():
         if choice == "oscillator" or choice == "oscillate" or choice == "oscill":
             oscillator()
 
+        if choice == "toscillator" or choice == "toscillate" or choice == "toscill" or choice == "time-oscill" or choice == "time-oscillate" or choice == "time-oscillator":
+            toscillator()
+
         if choice == "burner-start" or choice == "burner start" or choice == "burner" or choice == "burn" or choice == "Burn":
             burner()
+
+        if choice == "time-burner-start" or choice == "time burner start" or choice == "time burner" or choice == "tburn" or choice == "time burn" or choice == "tburner" or choice == "tBurn" or choice == "time-burner":
+            tburner()
 
         if choice == 'search' or choice == 'fsearch':
             search()
