@@ -15,7 +15,7 @@ medicci = "^m^"
 set_usr(medicci + "" + " " + "" + "[" + "" + new + "" + "]" + "" + " " + "" + "$" + "" + " ")
 print()
 def version():
-    title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-4.3.0.0-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
+    title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-4.3.0.7-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
     title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
     title3 = " All Rights Reserved - Medicci.ca - {P0cket Un1-Ver$e}"
     cdt = datetime.datetime.now()
@@ -113,7 +113,7 @@ def commands():
     print(" version | [blank input] for nano | profile | fsearch")
 
     print()
-    print(" | call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard")
+    print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard")
     print()
     print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}")
 
@@ -574,6 +574,17 @@ def entry():
     ct = datetime.datetime.now()
     _room = "Room"
     print(_entry, gate, phase, _floor, floors, _room, rooms, ct)
+
+def zuz():
+    dd = (diction)
+    ct = datetime.datetime.now()
+    nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
+    result = random.sample(nano, random.randint(1, 6))
+    sitar = ">"
+    random_result = [random.choice(dd)]
+    result_text = ", ".join(random_result)
+    speak(result_text)
+    print(sitar, result_text, result, ct)
 
 def micasa():
     time.sleep(1)
@@ -3841,6 +3852,9 @@ def choice():
 
         if choice == 'search' or choice == 'fsearch':
             search()
+
+        if choice == "zuz" or choice == "ZUZ" or choice == "pp" or choice == "PP" or choice == "Zuz":
+            zuz()
 
 chooseAgain = "yes"
 while chooseAgain:
