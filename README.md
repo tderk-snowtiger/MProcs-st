@@ -2,7 +2,7 @@
 
         python3 MProcs.py
 
-you can also install though pip instead of running (the) script:
+you can also install through pip instead of running (the) script:
 
         pip install MProcs
 
