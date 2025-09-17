@@ -2842,7 +2842,6 @@ def MAIc():
                         hashh = random.sample(hashes, random.randint(1,1))
                         print(usr, hashh)
                         print()
-                        print(file=z)
                         time.sleep(.5)
 
         if True:
@@ -2857,7 +2856,6 @@ def MAIc():
                         hashh = random.sample(hashes, random.randint(1,1))
                         print(usr, hashh)
                         print()
-                        print(file=z)
                         time.sleep(.5)
 
         if True:
@@ -2872,7 +2870,6 @@ def MAIc():
                         hashh = random.sample(hashes, random.randint(1,1))
                         print(usr, hashh)
                         print()
-                        print(file=z)
                         time.sleep(.5)
 
         if True:
