@@ -16,7 +16,7 @@ def main():
     set_usr(medicci + "" + " " + "" + "[" + "" + new + "" + "]" + "" + " " + "" + "$" + "" + " ")
     print()
     def version():
-        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-4.3.0.7.4-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
+        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-4.3.0.8-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
         title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
         title3 = " All Rights Reserved - Medicci.ca - {P0cket Un1-Ver$e}"
         cdt = datetime.datetime.now()
@@ -1762,11 +1762,10 @@ def main():
                 time.sleep(.3)
                 generate_random_result()
 
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def speak(text):
         """Use espeak for offline text-to-speech."""
@@ -1812,11 +1811,10 @@ def main():
                     if random.choice([True, False]):
                         generate_random_result()
 
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def monitor_start():
         maroon = "^m^"
@@ -1845,11 +1843,10 @@ def main():
                     if random.choice([True, False]):
                         generate_random_result()
 
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def acad_monitor():
         maroon = "^m^"
@@ -1882,11 +1879,10 @@ def main():
                     if random.choice([True, False]):
                         generate_random_result()
         
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def time_monitor():
         maroon = "^m^"
@@ -1924,11 +1920,10 @@ def main():
             while True:
                 generate_random_result()
         
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def s_time_monitor():
         maroon = "^m^"
@@ -1969,11 +1964,10 @@ def main():
             while True:
                 generate_random_result()
         
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def msgs():
         while True:
@@ -3228,11 +3222,10 @@ def main():
             while True:
                 generate_random_result()
 
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def guard():
         while True:
@@ -3293,11 +3286,10 @@ def main():
             while True:
                 generate_random_result()
 
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def frames():
         while True:
@@ -3360,6 +3352,7 @@ def main():
             meter = ["                              ", "*                             ", " *                            ", "  *                           ", "   *                          ", "    *                         ", "     *                        ", "      *                       ", "       *                      ", "        *                     ", "         *                    ", "          *                   ", "           *                  ", "            *                 ", "             *                ", "              *               ", "               *              ", "                *             ", "                 *            ", "                  *           ", "                   *          ", "                    *         ", "                     *        ", "                      *       ", "                       *      ", "                        *     ", "                         *    ", "                          *   ", "                           *  ", "                            * ", "                             *"]
             oscill = random.sample(meter, 1)
             print(oscill)
+
         def main_loop():
             while True:
                 time.sleep(.1)
@@ -3367,11 +3360,10 @@ def main():
                 if integer > 2:
                     generate_random_result()
 
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def toscillator():
         print("Ctrl+C to stop")
@@ -3395,11 +3387,10 @@ def main():
                 time.sleep(buffer)
                 generate_random_result()
 
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def burner():
         nano = (diction)
@@ -3447,11 +3438,10 @@ def main():
                     if random.choice([True, False]):
                         generate_random_result()
 
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def tburner():
         nano = (diction)
@@ -3503,11 +3493,10 @@ def main():
                 time.sleep(buffer)
                 generate_random_result()
 
-        if __name__ == "__main__":
-            try:
-                main_loop()
-            except KeyboardInterrupt:
-                print("\nStopped by user.")
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
 
     def choice():
         choice = ''
