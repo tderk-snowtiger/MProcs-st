@@ -20,7 +20,7 @@ def main():
     print()
     print(file=z)
     def version():
-        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.0.1.2 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
+        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.0.2.5 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
         title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
         title3 = " All Rights Reserved - Medicci.ca - {P0cket Un1-Ver$e}"
         cdt = datetime.datetime.now()
@@ -180,7 +180,7 @@ def main():
         print()
         print(" version | [blank input] for nano | profile | note / journal / save | search")
         print()
-        print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
+        print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
         print()
         print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}, monitor-search [msearch], acad-search [asearch]")
 
@@ -4290,6 +4290,44 @@ def main():
         except Exception as e:
             print(f"An error occurred: {e}")
 
+
+    def busearch(file_path="burner-log.txt"):
+        zen = input("(burner) search: ")
+        if not zen:
+            print("Search cancelled.")
+            return
+
+        while True:
+            try:
+                fps = float(input("Indicate speed in seconds: "))
+                if fps < 0:
+                    print("Speed must be non-negative.")
+                    continue
+                break
+            except ValueError:
+                print("Invalid value. Please enter a number.")
+            except KeyboardInterrupt:
+                print("\nInput cancelled.")
+                return
+
+        print()
+        print("Ctrl-C to stop")
+        print()
+        try:
+            with open(file_path, 'r') as fp:
+                for line in fp:  # Process line by line to save memory
+                    if zen in line:  # Case-sensitive search
+                        try:
+                            time.sleep(fps)  # Can be interrupted by Ctrl+C
+                            print(line.strip())
+                        except KeyboardInterrupt:
+                            print("\nSearch interrupted by user.")
+                            return
+        except FileNotFoundError:
+            print(f"Error: File '{file_path}' not found.")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
     def oscillator():
         print("Ctrl+C to stop")
         print()
@@ -4908,8 +4946,8 @@ def main():
             random_letters = generate_random_letters()
             sitch  = (round(random.random()*999999999999999,5))
             kchat = random.sample(nano, random.randint(1,2))
-            print(ctm, random_letters, sitch, kchat)
-            print(ctm, random_letters, sitch, kchat, file=x)
+            print(title, ctm, random_letters, sitch, kchat)
+            print(title, ctm, random_letters, sitch, kchat, file=x)
         
         def main_loop():
             while True:
@@ -4973,8 +5011,8 @@ def main():
             random_letters = generate_random_letters()
             sitch  = (round(random.random()*999999999999999,5))
             kchat = random.sample(nano, random.randint(1,2))
-            print(ctm, random_letters, sitch, kchat)
-            print(ctm, random_letters, sitch, kchat, file=x)
+            print(title, ctm, random_letters, sitch, kchat)
+            print(title, ctm, random_letters, sitch, kchat, file=x)
         
         def main_loop():
             while True:
@@ -5340,6 +5378,9 @@ def main():
 
             if choice == "frames search" or choice == "fsearch":
                 fsearch()
+
+            if choice == "busearch" or choice == "burner search" or choice == "burner-search" or choice == "bsearch" or choice == "b-search":
+                busearch()
 
             if choice == "oscillator" or choice == "oscillate" or choice == "oscill":
                 oscillator()
