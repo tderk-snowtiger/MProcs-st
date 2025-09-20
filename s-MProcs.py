@@ -169,7 +169,7 @@ def main():
         print(" version | [blank input] for nano | profile | fsearch")
 
         print()
-        print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]")
+        print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]")
         print()
         print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}")
 
@@ -200,6 +200,43 @@ def main():
                     print(zen + "" + ' found')
                     print('Line Number:', l_no)
                     print('Line:', line)
+
+    def busearch(file_path="burner-log.txt"):
+        zen = input("(burner) search: ")
+        if not zen:
+            print("Search cancelled.")
+            return
+
+        while True:
+            try:
+                fps = float(input("Indicate speed in seconds: "))
+                if fps < 0:
+                    print("Speed must be non-negative.")
+                    continue
+                break
+            except ValueError:
+                print("Invalid value. Please enter a number.")
+            except KeyboardInterrupt:
+                print("\nInput cancelled.")
+                return
+
+        print()
+        print("Ctrl-C to stop")
+        print()
+        try:
+            with open(file_path, 'r') as fp:
+                for line in fp:  # Process line by line to save memory
+                    if zen in line:  # Case-sensitive search
+                        try:
+                            time.sleep(fps)  # Can be interrupted by Ctrl+C
+                            print(line.strip())
+                        except KeyboardInterrupt:
+                            print("\nSearch interrupted by user.")
+                            return
+        except FileNotFoundError:
+            print(f"Error: File '{file_path}' not found.")
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
     def profile():
         print()
@@ -3473,6 +3510,9 @@ def main():
 
     def burner():
         nano = (diction)
+        print("Not recording")
+        print()
+        time.sleep(.4)
         title = input("burn name: ")
         ct = datetime.datetime.now()
         monitor = "burner-start:"
@@ -3507,7 +3547,7 @@ def main():
             random_letters = generate_random_letters()
             sitch  = (round(random.random()*999999999999999,5))
             kchat = random.sample(nano, random.randint(1,2))
-            print(ctm, random_letters, sitch, kchat)
+            print(title, ctm, random_letters, sitch, kchat)
         
         def main_loop():
             while True:
@@ -3524,6 +3564,9 @@ def main():
 
     def tburner():
         nano = (diction)
+        print("Not recording")
+        print()
+        time.sleep(.4)
         title = input("burn name: ")
         while True:
             try:
@@ -3565,7 +3608,7 @@ def main():
             random_letters = generate_random_letters()
             sitch  = (round(random.random()*999999999999999,5))
             kchat = random.sample(nano, random.randint(1,2))
-            print(ctm, random_letters, sitch, kchat)
+            print(title, ctm, random_letters, sitch, kchat)
         
         def main_loop():
             while True:
@@ -3918,6 +3961,9 @@ def main():
 
             if choice == 'search' or choice == 'fsearch':
                 search()
+
+            if choice == "busearch" or choice == "burner search" or choice == "burner-search" or choice == "bsearch" or choice == "b-search":
+                busearch()
 
             if choice == "zuz" or choice == "ZUZ" or choice == "pp" or choice == "PP" or choice == "Zuz":
                 zuz()
