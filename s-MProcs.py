@@ -5,18 +5,27 @@ import string
 import threading
 import subprocess
 import platform
+import os
 
 def main():
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    BLUE = '\033[94m'
+    RESET = '\033[0m'
     print()
     def set_usr(newUsr):
         global usr
         usr = newUsr
     new = input("Set session username: ")
-    medicci = "^m^"
-    set_usr(medicci + "" + " " + "" + "[" + "" + new + "" + "]" + "" + " " + "" + "$" + "" + " ")
+    user = f"{GREEN}{new}{RESET}"
+    maroon = "^m^"
+    medicci = f"{RED}{maroon}{RESET}"
+    dollar = "$"
+    sign = f"{BLUE}{dollar}{RESET}"
+    set_usr(medicci + "" + " " + "" + "[" + "" + user + "" + "]" + "" + " " + "" + sign + "" + " ")
     print()
     def version():
-        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.0.1.2-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
+        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.6.0.1-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
         title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
         title3 = " All Rights Reserved - Medicci.ca - {P0cket Un1-Ver$e}"
         cdt = datetime.datetime.now()
@@ -166,12 +175,85 @@ def main():
 
     def commands():
         print()
-        print(" version | [blank input] for nano | profile | fsearch")
+        print(" version | [blank input] for nano | profile | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | fsearch ")
 
         print()
         print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]")
         print()
         print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}")
+
+    def ls():
+        try:
+            result = subprocess.run(['ls'], capture_output=True, text=True, check=True)
+            print(result.stdout)
+        except subprocess.CalledProcessError as e:
+            print(f"Error executing command: {e}")
+            print(f"Stderr: {e.stderr}")
+
+    def pwd():
+        print(f"Current directory: {os.getcwd()}")
+
+    def cd():
+        path = input("$ ")
+        try:
+            os.chdir(path)
+        except FileNotFoundError:
+            print(f"Error: Folder '{path}' does not exist.")
+        except NotADirectoryError:
+            print(f"Error: '{path}' is not a directory.")
+        except PermissionError:
+            print(f"Error: Permission denied to access '{path}'.")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+
+    def mkdir():
+        path = input("$ ")
+        try:
+            os.mkdir(path)
+        except FileExistsError:
+            print(f"Directory already exists at: {path}")
+
+    def clear():
+        try:
+            result = subprocess.run(['clear'], capture_output=True, text=True, check=True)
+            print(result.stdout)
+        except subprocess.CalledProcessError as e:
+            print(f"Error executing command: {e}")
+            print(f"Stderr: {e.stderr}")
+
+    def rm():
+        path = input("$ ")
+        try:
+            os.remove(path)
+        except FileNotFoundError:
+            print(f"Error: Folder '{path}' does not exist.")
+        except NotADirectoryError:
+            print(f"Error: '{path}' is not a directory.")
+        except PermissionError:
+            print(f"Error: Permission denied to access '{path}'.")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")        
+
+    def clear():
+        if os.name == 'posix':
+            _ = os.system('clear')
+        else:
+            _ = os.system('cls')
+
+    def text():
+        title = input("Title: ")
+        j = open("MProcs-text.txt", "a", buffering=1)
+        ct = datetime.datetime.now()
+        monitor = "text-type:"
+        print(usr, monitor, title, ct)
+        print(usr, monitor, title, ct, file=j)
+        print()
+        print("*this saves to MProcs-text.txt*")
+        print()
+        print(file=j)
+        type_text = input("# ")
+        print(type_text, file=j)
+        print(file=j)
 
     def GES():
         print()
@@ -187,7 +269,12 @@ def main():
             global usr
             usr = newUsr
         new = input("Session username: ")
-        set_usr("^m^" + "" + " " + "" + "[" + "" + new + "" + "]" + "" + " " + "" + "$" + "" + " ")
+        user = f"{GREEN}{new}{RESET}"
+        maroon = "^m^"
+        medicci = f"{RED}{maroon}{RESET}"
+        dollar = "$"
+        sign = f"{BLUE}{dollar}{RESET}"
+        set_usr(medicci + "" + " " + "" + "[" + "" + user + "" + "]" + "" + " " + "" + sign + "" + " ")
         ct = datetime.datetime.now()
 
     def search():
@@ -3968,8 +4055,29 @@ def main():
             if choice == "zuz" or choice == "ZUZ" or choice == "pp" or choice == "PP" or choice == "Zuz":
                 zuz()
 
-            if choice == "programs" or choice == "Programs" or choice == "Prog" or choice == "PROGR" or choice == "program" or choice == "Program":
+            if choice == "programs" or choice == "Programs" or choice == "Prog" or choice == "PROGR" or choice == "program" or choice == "Program" or choice == "progr":
                 programs()
+
+            if choice == "ls":
+                ls()
+
+            if choice == "cd":
+                cd()
+
+            if choice == "mkdir":
+                mkdir()
+
+            if choice == "clear" or choice == "cl":
+                clear()
+
+            if choice == "rm":
+                rm()
+
+            if choice == "pwd":
+                pwd()
+
+            if choice == "type-text" or choice == "type text" or choice == "typetext":
+                text()
 
     chooseAgain = "yes"
     while chooseAgain:
