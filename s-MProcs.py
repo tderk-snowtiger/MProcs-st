@@ -25,7 +25,7 @@ def main():
     set_usr(medicci + "" + " " + "" + "[" + "" + user + "" + "]" + "" + " " + "" + sign + "" + " ")
     print()
     def version():
-        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.6.0.1-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
+        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.9.1.1-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
         title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
         title3 = " All Rights Reserved - Medicci.ca - {P0cket Un1-Ver$e}"
         cdt = datetime.datetime.now()
@@ -2128,6 +2128,26 @@ def main():
         vers = list(verses1)
         dec = list(deck1)
 
+        def police2():
+            time.sleep(0)   
+            code = ["Code Red", "Code Blue", "Code Green", "Code Orange", "Code Yellow", "Code Black", "Code White", "Code Purple", "Code Pink"]
+            cod = random.sample(code, 1)[0]
+            urgency = ["Critical", "High", "Medium", "Low", "Lowest"]
+            urge = random.sample(urgency, 1)[0]
+            polis = ["3511 A vehicle that has been impounded for a mandatory 30 days", "A.P.S. Arizona Public Service", "A.S.A.P. As soon as possible", "A.T.F. Bureau of Alcohol, Tobacco, and Firearms", "BAILED OUT Subject jumped out of car and ran", "BYFRND Boyfriend", "BEER RUN Shoplifting beer", "BONDOUT Prisoner who is going to post bail and be released", "BEEN MADE/BURNED Undercover officer's ID is known", "BHND Behind", "BIKE Motorcycle", "BIKERS Motorcycle riders", "BOOKING Booking prisoner into jail", "BREAKING UP Radio transmissions are not being received clearly", "BUSTED Arrested", "C.C.W. Carrying concealed weapon", "C.O. Civilian observer", "COMP Complainant", "C.L.D. Citation in lieu of detention", "CRACK, ROCK Smokeable form of cocaine", "D.E.B. Drug Enforcement Bureau", "DIX Detectives", "D.O.A. Dead on arrival", "D.O.B. Date of birth", "D.O.C. Department of Corrections", "D.P.S. Department of Public Safety", "DRIVE BY Shots fired from a moving vehicle", "E.O.C. Emergency Operations Center", "EQUIPMENT Police vehicle", "E.R. Emergency Room", "E.T.A. Estimated time of arrival", "F.A.A. Federal Aviation Administration", "B.I. Federal Bureau of Investigation", "F.I. Field Interrogation (Form 36 card)", "FILE STOP Notation put in police record; File Stops are confirmed by R&I Bureau", "FLIR Device used by aircraft to check for heat sources", "F.O.J. From other jurisdiction", "FRONT DESK Information Desk at main station", "FUGITIVE A wanted person", "GAS WASH/WASHDOWN Fire Department needed to wash gas down", "G.C.I. /B.A. Test used to determine blood alcohol content", "G.I.B. General Investigations Bureau", "GOT THE EYE In view (on a code 5)", "GRN Green", "HOND Honda", "HIT Subject or item wanted", "H.G.N. Horizontal Gaze Nystagmus (a test for detecting drug / alcohol use)", "HOBBLES Nylon rope used for legs and hand restraint", "HOOK Wrecker", "HSE House", "ICE, CRYSTAL Smokeable methamphetamine", "J.C.C. Juvenile Corrections Center", "J.P. Justice of the Peace", "JUMPED ON Assaulted", "JUMPER Person attempting suicide by jumping", "LADDER Fire Department ladder truck", "MARQUIS Test for narcotics", "M.D.C. Mobile Digital Computer (Police car computer)", "MEDICS Paramedics", "MERZ Mercedes Benz", "MHP Mobile Home Park", "MOTOR Solo motor unit", "NUMBER 1 SITUATION Probable cause for arrest", "NUMBER 9's Citations", "OD Overdose", "ONE FROM LIST Contract wrecker (926)", "ONE ON ONE Suspect / witness I.D.", "ONE ROLL Fingerprints", "O.V. On view, officer just witnessed an incident", "PAGE 2 Additional charges filed on a subject already in custody", "P.C. Probable cause", "PLE Purple", "P.O. Probation officer", "RESTRAINTS Leather straps used to restrain prisoners", "RINGER Audible alarm", "ROLLOVER Accident involving overturned vehicle", "R.P. Responsible party", "S/E/C Southeast corner", "SEIZURE Impound a vehicle; subject having convulsions", "SGT Sergeant", "SILENT Silent alarm", "SLIM JIM Device used to open locked vehicle", "SMASH & GRAB Broke out window, grabbed items and ran", "S.O./M.C.S.O. Maricopa County Sheriff's Office", "S.R.P. Salt River Project", "STRIPPED Vehicle stripped", "TECH Radio or computer technician", "THIRTY-SIX Field interrogation (or form 36)", "THREE WHEELER Police 3-wheeled motorcycle", "TILL TAP Grab money from register", "DISPATCH AN ANIMAL To shoot an animal", "TRAFFIC BOX KEY Key used to open traffic signal control box", "XHUSB Ex-husband", "WAGON/WAGON Police paddy wagon"]
+            pol_str = " , over, ".join(random.sample(polis, random.randint(1, 8)))
+            locate = ["Local", "Local", "Foreign"]
+            loc = random.sample(locate, 1)[0]
+            direction = ["South", "North", "West", "East", "Southwest", "Southeast", "Northwest", "Northeast"]
+            dire = random.sample(direction, 1)[0]  
+            suspectcode = (round(random.random()*26))
+            sus = "Suspect Code:"
+            location = (round(random.random()*99999999,10))
+            ct = datetime.datetime.now()
+            po = "police:"
+            final_result_string = f"{po} {cod}, Urgency: {urge}, {sus} {suspectcode}, Terms: ({pol_str}), Location Type: {loc}, Direction: {dire}, Coords: {location}, Timestamp: {ct}"
+            return final_result_string 
+
         title = input("programs-monitor name: ")
 
         while True:
@@ -2142,7 +2162,7 @@ def main():
         monitor = "programs-monitor-start:"
         print(usr, monitor, title, ct)
         print()
-        print()
+
         def generate_random_result():
             time.sleep(buffer)
             ctm = datetime.datetime.now()
@@ -2155,7 +2175,7 @@ def main():
                 return letters
             random_letters = generate_random_letters()
             sitch  = (round(random.random()*9999,4))
-            random_result = (random.choice(nano), random.choice(nano), random.choice(nano), random.choice(acad), random.choice(medica), random.choice(scienc), random.choice(psycholog), random.choice(biolog), random.choice(dhamma), random.choice(chemis), random.choice(legal_t), random.choice(degre), random.choice(vers), random.choice(dec))
+            random_result = (random.choice(nano), random.choice(nano), random.choice(nano), random.choice(acad), random.choice(medica), random.choice(scienc), random.choice(psycholog), random.choice(biolog), random.choice(dhamma), random.choice(chemis), random.choice(legal_t), random.choice(degre), random.choice(vers), random.choice(dec), police2(), police2(), police2())
             result = random.sample(random_result, 1)
             result_text = ", ".join(result)
             print(maroon, random_letters, sitch, result, ctm)
@@ -2170,7 +2190,6 @@ def main():
             main_loop()
         except KeyboardInterrupt:
             print("\nStopped by user.")
-
 
     def msgs():
         while True:
