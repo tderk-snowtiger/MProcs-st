@@ -29,7 +29,7 @@ def main():
     print()
     print(file=z)
     def version():
-        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.9.1.1 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
+        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.9.1.1.2 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
         title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
         title3 = " All Rights Reserved - Medicci.ca - {P0cket Un1-Ver$e}"
         cdt = datetime.datetime.now()
@@ -573,6 +573,7 @@ def main():
         print(usr, brews, verse, ct, file=z)
 
     def teletubby():
+        ct = datetime.datetime.now()
         print("You think of a command", ct)
         print(usr + "" + " " + "" + "You think of a command", ct, file=z)
         time.sleep(2)
