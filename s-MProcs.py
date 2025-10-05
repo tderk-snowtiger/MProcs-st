@@ -25,7 +25,7 @@ def main():
     set_usr(medicci + "" + " " + "" + "[" + "" + user + "" + "]" + "" + " " + "" + sign + "" + " ")
     print()
     def version():
-        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.9.1.1-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
+        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.9.1.1.2-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
         title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
         title3 = " All Rights Reserved - Medicci.ca - {P0cket Un1-Ver$e}"
         cdt = datetime.datetime.now()
@@ -474,6 +474,7 @@ def main():
         print(brews, verse, ct)
 
     def teletubby():
+        ct = datetime.datetime.now()
         print("You think of a command", ct)
         time.sleep(2)
 
