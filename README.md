@@ -2,9 +2,17 @@
 
         python3 MProcs.py
 
-you can also install through pip instead of running (the) script:
+you can also install through pipx instead of running (the) script:
 
-        pip install MProcs
+        sudo apt install pipx (on Linux/MacOS)
+
+then
+
+        pipx install MProcs
+
+then (fix for python 3.12 update):
+
+        pipx ensurepath
 
 then run:
 
