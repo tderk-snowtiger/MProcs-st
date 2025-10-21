@@ -26,11 +26,9 @@ def main():
     sign = f"{PURPLE}{dollar}{RESET}"
     set_usr(medicci + "" + " " + "" + "[" + "" + user + "" + "]" + "" + " " + "" + sign + "" + " ")
     print()
-    z = open("MProcs-logs.txt", "a", buffering=1)
-    print("[This saves to MProcs-logs.txt]")
-    print()
+
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.12.1.0.1 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.12.1.0.1-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
