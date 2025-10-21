@@ -10,6 +10,8 @@ import os
 def main():
     RED = '\033[91m'
     GREEN = '\033[92m'
+    PURPLE = '\033[35m'
+    ORANGE = '\033[93m'
     BLUE = '\033[94m'
     RESET = '\033[0m'
     print()
@@ -21,7 +23,7 @@ def main():
     maroon = "^m^"
     medicci = f"{RED}{maroon}{RESET}"
     dollar = "$"
-    sign = f"{BLUE}{dollar}{RESET}"
+    sign = f"{PURPLE}{dollar}{RESET}"
     set_usr(medicci + "" + " " + "" + "[" + "" + user + "" + "]" + "" + " " + "" + sign + "" + " ")
     print()
     z = open("MProcs-logs.txt", "a", buffering=1)
@@ -29,14 +31,16 @@ def main():
     print()
     print(file=z)
     def version():
-        title =  usr + "" + " " + "" + ">>> I.S. (Incubator Studios) Outbeat Produce: MProcs-5.10.2.0.3 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]"
-        title2 = "| Indicative: @USVirtualUni && © Medicine, Computable (N_2025) |"
-        title3 = " All Rights Reserved - Medicci.ca - {P0cket Un1-Ver$e}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.12.1.0.1 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
+        title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
+        title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
         cdt = datetime.datetime.now()
-        print(title, cdt, title3)
+        time = f"{GREEN}{cdt}{RESET}"
+        print(title, time, title3, title4)
         print()
         print(title2)
-        print(title, cdt, title3, file=z)
+        print(title, time, title3, title4, file=z)
         print(file=z)
         print(title2, file=z)
         print()
@@ -187,10 +191,33 @@ def main():
     koran1 = ["[67.1] Blessed is He in Whose hand is the kingdom, and He has power over all things,", "[67.2] Who created death and life that He may try you-- which of you is best in deeds; and He is the Mighty, the Forgiving,", "[67.3] Who created the seven heavens one above another; you see no incongruity in the creation of the Beneficent God; then look again, can you see any disorder?", "[67.4] Then turn back the eye again and again; your look shall '~ come back to you confused while it is fatigued.", "[67.5] And certainly We have adorned this lower heaven with ( lamps and We have made these missiles for the Shaitans, and We have prepared for them the chastisement of burning.", "[67.6] And for those who disbelieve in their Lord is the punishment of hell, and evil is the resort.", "[67.7] When they shall be cast therein, they shall hear a loud moaning of it as it heaves,", "[67.8] Almost bursting for fury. Whenever a group is cast into it, its keeper shall ask them: Did there not come to you a warner?", "[67.9] They shall say: Yea! indeed there came to us a warner, but we rejected (him) and said: Allah has not revealed anything, you are only in a great error.", "[67.10] And they shall say: Had we but listened or pondered, we should not have been among the inmates of the burning fire.", "[67.11] So they shall acknowledge their sins, but far will be (forgiveness) from the inmates of the burning fire.", "[67.12] (As for) those who fear their Lord in secret, they shall surely have forgiveness and a great reward.", "[67.13] And conceal your word or manifest it; surely He is Cognizant of what is in the hearts.", "[67.14] Does He not know, Who created? And He is the Knower of the subtleties, the Aware.", "[67.15] He it is Who made the earth smooth for you, therefore go about in the spacious sides thereof, and eat of His sustenance, and to Him is the return after death.", "[67.16] Are you secure of those in the heaven that He should not make the earth to swallow you up? Then lo! it shall be in a state of commotion.", "[67.17] Or are you secure of those in the heaven that He should not send down upon you a punishment? Then shall you know how was My warning.", "[67.18] And certainly those before them rejected (the truth), then how was My disapproval.", "[67.19] Have they not seen the birds above them expanding (their wings) and contracting (them)? What is it that withholds them save the Beneficent God? Surely He sees everything.", "[67.20] Or who is it that will be a host for you to assist you besides the Beneficent God? The unbelievers are only in deception.", "[67.21] Or who is it that will give you sustenance if He should withhold His sustenance? Nay! they persist in disdain and aversion.", "[67.22] What! is he who goes prone upon his face better guided or he who walks upright upon a straight path?", "[67.23] Say: He it is Who brought you into being and made for you the ears and the eyes and the hearts: little is it that you give thanks.", "[67.24] Say: He it is Who multiplied you in the earth and to Him you shall be gathered.", "[67.25] And they say: When shall this threat be (executed) if you are truthful?", "[67.26] Say: The knowledge (thereof is only with Allah and I am only a plain warner.=", "[67.27] But when they shall see it nigh, the faces of those who disbelieve shall be sorry, and it shall be said; This is that which you used to call for.", "[67.28] Say: Have you considered if Allah should destroy me and those with me-- rather He will have mercy on us; yet who will protect the unbelievers from a painful punishment?", "[67.29] Say: He is the Beneficent God, we believe in Him and on Him do we rely, so you shall come to know who it is that is in clear error.", "[67.30] Say: Have you considered if your water should go down, who is it then that will bring you flowing water?", "[89.1] I swear by the daybreak,", "[89.2] And the ten nights,", "[89.3] And the even and the odd,", "[89.4] And the night when it departs.", "[89.5] Truly in that there is an oath for those who possess understanding.", "[89.6] Have you not considered how your Lord dealt with Ad,", "[89.7] (The people of) Aram, possessors of lofty buildings,", "[89.8] The like of which were not created in the (other) cities;", "[89.9] And (with) Samood, who hewed out the rocks in the valley,", "[89.10] And (with) Firon, the lord of hosts,", "[89.11] Who committed inordinacy in the cities,", "[89.12] So they made great mischief therein?", "[89.13] Therefore your Lord let down upon them a portion of the chastisement.", "[89.14] Most sure!y your Lord is watching.", "[89.15] And as for man, when his Lord tries him, then treats him with honor and makes him lead an easy life, he says: My Lord honors me.", "[89.16] But when He tries him (differently), then straitens to him his means of subsistence, he says: My Lord has disgraced me.", "[89.17] Nay! but you do not honor the orphan,", "[89.18] Nor do you urge one another to feed the poor,", "[89.19] And you eat away the heritage, devouring (everything) indiscriminately,", "[89.20] And you love wealth with exceeding love.", "[89.21] Nay! when the earth is made to crumble to pieces,", "[89.22] And your Lord comes and (also) the angels in ranks,", "[89.23] And hell is made to appear on that day. On that day shall man be mindful, and what shall being mindful (then) avail him?", "[89.24] He shall say: O! would that I had sent before for (this) my life!", "[89.25] But on that day shall no one chastise with (anything like) His chastisement,", "[89.26] And no one shall bind with (anything like) His binding.", "[89.27] O soul that art at rest!", "[89.28] Return to your Lord, well-pleased (with him), well-pleasing (Him),", "[89.29] So enter among My servants,", "[89.30] And enter into My garden.", "[87.1] Glorify the name of your Lord, the Most High,", "[87.2] Who creates, then makes complete,", "[87.3] And Who makes (things) according to a measure, then guides (them to their goal),", "[87.4] And Who brings forth herbage,", "[87.5] Then makes it dried up, dust-colored.", "[87.6] We will make you recite so you shall not forget,", "[87.7] Except what Allah pleases, surely He knows the manifest, and what is hidden.", "[87.8] And We will make your way smooth to a state of ease.", "[87.9] Therefore do remind, surely reminding does profit.", "[87.10] He who fears will mind,", "[87.11] And the most unfortunate one will avoid it,", "[87.12] Who shall enter the great fire;", "[87.13] Then therein he shall neither live nor die.", "[87.14] He indeed shall be successful who purifies himself,", "[87.15] And magnifies the name of his Lord and prays.", "[87.16] Nay! you prefer the life of this world,", "[87.17] While the hereafter is better and more lasting.", "[87.18] Most surely this is in the earlier scriptures,", "[87.19] The scriptures of Ibrahim and Musa.", "[24.1] (This is) a chapter which We have revealed and made obligatory and in which We have revealed clear communications that you may be mindful.", "[24.2] (As for) the fornicatress and the fornicator, flog each of them, (giving) a hundred stripes, and let not pity for them detain you in the matter of obedience to Allah, if you believe in Allah and the last day, and let a party of believers witness their chastisement.", "[24.3] The fornicator shall not marry any but a fornicatress or idolatress, and (as for) the fornicatress, none shall marry her but a fornicator or an idolater; and it is forbidden to the believers.", "[24.4] And those who accuse free women then do not bring four witnesses, flog them, (giving) eighty stripes, and do not admit any evidence from them ever; and these it is that are the transgressors,", "[24.5] Except those who repent after this and act aright, for surely Allah is Forgiving, Merciful.", "[24.6] And (as for) those who accuse their wives and have no witnesses except themselves, the evidence of one of these (should be taken) four times, bearing Allah to witness that he is most surely of the truthful ones.", "[24.7] And the fifth (time) that the curse of Allah be on him if he is one of the liars.", "[24.8] And it shall avert the chastisement from her if she testify four times, bearing Allah to witness that he is most surely one of the liars;", "[24.9] And the fifth (time) that the wrath of Allah be on her if he is one of the truthful.", "[24.10] And were it not for Allah's grace upon you and His mercy-- and that Allah is Oft-returning (to mercy), Wise!", "[24.11] Surely they who concocted the lie are a party from among you. Do not regard it an evil to you; nay, it is good for you. Every man of them shall have what he has earned of sin; and (as for) him who took upon himself the main part thereof, he shall have a grievous chastisement.", "[24.12] Why did not the believing men and the believing women, when you heard it, think well of their own people, and say: This is an evident falsehood?", "[24.13] Why did they not bring four witnesses of it? But as they have not brought witnesses they are liars before Allah.", "[24.14] And were it not for Allah's grace upon you and His mercy in this world and the hereafter, a grievous chastisement would certainly have touched you on account of the discourse which you entered into.", "[24.15] When you received it with your tongues and spoke with your mouths what you had no knowledge of, and you deemed it an easy matter while with Allah it was grievous.", "[24.16] And why did you not, when you heard it, say: It does not beseem us that we should talk of it; glory be to Thee! this is a great calumny?", "[24.17] Allah admonishes you that you should not return to the like of it ever again if you are believers.", "[24.18] And Allah makes clear to you the communications; and Allah is Knowing, Wise.", "[24.19] Surely (as for) those who love that scandal should circulate respecting those who believe, they shall have a grievous chastisement in this world and the hereafter; and Allah knows, while you do not know.", "[24.20] And were it not for Allah's grace on you and His mercy, and that Allah is Compassionate, Merciful.", "[24.21] O you who believe! do not follow the footsteps of the Shaitan, and whoever follows the footsteps of the Shaitan, then surely he bids the doing of indecency and evil; and were it not for Allah's grace upon you and His mercy, not one of you would have ever been pure, but Allah purifies whom He pleases; and Allah is Hearing, Knowing.", "[24.22] And let not those of you who possess grace and abundance swear against giving to the near of kin and the poor and those who have fled in Allah's way, and they should pardon and turn away. Do you not love that Allah should forgive you? And Allah is Forgiving, Merciful.", "[24.23] Surely those who accuse chaste believing women, unaware (of the evil), are cursed in this world and the hereafter, and they shall have a grievous chastisement.", "[24.24] On the day when their tongues and their hands and their feet shall bear witness against them as to what they did.", "[24.25] On that day Allah will pay back to them in full their just reward, and they shall know that Allah is the evident Truth.", "[24.26] Bad women .are for bad men and bad men are for bad women. Good women are for good men and good men are for good women", "[24.27] O you who believe! Do not enter houses other than your own houses until you have asked permission and saluted their inmates; this is better for you, that you may be mindful.", "[24.28] But if you do not find any one therein, then do not enter them until permission is given to you; and if it is said to you: Go back, then go back; this is purer for you; and Allah is Cognizant of what you do.", "[24.29] It is no sin in you that you enter uninhabited houses wherein you have your necessaries; and Allah knows what you do openly and what you hide.", "[24.30] Say to the believing men that they cast down their looks and guard their private parts; that is purer for them; surely Allah is Aware of what they do.", "[24.31] And say to the believing women that they cast down their looks and guard their private parts and do not display their ornaments except what appears thereof, and let them wear their head-coverings over their bosoms, and not display their ornaments except to their husbands or their fathers, or the fathers of their husbands, or their sons, or the sons of their husbands, or their brothers, or their brothers' sons, or their sisters' sons, or their women, or those whom their right hands possess, or the male servants not having need (of women), or the children who have not attained knowledge of what is hidden of women; and let them not strike their feet so that what they hide of their ornaments may be known; and turn to Allah all of you, O believers! so that you may be successful.", "[24.32] And marry those among you who are single and those who are fit among your male slaves and your female slaves; if they are needy, Allah will make them free from want out of His grace; and Allah is Ample-giving, Knowing.", "[24.33] And let those who do not find the means to marry keep chaste until Allah makes them free from want out of His grace. And (as for) those who ask for a writing from among those whom your right hands possess, give them the writing if you know any good in them, and give them of the wealth of Allah which He has given you; and do not compel your slave girls to prostitution, when they desire to keep chaste, in order to seek the frail good of this world's life; and whoever compels them, then surely after their compulsion Allah is Forgiving, Merciful.", "[24.34] And certainly We have sent to you clear communications and a description of those who have passed away before you, and an admonition to those who guard (against evil).", "[24.35] Allah is the light of the heavens and the earth; a likeness of His light is as a niche in which is a lamp, the lamp is in a glass, (and) the glass is as it were a brightly shining star, lit from a blessed olive-tree, neither eastern nor western, the oil whereof almost gives light though fire touch it not-- light upon light-- Allah guides to His light whom He pleases, and Allah sets forth parables for men, and Allah is Cognizant of all things.", "[24.36] In houses which Allah has permitted to be exalted and that His name may be remembered in them; there glorify Him therein in the mornings and the evenings,", "[24.37] Men whom neither merchandise nor selling diverts from the remembrance of Allah and the keeping up of prayer and the giving of poor-rate; they fear a day in which the hearts and eyes shall turn about;", "[24.38] That Allah may give them the best reward of what they have done, and give them more out of His grace; and Allah gives sustenance to whom He pleases without measure.", "[24.39] And (as for) those who disbelieve, their deeds are like the mirage in a desert, which the thirsty man deems to be water; until when he comes to it he finds it to be naught, and there he finds Allah, so He pays back to him his reckoning in full; and Allah is quick in reckoning;", "[24.40] Or like utter darkness in the deep sea: there covers it a wave above which is another wave, above which is a cloud, (layers of) utter darkness one above another; when he holds out his hand, he is almost unable to see it; and to whomsoever Allah does not give light, he has no light.", "[24.41] Do you not see that Allah is He Whom do glorify all those who are in the heavens and the earth, and the (very) birds with expanded wings? He knows the prayer of each one and its glorification, and Allah is Cognizant of what they do.", "[24.42] And Allah's is the kingdom of the heavens and the earth, and to Allah is the eventual coming.", "[24.43] Do you not see that Allah drives along the clouds, then gathers them together, then piles them up, so that you see the rain coming forth from their midst? And He sends down of the clouds that are (like) mountains wherein is hail, afflicting therewith whom He pleases and turning it away from whom He pleases; the flash of His lightning almost takes away the sight.", "[24.44] Allah turns over the night and the day; most surely there is a lesson in this for those who have sight.", \
         "[24.45] And Allah has created from water every living creature: so of them is that which walks upon its belly, and of them is that which walks upon two feet, and of them is that which walks upon four; Allah creates what He pleases; surely Allah has power over all things.", "[24.46] Certainly We have revealed clear communications, and Allah guides whom He pleases to the right way.", "[24.47] And they say: We believe in Allah and in the apostle and we obey; then a party of them turn back after this, and these are not believers.", "[24.48] And when they are called to Allah and His Apostle that he may judge between them, lo! a party of them turn aside.", "[24.49] And if the truth be on their side, they come to him quickly, obedient.", "[24.50] Is there in their hearts a disease, or are they in doubt, or do they fear that Allah and His Apostle will act wrongfully towards them? Nay! they themselves are the unjust.", "[24.51] The response of the believers, when they are invited to Allah and His Apostle that he may judge between them, is only to say: We hear and we obey; and these it is that are the successful.", "[24.52] And he who obeys Allah and His Apostle, and fears Allah, and is careful of (his duty to) Him, these it is that are the achievers.", "[24.53] And they swear by Allah with the most energetic of their oaths that if you command them they would certainly go forth. Say: Swear not; reasonable obedience (is desired); surely Allah is aware of what you do.", "[24.54] Say: Obey Allah and obey the Apostle; but if you turn back, then on him rests that which is imposed on him and on you rests that which is imposed on you; and if you obey him, you are on the right way; and nothing rests on the Apostle but clear delivering (of the message).", "[24.55] Allah has promised to those of you who believe and do good that He will most certainly make them rulers in the earth as He made rulers those before them, and that He will most certainly establish for them their religion which He has chosen for them, and that He will most certainly, after their fear, give them security in exchange; they shall serve Me, not associating aught with Me; and whoever is ungrateful after this, these it is who are the. transgressors.", "[24.56] And keep up prayer and pay the poor-rate and obey the Apostle, so that mercy may be shown to you.", "[24.57] Think not that those who disbelieve shall escape in the earth, and their abode is the fire; and certainly evil is the resort!", "[24.58] O you who believe! let those whom your right hands possess and those of you who have not attained to puberty ask permission of you three times; before the morning prayer, and when you put off your clothes at midday in summer, and after the prayer of the nightfall; these are three times of privacy for you; neither is it a sin for you nor for them besides these, some of you must go round about (waiting) upon others; thus does Allah make clear to you the communications, and Allah is Knowing, Wise.", "[24.59] And when the children among you have attained to puberty, let them seek permission as those before them sought permission; thus does Allah make clear to you His communications, and Allah is knowing, Wise.", "[24.60] And (as for) women advanced in years who do not hope for a marriage, it is no sin for them if they put off their clothes without displaying their ornaments; and if they restrain themselves it is better for them; and Allah is Hearing, Knowing.", "[24.61] There is no blame on the blind man, nor is there blame on the lame, nor is there blame on the sick, nor on yourselves that you eat from your houses, or your fathers' houses or your mothers' houses, or your brothers' houses, or your sisters' houses, or your paternal uncles' houses, or your paternal aunts' houses, or your maternal uncles' houses, or your maternal aunts' houses, or what you possess the keys of, or your friends' (houses). It is no sin in you that you eat together or separately. So when you enter houses, greet your people with a salutation from Allah, blessed (and) goodly; thus does Allah make clear to you the communications that you may understand.", "[24.62] Only those are believers who believe in Allah and His Apostle, and when they are with him on a momentous affair they go not away until they have asked his permission; surely they who ask your permission are they who believe in Allah and His Apostle; so when they ask your permission for some affair of theirs, give permission to whom you please of them and ask forgiveness for them from Allah; surely Allah is Forgiving, Merciful.", "[24.63] Do not hold the Apostle's calling (you) among you to be like your calling one to the other; Allah indeed knows those who steal away from among you, concealing themselves; therefore let those beware who go against his order lest a trial afflict them or there befall them a painful chastisement.", "[24.64] Now surely Allah's is whatever is in the heavens and the earth; He knows indeed that to which you are conforming yourselves; and on the day on which they are returned to Him He will inform them of what they did; and Allah is Cognizant of all things.", "[85.1] I swear by the mansions of the stars,", "[85.2] And the promised day,", "[85.3] And the bearer of witness and those against whom the witness is borne.", "[85.4] Cursed be the makers of the pit,", "[85.5] Of the fire (kept burning) with fuel,", "[85.6] When they sat by it,", "[85.7] And they were witnesses of what they did with the believers.", "[85.8] And they did not take vengeance on them for aught except that they believed in Allah, the Mighty, the Praised,", "[85.9] Whose is the kingdom of the heavens and the earth; and Allah is a Witness of all things.", "[85.10] Surely (as for) those who persecute the believing men and the believing women, then do not repent, they shall have the chastisement of hell, and they shall have the chastisement of burning.", "[85.11] Surely (as for) those who believe and do good, they shall have gardens beneath which rivers flow, that is the great achievement.", "[85.12] Surely the might of your Lord is great.", "[85.13] Surely He it is Who originates and reproduces,", "[85.14] And He is the Forgiving, the Loving,", "[85.15] Lord of the Arsh, the Glorious,", "[85.16] The great doer of what He will.", "[85.17] Has not there come to you the story of the hosts,", "[85.18] Of Firon and Samood?", "[85.19] Nay! those who disbelieve are in (the act of) giving the lie to the truth.", "[85.20] And Allah encompasses them on every side.", "[85.21] Nay! it is a glorious Quran,", "[85.22] In a guarded tablet.", "[113.1] Say: I seek refuge in the Lord of the dawn,", "[113.2] From the evil of what He has created,", "[113.3] And from the evil of the utterly dark night when it comes,", "[113.4] And from the evil of those who blow on knots,", "[113.5] And from the evil of the envious when he envies", "[52.1] I swear by the Mountain,", "[52.2] And the Book written", "[52.3] In an outstretched fine parchment,", "[52.4] And the House (Kaaba) that is visited,", "[52.5] And the elevated canopy", "[52.6] And the swollen sea", "[52.7] Most surely the punishment of your Lord will come to pass;", "[52.8] There shall be none to avert it;", "[52.9] On the day when the heaven shall move from side to side", "[52.10] And the mountains shall pass away passing away (altogether).", "[52.11] So woe on that day to those who reject (the truth),", "[52.12] Those who sport entering into vain discourses.", "[52.13] The day on which they shall be driven away to the fire of hell with violence.", "[52.14] This is the fire which you used to give the lie to.", "[52.15] Is it magic then or do you not see?", "[52.16] Enter into it, then bear (it) patiently, or do not bear (it) patiently, it is the same to you; you shall be requited only (for) what you did.", "[52.17] Surely those who guard (against evil) shall be in gardens and bliss", "[52.18] Rejoicing because of what their Lord gave them, and their Lord saved them from the punishment of the burning fire.", "[52.19] Eat and drink pleasantly for what you did,", "[52.20] Reclining on thrones set in lines, and We will unite them to large-eyed beautiful ones.", "[52.21] And (as for) those who believe and their offspring follow them in faith, We will unite with them their offspring and We will not diminish to them aught of their work; every man is responsible for what he shall have wrought.", "[52.22] And We will aid them with fruit and flesh such as they desire.", "[52.23] They shall pass therein from one to another a cup wherein there shall be nothing vain nor any sin.", "[52.24] And round them shall go boys of theirs as if they were hidden pearls.", "[52.25] And some of them shall advance towards others questioning each other.", "[52.26] Saying: Surely we feared before on account of our families:", "[52.27] But Allah has been gracious to us and He has saved us from the punishment of the hot wind:", "[52.28] Surely we called upon Him before: Surely He is the Benign, the Merciful.", "[52.29] Therefore continue to remind, for by the grace of your Lord, you are not a soothsayer, or a madman.", "[52.30] Or do they say: A poet, we wait for him the evil accidents of time.", "[52.31] Say: Wait, for surely I too with you am of those who wait.", "[52.32] Nay! do their understandings bid them this? Or are they an inordinate people?", "[52.33] Or do they say: He has forged it. Nay! they do not believe.", "[52.34] Then let them bring an announcement like it if they are truthful.", "[52.35] Or were they created without there being anything, or are they the creators?", "[52.36] Or did they create the heavens and the earth? Nay! they have no certainty.", "[52.37] Or have they the treasures of your Lord with them? Or have they been set in absolute authority?", "[52.38] Or have they the means by which they listen? Then let their listener bring a clear authority.", "[52.39] Or has He daughters while you have sons?", "[52.40] Or do you ask them for a reward, so that they are overburdened by a debt?", "[52.41] Or have they the unseen so that they write (it) down?", "[52.42] Or do they desire a war? But those who disbelieve shall be the vanquished ones in war.", "[52.43] Or have they a god other than Allah? Glory be to Allah from what they set up (with Him).", "[52.44] And if they should see a portion of the heaven coming down, they would say: Piled up clouds.", "[52.45] Leave them then till they meet that day of theirs wherein they shall be made to swoon (with terror):", "[52.46] The day on which their struggle shall not avail them aught, nor shall they be helped.", "[52.47] And surely those who are unjust shall have a punishment besides that (in the world), but most of them do not know.", "[52.48] And wait patiently for the judgment of your Lord, for surely you are before Our eyes, and sing the praise of your Lord when you rise;", "[52.49] And in the night, give Him glory too, and at the setting of the stars."]
         
+    fcci = ['a', 'ai', 'an', 'ang', 'ao', 'ba', 'bai', 'ban', 'bang', 'bao', 'bei', 'ben', 'beng', 'bi', 'bian', 'biao', 'bie', 'bin', 'bing', 'bo', 'bu', 'ca', 'cai', 'can', 'cang', 'cao', 'ce', 'cei', 'cen', 'ceng', 'cha', 'chai', 'chan', 'chang', 'chao', 'che', 'chen', 'cheng', 'chi', 'chong', 'chou', 'chu', 'chua', 'chuai', 'chuan', 'chuang', 'chui', 'chun', 'chuo', 'ci', 'cong', 'cou', 'cu', 'cuan', 'cui', 'cun', 'cuo', 'da', 'dai', 'dan', 'dang', 'dao', 'de', 'dei', 'den', 'deng', 'di', 'dia', 'dian', 'diao', 'die', 'ding', 'diu', 'dong', 'dou', 'du', 'duan', 'dui', 'dun', 'duo', 'e', 'ei', 'en', 'eng', 'er', 'fa', 'fan', 'fang', 'fei', 'fen', 'feng', 'fo', 'fou', 'fu', 'ga', 'gai', 'gan', 'gang', 'gao', 'ge', 'gei', 'gen', 'geng', 'gong', 'gou', 'gu', 'gua', 'guai', 'guan', 'guang', 'gui', 'gun', 'guo', 'ha', 'hai', 'han', 'hang', 'hao', 'he', 'hei', 'hen', 'heng', 'hong', 'hou', 'hu', 'hua', 'huai', 'huan', 'huang', 'hui', 'hun', 'huo', 'ji', 'jia', 'jian', 'jiang', 'jiao', 'jie', 'jin', 'jing', 'jiong', 'jiu', 'ju', 'juan', 'jue', 'jun', 'ka', 'kai', 'kan', 'kang', 'kao', 'ke', 'kei', 'ken', 'keng', 'kong', 'kou', 'ku', 'kua', 'kuai', 'kuan', 'kuang', 'kui', 'kun', 'kuo', 'la', 'lai', 'lan', 'lang', 'lao', 'le', 'lei', 'leng', 'li', 'lia', 'lian', 'liang', 'liao', 'lie', 'lin', 'ling', 'liu', 'long', 'lou', 'lu', 'luan', 'lun', 'luo', 'lü', 'lüe', 'ma', 'mai', 'man', 'mang', 'mao', 'me', 'mei', 'men', 'meng', 'mi', 'mian', 'miao', 'mie', 'min', 'ming', 'miu', 'mo', 'mou', 'mu', 'na', 'nai', 'nan', 'nang', 'nao', 'ne', 'nei', 'nen', 'neng', 'ni', 'nian', 'niang', 'niao', 'nie', 'nin', 'ning', 'niu', 'nong', 'nou', 'nu', 'nuan', 'nuo', 'nü', 'nüe', 'o', 'ou', 'pa', 'pai', 'pan', 'pang', 'pao', 'pei', 'pen', 'peng', 'pi', 'pian', 'piao', 'pie', 'pin', 'ping', 'po', 'pou', 'pu', 'qi', 'qia', 'qian', 'qiang', 'qiao', 'qie', 'qin', 'qing', 'qiong', 'qiu', 'qu', 'quan', 'que', 'qun', 'ran', 'rang', 'rao', 're', 'ren', 'reng', 'ri', 'rong', 'rou', 'ru', 'ruan', 'rui', 'run', 'ruo', 'sa', 'sai', 'san', 'sang', 'sao', 'se', 'sen', 'seng', 'sha', 'shai', 'shan', 'shang', 'shao', 'she', 'shei', 'shen', 'sheng', 'shi', 'shou', 'shu', 'shua', 'shuai', 'shuan', 'shuang', 'shui', 'shun', 'shuo', 'si', 'song', 'sou', 'su', 'suan', 'sui', 'sun', 'suo', 'ta', 'tai', 'tan', 'tang', 'tao', 'te', 'tei', 'teng', 'ti', 'tian', 'tiao', 'tie', 'ting', 'tong', 'tou', 'tu', 'tuan', 'tui', 'tun', 'tuo', 'wa', 'wai', 'wan', 'wang', 'wei', 'wen', 'weng', 'wo', 'wu', 'xi', 'xia', 'xian', 'xiang', 'xiao', 'xie', 'xin', 'xing', 'xiong', 'xiu', 'xu', 'xuan', 'xue', 'xun', 'ya', 'yan', 'yang', 'yao', 'ye', 'yi', 'yin', 'ying', 'yo', 'yong', 'you', 'yu', 'yuan', 'yue', 'yun', 'za', 'zai', 'zan', 'zang', 'zao', 'ze', 'zei', 'zen', 'zeng', 'zha', 'zhai', 'zhan', 'zhang', 'zhao', 'zhe', 'zhei', 'zhen', 'zheng', 'zhi', 'zhong', 'zhou', 'zhu', 'zhua', 'zhuai', 'zhuan', 'zhuang', 'zhui', 'zhun', 'zhuo', 'zi', 'zong', 'zou', 'zu', 'zuan', 'zui', 'zun', 'zuo', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+
+    def nano():
+        dd = (diction)
+        ct = datetime.datetime.now()
+        nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
+        result = random.sample(nano, random.randint(1, 6))
+        star = "***"
+        print(star, result, ct)
+        print(usr, star, result, ct, file=z)
+
+    def tinie_N():
+        an = (fcci)
+        acad = (acadlist)
+        ct = datetime.datetime.now()
+        cci = random.sample(an, random.randint(1,10))
+        acadl = random.sample(acad, random.randint(1,5))
+        wonyao_str = ''.join(cci)
+        ha_sh = "#"
+        print(ha_sh, wonyao_str, acadl, ct)
+        print(usr, ha_sh, wonyao_str, acadl, ct, file=z)
 
     def commands():
         print()
         print(" version | [blank input] for nano | profile | note / journal / save | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | search")
+        print()
+        print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci]")
         print()
         print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
         print()
@@ -292,7 +319,7 @@ def main():
         maroon = "^m^"
         medicci = f"{RED}{maroon}{RESET}"
         dollar = "$"
-        sign = f"{BLUE}{dollar}{RESET}"
+        sign = f"{PURPLE}{dollar}{RESET}"
         set_usr(medicci + "" + " " + "" + "[" + "" + user + "" + "]" + "" + " " + "" + sign + "" + " ")
         ct = datetime.datetime.now()
         m = open("monitor-logs.txt", "a", buffering=1)
@@ -820,15 +847,6 @@ def main():
         med = "Clearance:"
         print(med, clear, ct)
         print(usr, med, clear, ct, file=z)
-
-    def nano():
-        dd = (diction)
-        ct = datetime.datetime.now()
-        nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
-        result = random.sample(nano, random.randint(1, 6))
-        star = "***"
-        print(star, result, ct)
-        print(usr, star, result, ct, file=z)
 
     def entry():
         _entry = "Entry: "
@@ -2578,6 +2596,47 @@ def main():
         except KeyboardInterrupt:
             print("\nStopped by user.")
 
+    def fntcci_monitor():
+        maroon = "^m^"
+        aono = (fcci)
+        acad = (acadlist)
+        title = input("FNTCCI-monitor name: ")
+        i = open("FNTCCI-monitor-logs.txt", "a", buffering=1)
+        ct = datetime.datetime.now()
+        monitor = "FNTCCI-monitor-start:"
+        print(usr, monitor, title, ct)
+        print(usr, monitor, title, ct, file=z)
+        print(usr, monitor, title, ct, file=i)
+        print()
+        print(file=z)
+        print("*this saves to FNTCCI-monitor-logs.txt* Ctrl+C to stop")
+        print()
+        print(file=i)
+        def Wonraoyerjishibli():
+            cci = random.sample(aono, random.randint(1,10))
+            acadl = random.sample(acad, random.randint(1,7))
+            wonyao_str = ''.join(cci)
+            ctm = datetime.datetime.now()
+            print(maroon, wonyao_str, acadl, ctm)
+            print(maroon, wonyao_str, acadl, ctm, file=i)
+            print("_______________________________________")
+            print("_______________________________________", file=i)
+            print()
+            print(file=i)
+
+        def main_loop():
+            while True:
+                time.sleep(random.randint(0,12))
+                integer = (round(random.random()*35))
+                if integer > 17:
+                    if random.choice([True, False]):
+                        Wonraoyerjishibli()
+        
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
     def time_monitor():
         maroon = "^m^"
         nano = (diction)
@@ -2955,6 +3014,41 @@ def main():
             print(file=z)
             print(tag, rtag, random_letters, sitch, kchat, kchat2, ctm)
             print(usr, tag, rtag, random_letters, sitch, kchat, kchat2, ctm, file=z)
+
+    def ntag():  
+        ctag = input("n-tag: ")
+        while True:
+            try:
+                number = int(input("Number of results: "))
+            except ValueError:
+                print("Invalid value")
+            else:
+                break
+        number
+        for _ in range(number):
+            time.sleep(.103)
+            an = (fcci) 
+            acad = (acadlist)
+            ct = datetime.datetime.now()
+            tag = "n-tag:"
+            ctm = datetime.datetime.now()
+            def generate_random_letters():
+                random1 = random.choice(string.ascii_letters)
+                random2 = random.choice(string.ascii_letters)
+                random3 = random.choice(string.ascii_letters)
+                letters = [random1, random2, random3]
+                random.shuffle(letters)
+                return letters
+            random_letters = generate_random_letters()
+            sitch  = (round(random.random()*9999,4))
+            nn = random.sample(an, random.randint(1,10))
+            wonyao_str = ''.join(nn)
+            acadl = random.sample(acad, random.randint(1,7))
+            print()
+            print(file=z)
+            print(tag, ctag, random_letters, sitch, wonyao_str, acadl, ctm)
+            print(usr, tag, ctag, random_letters, sitch, wonyao_str, acadl, ctm, file=z)
+
 
     def MAI():
         import time
@@ -5537,6 +5631,15 @@ def main():
             if choice == "pwd":
                 pwd()
 
+            if choice == "Tinien" or choice == "tinien" or choice == " " or choice == "**":
+                tinie_N()
+
+            if choice == "ntag" or choice == "n-tag":
+                ntag()
+
+            if choice == "fstart" or choice == "f-start" or choice == "fmonitor" or choice == "fmonitor" or choice == "fcci" or choice == "fcci monitor" or choice == "fcci-monitor" or choice == "FCCI" or choice == "FCCI-monitor" or choice == "FCCI monitor":
+                fntcci_monitor()
+
             if choice == "type-text" or choice == "type text" or choice == "typetext":
                 text()
 
@@ -5549,6 +5652,7 @@ def main():
     m.close()
     a.close()
     b.close()
+    i.close()
     x.close()
     c.close()
     t.close()
@@ -5557,11 +5661,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
 
 
