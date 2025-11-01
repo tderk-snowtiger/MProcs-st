@@ -31,7 +31,7 @@ def main():
     print()
     print(file=z)
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.12.1.0.1 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.12.5.0.3 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -2481,10 +2481,10 @@ def main():
             random_letters = generate_random_letters()
             sitch  = (round(random.random()*9999,4))
             kchat = random.sample(nano, random.randint(1,7))
-            print(maroon, random_letters, sitch, kchat, ctm)
-            print(maroon, random_letters, sitch, kchat, ctm, file=c)
-            random_result = [random.choice(nano)]
+            random_result = random.sample(nano, random.randint(1,7))
             result_text = ", ".join(random_result)
+            print(maroon, random_letters, sitch, result_text, ctm)
+            print(maroon, random_letters, sitch, result_text, ctm, file=c)
             speak(result_text)
             print()
             print(file=c)
