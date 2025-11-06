@@ -6,6 +6,7 @@ import threading
 import subprocess
 import platform
 import os
+import shutil
 
 def main():
     RED = '\033[91m'
@@ -31,7 +32,7 @@ def main():
     print()
     print(file=z)
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.12.5.0.3 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.12.6.2.0 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -217,7 +218,7 @@ def main():
         print()
         print(" version | [blank input] for nano | profile | note / journal / save | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | search")
         print()
-        print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci]")
+        print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: cbmp, xcbmp, hbmp, xhbmp, jbmp, xjbmp")
         print()
         print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
         print()
@@ -2442,18 +2443,32 @@ def main():
             print("\nStopped by user.")
 
     def speak(text):
-        """Use espeak for offline text-to-speech."""
-        try:
-            if platform.system() == "Windows":
-                # On Windows, espeak may be installed separately and available as 'espeak'
-                subprocess.run(["espeak", text], check=True)
-            else:
-                # On Linux/macOS, espeak is typically available as 'espeak'
-                subprocess.run(["espeak", text], check=True)
-        except FileNotFoundError:
-            print("espeak not found. Please install dependency 'espeak' for text-to-speech.")
-        except subprocess.CalledProcessError as e:
-            print(f"Text-to-speech error: {e}")
+        if platform.system() == "Linux" and shutil.which("termux-tts-speak"):
+            try:
+                subprocess.run(["termux-tts-speak", text], check=True)
+                return
+            except subprocess.CalledProcessError as e:
+                print(f"Termux-TTS error: {e}")
+            except FileNotFoundError:
+                pass
+
+        if shutil.which("espeak"):
+            try:
+                if platform.system() == "Windows":
+                    subprocess.run(["espeak", text], check=True)
+                else:
+                    subprocess.run(["espeak", text], check=True)
+                return
+            except subprocess.CalledProcessError as e:
+                print(f"eSpeak error: {e}")
+                return
+            except Exception as e:
+                print(f"An unexpected error occurred with eSpeak: {e}")
+                return d
+        else:
+            print()
+            print("ERROR: Neither 'termux-tts-speak' nor 'espeak' was found.")
+            print("Install 'termux-api' (and the Android Termux:API app) or 'sudo apt install espeak / pkg install espeak'.")
 
     def call():
         maroon = "^m^"
@@ -5231,6 +5246,414 @@ def main():
         except KeyboardInterrupt:
             print("\nStopped by user.")
 
+    def cbmp():
+
+        time.sleep(.3)
+
+        print()
+        print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Chinese'")
+        print()
+        print("Ctrl+C To Stop")
+        print()
+        print("'FNTCCI (C)'")
+        print()
+
+        time.sleep(.3)
+
+        c_fcci = ['a', 'ai', 'an', 'ang', 'ao', 'ba', 'bai', 'ban', 'bang', 'bao', 'bei', 'ben', 'beng', 'bi', 'bian', 'biao', 'bie', 'bin', 'bing', 'bo', 'bu', 'ca', 'cai', 'can', 'cang', 'cao', 'ce', 'cei', 'cen', 'ceng', 'cha', 'chai', 'chan', 'chang', 'chao', 'che', 'chen', 'cheng', 'chi', 'chong', 'chou', 'chu', 'chua', 'chuai', 'chuan', 'chuang', 'chui', 'chun', 'chuo', 'ci', 'cong', 'cou', 'cu', 'cuan', 'cui', 'cun', 'cuo', 'da', 'dai', 'dan', 'dang', 'dao', 'de', 'dei', 'den', 'deng', 'di', 'dia', 'dian', 'diao', 'die', 'ding', 'diu', 'dong', 'dou', 'du', 'duan', 'dui', 'dun', 'duo', 'e', 'ei', 'en', 'eng', 'er', 'fa', 'fan', 'fang', 'fei', 'fen', 'feng', 'fo', 'fou', 'fu', 'ga', 'gai', 'gan', 'gang', 'gao', 'ge', 'gei', 'gen', 'geng', 'gong', 'gou', 'gu', 'gua', 'guai', 'guan', 'guang', 'gui', 'gun', 'guo', 'ha', 'hai', 'han', 'hang', 'hao', 'he', 'hei', 'hen', 'heng', 'hong', 'hou', 'hu', 'hua', 'huai', 'huan', 'huang', 'hui', 'hun', 'huo', 'ji', 'jia', 'jian', 'jiang', 'jiao', 'jie', 'jin', 'jing', 'jiong', 'jiu', 'ju', 'juan', 'jue', 'jun', 'ka', 'kai', 'kan', 'kang', 'kao', 'ke', 'kei', 'ken', 'keng', 'kong', 'kou', 'ku', 'kua', 'kuai', 'kuan', 'kuang', 'kui', 'kun', 'kuo', 'la', 'lai', 'lan', 'lang', 'lao', 'le', 'lei', 'leng', 'li', 'lia', 'lian', 'liang', 'liao', 'lie', 'lin', 'ling', 'liu', 'long', 'lou', 'lu', 'luan', 'lun', 'luo', 'lü', 'lüe', 'ma', 'mai', 'man', 'mang', 'mao', 'me', 'mei', 'men', 'meng', 'mi', 'mian', 'miao', 'mie', 'min', 'ming', 'miu', 'mo', 'mou', 'mu', 'na', 'nai', 'nan', 'nang', 'nao', 'ne', 'nei', 'nen', 'neng', 'ni', 'nian', 'niang', 'niao', 'nie', 'nin', 'ning', 'niu', 'nong', 'nou', 'nu', 'nuan', 'nuo', 'nü', 'nüe', 'o', 'ou', 'pa', 'pai', 'pan', 'pang', 'pao', 'pei', 'pen', 'peng', 'pi', 'pian', 'piao', 'pie', 'pin', 'ping', 'po', 'pou', 'pu', 'qi', 'qia', 'qian', 'qiang', 'qiao', 'qie', 'qin', 'qing', 'qiong', 'qiu', 'qu', 'quan', 'que', 'qun', 'ran', 'rang', 'rao', 're', 'ren', 'reng', 'ri', 'rong', 'rou', 'ru', 'ruan', 'rui', 'run', 'ruo', 'sa', 'sai', 'san', 'sang', 'sao', 'se', 'sen', 'seng', 'sha', 'shai', 'shan', 'shang', 'shao', 'she', 'shei', 'shen', 'sheng', 'shi', 'shou', 'shu', 'shua', 'shuai', 'shuan', 'shuang', 'shui', 'shun', 'shuo', 'si', 'song', 'sou', 'su', 'suan', 'sui', 'sun', 'suo', 'ta', 'tai', 'tan', 'tang', 'tao', 'te', 'tei', 'teng', 'ti', 'tian', 'tiao', 'tie', 'ting', 'tong', 'tou', 'tu', 'tuan', 'tui', 'tun', 'tuo', 'wa', 'wai', 'wan', 'wang', 'wei', 'wen', 'weng', 'wo', 'wu', 'xi', 'xia', 'xian', 'xiang', 'xiao', 'xie', 'xin', 'xing', 'xiong', 'xiu', 'xu', 'xuan', 'xue', 'xun', 'ya', 'yan', 'yang', 'yao', 'ye', 'yi', 'yin', 'ying', 'yo', 'yong', 'you', 'yu', 'yuan', 'yue', 'yun', 'za', 'zai', 'zan', 'zang', 'zao', 'ze', 'zei', 'zen', 'zeng', 'zha', 'zhai', 'zhan', 'zhang', 'zhao', 'zhe', 'zhei', 'zhen', 'zheng', 'zhi', 'zhong', 'zhou', 'zhu', 'zhua', 'zhuai', 'zhuan', 'zhuang', 'zhui', 'zhun', 'zhuo', 'zi', 'zong', 'zou', 'zu', 'zuan', 'zui', 'zun', 'zuo', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+        
+        maroon = "^m^"
+
+        cnano1 = (c_fcci)
+
+        q = open("cbmp.txt", "a", buffering=1)
+
+        ct = datetime.datetime.now()
+
+        monitor = "cbmp-start:"
+        print(monitor, ct)
+        print(monitor, ct, file=q)
+        print()
+        print("*this saves to cbmp.txt*")
+        print()
+        print(file=q)
+
+        def generate_random_result():
+
+            ctm = datetime.datetime.now()
+
+            def generate_random_letters():
+                random1 = random.choice(string.ascii_letters)
+                random2 = random.choice(string.ascii_letters)
+                random3 = random.choice(string.ascii_letters)
+                letters = [random1, random2, random3]
+                return letters
+
+            random_letters = generate_random_letters()
+
+            sitch  = (round(random.random()*9999,4))
+
+            cci1 = random.sample(cnano1, random.randint(1,10))
+
+            result_text = "".join(cci1)
+
+            print(maroon, random_letters, sitch, result_text, ctm)
+            print(maroon, random_letters, sitch, result_text, ctm, file=q)
+
+            speak(result_text)
+
+            print()
+            print(file=q)
+            
+        def main_loop():
+            while True:
+                time.sleep(random.randint(0,6))
+                integer = (round(random.random()*18))
+                if integer > 10:
+                    if random.choice([True, False]):
+                        generate_random_result()
+
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
+    def xcbmp():
+
+        time.sleep(.3)
+
+        print()
+        print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Chinese'")
+        print()
+        print("Ctrl+C To Stop")
+        print()
+        print("'FNTCCI (C)'")
+        print()
+
+        time.sleep(.3)
+
+        c_fcci2 = ['a', 'ai', 'an', 'ang', 'ao', 'ba', 'bai', 'ban', 'bang', 'bao', 'bei', 'ben', 'beng', 'bi', 'bian', 'biao', 'bie', 'bin', 'bing', 'bo', 'bu', 'ca', 'cai', 'can', 'cang', 'cao', 'ce', 'cei', 'cen', 'ceng', 'cha', 'chai', 'chan', 'chang', 'chao', 'che', 'chen', 'cheng', 'chi', 'chong', 'chou', 'chu', 'chua', 'chuai', 'chuan', 'chuang', 'chui', 'chun', 'chuo', 'ci', 'cong', 'cou', 'cu', 'cuan', 'cui', 'cun', 'cuo', 'da', 'dai', 'dan', 'dang', 'dao', 'de', 'dei', 'den', 'deng', 'di', 'dia', 'dian', 'diao', 'die', 'ding', 'diu', 'dong', 'dou', 'du', 'duan', 'dui', 'dun', 'duo', 'e', 'ei', 'en', 'eng', 'er', 'fa', 'fan', 'fang', 'fei', 'fen', 'feng', 'fo', 'fou', 'fu', 'ga', 'gai', 'gan', 'gang', 'gao', 'ge', 'gei', 'gen', 'geng', 'gong', 'gou', 'gu', 'gua', 'guai', 'guan', 'guang', 'gui', 'gun', 'guo', 'ha', 'hai', 'han', 'hang', 'hao', 'he', 'hei', 'hen', 'heng', 'hong', 'hou', 'hu', 'hua', 'huai', 'huan', 'huang', 'hui', 'hun', 'huo', 'ji', 'jia', 'jian', 'jiang', 'jiao', 'jie', 'jin', 'jing', 'jiong', 'jiu', 'ju', 'juan', 'jue', 'jun', 'ka', 'kai', 'kan', 'kang', 'kao', 'ke', 'kei', 'ken', 'keng', 'kong', 'kou', 'ku', 'kua', 'kuai', 'kuan', 'kuang', 'kui', 'kun', 'kuo', 'la', 'lai', 'lan', 'lang', 'lao', 'le', 'lei', 'leng', 'li', 'lia', 'lian', 'liang', 'liao', 'lie', 'lin', 'ling', 'liu', 'long', 'lou', 'lu', 'luan', 'lun', 'luo', 'lü', 'lüe', 'ma', 'mai', 'man', 'mang', 'mao', 'me', 'mei', 'men', 'meng', 'mi', 'mian', 'miao', 'mie', 'min', 'ming', 'miu', 'mo', 'mou', 'mu', 'na', 'nai', 'nan', 'nang', 'nao', 'ne', 'nei', 'nen', 'neng', 'ni', 'nian', 'niang', 'niao', 'nie', 'nin', 'ning', 'niu', 'nong', 'nou', 'nu', 'nuan', 'nuo', 'nü', 'nüe', 'o', 'ou', 'pa', 'pai', 'pan', 'pang', 'pao', 'pei', 'pen', 'peng', 'pi', 'pian', 'piao', 'pie', 'pin', 'ping', 'po', 'pou', 'pu', 'qi', 'qia', 'qian', 'qiang', 'qiao', 'qie', 'qin', 'qing', 'qiong', 'qiu', 'qu', 'quan', 'que', 'qun', 'ran', 'rang', 'rao', 're', 'ren', 'reng', 'ri', 'rong', 'rou', 'ru', 'ruan', 'rui', 'run', 'ruo', 'sa', 'sai', 'san', 'sang', 'sao', 'se', 'sen', 'seng', 'sha', 'shai', 'shan', 'shang', 'shao', 'she', 'shei', 'shen', 'sheng', 'shi', 'shou', 'shu', 'shua', 'shuai', 'shuan', 'shuang', 'shui', 'shun', 'shuo', 'si', 'song', 'sou', 'su', 'suan', 'sui', 'sun', 'suo', 'ta', 'tai', 'tan', 'tang', 'tao', 'te', 'tei', 'teng', 'ti', 'tian', 'tiao', 'tie', 'ting', 'tong', 'tou', 'tu', 'tuan', 'tui', 'tun', 'tuo', 'wa', 'wai', 'wan', 'wang', 'wei', 'wen', 'weng', 'wo', 'wu', 'xi', 'xia', 'xian', 'xiang', 'xiao', 'xie', 'xin', 'xing', 'xiong', 'xiu', 'xu', 'xuan', 'xue', 'xun', 'ya', 'yan', 'yang', 'yao', 'ye', 'yi', 'yin', 'ying', 'yo', 'yong', 'you', 'yu', 'yuan', 'yue', 'yun', 'za', 'zai', 'zan', 'zang', 'zao', 'ze', 'zei', 'zen', 'zeng', 'zha', 'zhai', 'zhan', 'zhang', 'zhao', 'zhe', 'zhei', 'zhen', 'zheng', 'zhi', 'zhong', 'zhou', 'zhu', 'zhua', 'zhuai', 'zhuan', 'zhuang', 'zhui', 'zhun', 'zhuo', 'zi', 'zong', 'zou', 'zu', 'zuan', 'zui', 'zun', 'zuo', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+        
+        maroon = "^m^"
+
+        cnano2 = (c_fcci2)
+
+        ct = datetime.datetime.now()
+
+        monitor = "xcbmp-start:"
+        print(monitor, ct)
+        print()
+
+        def generate_random_result():
+
+            ctm = datetime.datetime.now()
+
+            def generate_random_letters():
+                random1 = random.choice(string.ascii_letters)
+                random2 = random.choice(string.ascii_letters)
+                random3 = random.choice(string.ascii_letters)
+                letters = [random1, random2, random3]
+                return letters
+
+            random_letters = generate_random_letters()
+
+            sitch  = (round(random.random()*9999,4))
+
+            cci2 = random.sample(cnano2, random.randint(1,10))
+
+            result_text = "".join(cci2)
+
+            print(maroon, random_letters, sitch, result_text, ctm)
+
+            speak(result_text)
+
+            print()
+            
+        def main_loop():
+            while True:
+                time.sleep(random.randint(0,6))
+                integer = (round(random.random()*18))
+                if integer > 10:
+                    if random.choice([True, False]):
+                        generate_random_result()
+
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
+    def hbmp():
+
+        time.sleep(.3)
+
+        print()
+        print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Korean'")
+        print()
+        print("Ctrl+C To Stop")
+        print()
+        print("'FNTCCI (H)'")
+        print()
+
+        time.sleep(.3)
+
+        h_fcci = ["ga", "gya", "geo", "gyeo", "go", "gyo", "gu", "gyu", "geu", "gi", "gae", "gyae", "ge", "gye", "gwa", "gwae", "goe", "gwo", "gwe", "gwi", "gui", "kka", "kkya", "kkeo", "kkyeo", "kko", "kkyo", "kku", "kkyu", "kkeu", "kki", "kkae", "kkyae", "kke", "kkye", "kkwa", "kkwae", "kkoe", "kkwo", "kkwe", "kkwi", "kkui", "na", "nya", "neo", "nyeo", "no", "nyo", "nu", "nyu", "neu", "ni", "nae", "nyae", "ne", "nye", "nwa", "nwae", "noe", "nwo", "nwe", "nwi", "nui", "da", "dya", "deo", "dyeo", "do", "dyo", "du", "dyu", "deu", "di", "dae", "dyae", "de", "dye", "dwa", "dwae", "doe", "dwo", "dwe", "dwi", "dui", "tta", "ttya", "tteo", "ttyeo", "tto", "ttyo", "ttu", "ttyu", "tteu", "tti", "ttae", "ttyae", "tte", "ttye", "ttwa", "ttwae", "ttoe", "ttwo", "ttwe", "ttwi", "ttui", "ra", "rya", "reo", "ryeo", "ro", "ryo", "ru", "ryu", "reu", "ri", "rae", "ryae", "re", "rye", "rwa", "rwae", "roe", "rwo", "rwe", "rwi", "rui", "ma", "mya", "meo", "myeo", "mo", "myo", "mu", "myu", "meu", "mi", "mae", "myae", "me", "mye", "mwa", "mwae", "moe", "mwo", "mwe", "mwi", "mui", "ba", "bya", "beo", "byeo", "bo", "byo", "bu", "byu", "beu", "bi", "bae", "byae", "be", "bye", "bwa", "bwae", "boe", "bwo", "bwe", "bwi", "bui", "ppa", "ppya", "ppeo", "ppyeo", "ppo", "ppyo", "ppu", "ppyu", "ppeu", "ppi", "ppae", "ppyae", "ppe", "ppye", "ppwa", "ppwae", "ppoe", "ppwo", "ppwe", "ppwi", "ppui", "sa", "sya", "seo", "syeo", "so", "syo", "su", "syu", "seu", "si", "sae", "syae", "se", "sye", "swa", "swae", "soe", "swo", "swe", "swi", "sui", "ssa", "ssya", "sseo", "ssyeo", "sso", "ssyo", "ssu", "ssyu", "sseu", "ssi", "ssae", "ssyae", "sse", "ssye", "sswa", "sswae", "ssoe", "sswo", "sswe", "sswi", "ssui", "a", "ya", "eo", "yeo", "o", "yo", "u", "yu", "eu", "i", "ae", "yae", "e", "ye", "wa", "wae", "oe", "wo", "we", "wi", "ui", "ja", "jya", "jeo", "jyeo", "jo", "jyo", "ju", "jyu", "jeu", "ji", "jae", "jyae", "je", "jye", "jwa", "jwae", "joe", "jwo", "jwe", "jwi", "jui", "jja", "jjya", "jjeo", "jjyeo", "jjo", "jjyo", "jju", "jjyu", "jjeu", "jji", "jjae", "jjyae", "jje", "jjye", "jjwa", "jjwae", "jjoe", "jjwo", "jjwe", "jjwi", "jjui", "cha", "chya", "cheo", "chyeo", "cho", "chyo", "chu", "chyu", "cheu", "chi", "chae", "chyae", "che", "chye", "chwa", "chwae", "choe", "chwo", "chwe", "chwi", "chui", "ka", "kya", "keo", "kyeo", "ko", "kyo", "ku", "kyu", "keu", "ki", "kae", "kyae", "ke", "kye", "kwa", "kwae", "koe", "kwo", "kwe", "kwi", "kui", "ta", "tya", "teo", "tyeo", "to", "tyo", "tu", "tyu", "teu", "ti", "tae", "tyae", "te", "tye", "twa", "twae", "toe", "two", "twe", "twi", "tui", "pa", "pya", "peo", "pyeo", "po", "pyo", "pu", "pyu", "peu", "pi", "pae", "pyae", "pe", "pye", "pwa", "pwae", "poe", "pwo", "pwe", "pwi", "pui", "ha", "hya", "heo", "hyeo", "ho", "hyo", "hu", "hyu", "heu", "hi", "hae", "hyae", "he", "hye", "hwa", "hwae", "hoe", "hwo", "hwe", "hwi", "hui", ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+        
+        maroon = "^m^"
+
+        hnano1 = (h_fcci)
+
+        k = open("hbmp.txt", "a", buffering=1)
+
+        ct = datetime.datetime.now()
+
+        monitor = "hbmp-start:"
+        print(monitor, ct)
+        print(monitor, ct, file=k)
+        print()
+        print("*this saves to hbmp.txt*")
+        print()
+        print(file=k)
+
+        def generate_random_result():
+
+            ctm = datetime.datetime.now()
+
+            def generate_random_letters():
+                random1 = random.choice(string.ascii_letters)
+                random2 = random.choice(string.ascii_letters)
+                random3 = random.choice(string.ascii_letters)
+                letters = [random1, random2, random3]
+                return letters
+
+            random_letters = generate_random_letters()
+
+            sitch  = (round(random.random()*9999,4))
+
+            hcci = random.sample(hnano1, random.randint(1,10))
+
+            result_text = "".join(hcci)
+
+            print(maroon, random_letters, sitch, result_text, ctm)
+            print(maroon, random_letters, sitch, result_text, ctm, file=k)
+
+            speak(result_text)
+
+            print()
+            print(file=k)
+            
+        def main_loop():
+            while True:
+                time.sleep(random.randint(0,6))
+                integer = (round(random.random()*18))
+                if integer > 10:
+                    if random.choice([True, False]):
+                        generate_random_result()
+
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
+    def xhbmp():
+
+        time.sleep(.3)
+
+        print()
+        print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Korean'")
+        print()
+        print("Ctrl+C To Stop")
+        print()
+        print("'FNTCCI (H)'")
+        print()
+
+        time.sleep(.3)
+
+        h_fcci2 = ["ga", "gya", "geo", "gyeo", "go", "gyo", "gu", "gyu", "geu", "gi", "gae", "gyae", "ge", "gye", "gwa", "gwae", "goe", "gwo", "gwe", "gwi", "gui", "kka", "kkya", "kkeo", "kkyeo", "kko", "kkyo", "kku", "kkyu", "kkeu", "kki", "kkae", "kkyae", "kke", "kkye", "kkwa", "kkwae", "kkoe", "kkwo", "kkwe", "kkwi", "kkui", "na", "nya", "neo", "nyeo", "no", "nyo", "nu", "nyu", "neu", "ni", "nae", "nyae", "ne", "nye", "nwa", "nwae", "noe", "nwo", "nwe", "nwi", "nui", "da", "dya", "deo", "dyeo", "do", "dyo", "du", "dyu", "deu", "di", "dae", "dyae", "de", "dye", "dwa", "dwae", "doe", "dwo", "dwe", "dwi", "dui", "tta", "ttya", "tteo", "ttyeo", "tto", "ttyo", "ttu", "ttyu", "tteu", "tti", "ttae", "ttyae", "tte", "ttye", "ttwa", "ttwae", "ttoe", "ttwo", "ttwe", "ttwi", "ttui", "ra", "rya", "reo", "ryeo", "ro", "ryo", "ru", "ryu", "reu", "ri", "rae", "ryae", "re", "rye", "rwa", "rwae", "roe", "rwo", "rwe", "rwi", "rui", "ma", "mya", "meo", "myeo", "mo", "myo", "mu", "myu", "meu", "mi", "mae", "myae", "me", "mye", "mwa", "mwae", "moe", "mwo", "mwe", "mwi", "mui", "ba", "bya", "beo", "byeo", "bo", "byo", "bu", "byu", "beu", "bi", "bae", "byae", "be", "bye", "bwa", "bwae", "boe", "bwo", "bwe", "bwi", "bui", "ppa", "ppya", "ppeo", "ppyeo", "ppo", "ppyo", "ppu", "ppyu", "ppeu", "ppi", "ppae", "ppyae", "ppe", "ppye", "ppwa", "ppwae", "ppoe", "ppwo", "ppwe", "ppwi", "ppui", "sa", "sya", "seo", "syeo", "so", "syo", "su", "syu", "seu", "si", "sae", "syae", "se", "sye", "swa", "swae", "soe", "swo", "swe", "swi", "sui", "ssa", "ssya", "sseo", "ssyeo", "sso", "ssyo", "ssu", "ssyu", "sseu", "ssi", "ssae", "ssyae", "sse", "ssye", "sswa", "sswae", "ssoe", "sswo", "sswe", "sswi", "ssui", "a", "ya", "eo", "yeo", "o", "yo", "u", "yu", "eu", "i", "ae", "yae", "e", "ye", "wa", "wae", "oe", "wo", "we", "wi", "ui", "ja", "jya", "jeo", "jyeo", "jo", "jyo", "ju", "jyu", "jeu", "ji", "jae", "jyae", "je", "jye", "jwa", "jwae", "joe", "jwo", "jwe", "jwi", "jui", "jja", "jjya", "jjeo", "jjyeo", "jjo", "jjyo", "jju", "jjyu", "jjeu", "jji", "jjae", "jjyae", "jje", "jjye", "jjwa", "jjwae", "jjoe", "jjwo", "jjwe", "jjwi", "jjui", "cha", "chya", "cheo", "chyeo", "cho", "chyo", "chu", "chyu", "cheu", "chi", "chae", "chyae", "che", "chye", "chwa", "chwae", "choe", "chwo", "chwe", "chwi", "chui", "ka", "kya", "keo", "kyeo", "ko", "kyo", "ku", "kyu", "keu", "ki", "kae", "kyae", "ke", "kye", "kwa", "kwae", "koe", "kwo", "kwe", "kwi", "kui", "ta", "tya", "teo", "tyeo", "to", "tyo", "tu", "tyu", "teu", "ti", "tae", "tyae", "te", "tye", "twa", "twae", "toe", "two", "twe", "twi", "tui", "pa", "pya", "peo", "pyeo", "po", "pyo", "pu", "pyu", "peu", "pi", "pae", "pyae", "pe", "pye", "pwa", "pwae", "poe", "pwo", "pwe", "pwi", "pui", "ha", "hya", "heo", "hyeo", "ho", "hyo", "hu", "hyu", "heu", "hi", "hae", "hyae", "he", "hye", "hwa", "hwae", "hoe", "hwo", "hwe", "hwi", "hui", ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+
+        maroon = "^m^"
+
+        hnano2 = (h_fcci2)
+
+        ct = datetime.datetime.now()
+
+        monitor = "xhbmp-start:"
+        print(monitor, ct)
+        print()
+
+        def generate_random_result():
+
+            ctm = datetime.datetime.now()
+
+            def generate_random_letters():
+                random1 = random.choice(string.ascii_letters)
+                random2 = random.choice(string.ascii_letters)
+                random3 = random.choice(string.ascii_letters)
+                letters = [random1, random2, random3]
+                return letters
+
+            random_letters = generate_random_letters()
+
+            sitch  = (round(random.random()*9999,4))
+
+            hcci2 = random.sample(hnano2, random.randint(1,10))
+
+            result_text = "".join(hcci2)
+
+            print(maroon, random_letters, sitch, result_text, ctm)
+
+            speak(result_text)
+
+            print()
+            
+        def main_loop():
+            while True:
+                time.sleep(random.randint(0,6))
+                integer = (round(random.random()*18))
+                if integer > 10:
+                    if random.choice([True, False]):
+                        generate_random_result()
+
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
+    def jbmp():
+
+        time.sleep(.3)
+
+        print()
+        print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Japanese'")
+        print()
+        print("Ctrl+C To Stop")
+        print()
+        print("'FNTCCI (J)'")
+        print()
+
+        time.sleep(.3)
+
+        j_fcci = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "kya", "kyu", "kyo", "ga", "gi", "gu", "ge", "go", "gya", "gyu", "gyo", "sa", "shi", "su", "se", "so", "sha", "shu", "sho", "za", "ji", "zu", "ze", "zo", "ja", "ju", "jo", "ta", "chi", "tsu", "te", "to", "cha", "chu", "cho", "da", "de", "do", "na", "ni", "nu", "ne", "no", "nya", "nyu", "nyo", "ha", "hi", "fu", "he", "ho", "hya", "hyu", "hyo", "ba", "bi", "bu", "be", "bo", "bya", "byu", "byo", "pa", "pi", "pu", "pe", "po", "pya", "pyu", "pyo", "ma", "mi", "mu", "me", "mo", "mya", "myu", "myo", "ya", "yu", "yo", "ra", "ri", "ru", "re", "ro", "rya", "ryu", "ryo", "wa", "wo", "n", ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+        
+        maroon = "^m^"
+
+        jnano = (j_fcci)
+
+        e = open("jbmp.txt", "a", buffering=1)
+
+        ct = datetime.datetime.now()
+
+        monitor = "jbmp-start:"
+        print(monitor, ct)
+        print(monitor, ct, file=e)
+        print()
+        print("*this saves to jbmp.txt*")
+        print()
+        print(file=e)
+
+        def generate_random_result():
+
+            ctm = datetime.datetime.now()
+
+            def generate_random_letters():
+                random1 = random.choice(string.ascii_letters)
+                random2 = random.choice(string.ascii_letters)
+                random3 = random.choice(string.ascii_letters)
+                letters = [random1, random2, random3]
+                return letters
+
+            random_letters = generate_random_letters()
+
+            sitch  = (round(random.random()*9999,4))
+
+            jcci = random.sample(jnano, random.randint(1,10))
+
+            result_text = "".join(jcci)
+
+            print(maroon, random_letters, sitch, result_text, ctm)
+            print(maroon, random_letters, sitch, result_text, ctm, file=e)
+
+            speak(result_text)
+
+            print()
+            print(file=e)
+            
+        def main_loop():
+            while True:
+                time.sleep(random.randint(0,6))
+                integer = (round(random.random()*18))
+                if integer > 10:
+                    if random.choice([True, False]):
+                        generate_random_result()
+
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
+    def xjbmp():
+
+        time.sleep(.3)
+
+        print()
+        print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Japanese'")
+        print()
+        print("Ctrl+C To Stop")
+        print()
+        print("'FNTCCI (J)'")
+        print()
+
+        time.sleep(.3)
+
+        jfcci2 = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "kya", "kyu", "kyo", "ga", "gi", "gu", "ge", "go", "gya", "gyu", "gyo", "sa", "shi", "su", "se", "so", "sha", "shu", "sho", "za", "ji", "zu", "ze", "zo", "ja", "ju", "jo", "ta", "chi", "tsu", "te", "to", "cha", "chu", "cho", "da", "de", "do", "na", "ni", "nu", "ne", "no", "nya", "nyu", "nyo", "ha", "hi", "fu", "he", "ho", "hya", "hyu", "hyo", "ba", "bi", "bu", "be", "bo", "bya", "byu", "byo", "pa", "pi", "pu", "pe", "po", "pya", "pyu", "pyo", "ma", "mi", "mu", "me", "mo", "mya", "myu", "myo", "ya", "yu", "yo", "ra", "ri", "ru", "re", "ro", "rya", "ryu", "ryo", "wa", "wo", "n", ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+
+        maroon = "^m^"
+
+        jnano2 = (jfcci2)
+
+        ct = datetime.datetime.now()
+
+        monitor = "xjbmp-start:"
+        print(monitor, ct)
+        print()
+
+        def generate_random_result():
+
+            ctm = datetime.datetime.now()
+
+            def generate_random_letters():
+                random1 = random.choice(string.ascii_letters)
+                random2 = random.choice(string.ascii_letters)
+                random3 = random.choice(string.ascii_letters)
+                letters = [random1, random2, random3]
+                return letters
+
+            random_letters = generate_random_letters()
+
+            sitch  = (round(random.random()*9999,4))
+
+            jcci2 = random.sample(jnano2, random.randint(1,10))
+
+            result_text = "".join(jcci2)
+
+            print(maroon, random_letters, sitch, result_text, ctm)
+
+            speak(result_text)
+
+            print()
+            
+        def main_loop():
+            while True:
+                time.sleep(random.randint(0,6))
+                integer = (round(random.random()*18))
+                if integer > 10:
+                    if random.choice([True, False]):
+                        generate_random_result()
+
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
     def choice():
         choice = ''
         while choice !='pray' and choice !='slot' and choice !='search for items' and choice !='surf' and choice !='sleep' and choice !='eat' and choice !='meditate' and choice !='find coins' and choice !='draw card' and choice !='fly' and choice !='drink coffee' and choice !='drink tea' and choice !='surf' and choice !='dhammapada' and choice !='skate' and choice !='art' and choice !='give alms' and choice !='radio' and choice !='hack' and choice !='message' and choice !='brawl' and choice !='souls'and choice !='hipster tarot' and choice !='mp3' and choice !='spar' and choice !='train' and choice !='rest' and choice !='psalms' and choice !='haiku' and choice !='muslim prayer' and choice !='karate' and choice !='koans' and choice !='equips' and choice !='rpg' and choice !='archery' and choice !='color key' and choice !='doodling' and choice !='BUMP' and choice !='MA' and choice !='Magic' and choice !='commands' and choice !='ascii' and choice !='zen melody' and choice !='monopoly' and choice !='light incense' and choice  !='stats' and choice !='prayer' and choice !='progress' and choice !='collections' and choice !='football' and choice !='c' and choice !='map' and choice !='search' and choice !='print time' and choice !='entry' and choice !='posting' and choice !='koran' and choice !='heBrews' and choice !='Medicals' and choice !='M' and choice !='Clearance' and choice !='MiCasa' and choice !='stuff' and choice !='worship' and choice !='Earth Science' and choice !='SCI' and choice !='value' and choice !='psychology' and choice !='psyc' and choice !='Patient Simu' and choice !='biology' and choice !='B' and choice !='legal terms' and choice !='Law' and choice !='the heart sutra' and choice !='License' and choice !='police' and choice !='prad' and choice !='climb' and choice !='chemistry' and choice !='ch' and choice !='weapon start' and choice !='wstart' and choice !='teletubby' and choice !='note' and choice !='save' and choice !='journal' and choice !='version' and choice !='ai' and choice !='auto-mat' and choice !='AAM' and choice !='ID' and choice !='IDC' and choice !='echo' and choice !='monitor-start' and choice !='mstart' and choice !='change username' and choice !='username' and choice !='user' and choice !='fuzz' and choice !='message-scan' and choice !='scan' and choice !='monitor-search' and choice !='msearch' and choice !='tag' and choice !='atag' and choice !='a-tag' and choice !='acad-monitor' and choice !='astart' and choice !='acad-search' and choice !='asearch' and choice !='oscillator' and choice !='oscillate' and choice !='oscill' and choice !='amror' and choice !='game' and choice !='amsearch' and choice !='amror-search' and choice !='amror search' and choice !='profile' and choice !='Profile' and choice !='herbs' and choice !='herbals' and choice !='degree' and choice !='degrees' and choice !='major' and choice !='majors' and choice !='MedProc AI' and choice !='MAI' and choice !='frames' and choice !='fsearch' and choice !='ascsearch' and choice !='alerts' and choice !='Alerts' and choice !='burner-start' and choice !='burner start' and choice !='burner' and choice !='burn' and choice !='MAIc' and choice !='MPC' and choice !='mpc' and choice !='GES' and choice !='call' and choice !='time-monitor':
@@ -5643,6 +6066,24 @@ def main():
             if choice == "type-text" or choice == "type text" or choice == "typetext":
                 text()
 
+            if choice == "cbmp":
+                cbmp()
+
+            if choice == "xcbmp":
+                xcbmp()
+
+            if choice == "hbmp":
+                hbmp()
+
+            if choice == "xhbmp":
+                xhbmp()
+
+            if choice == "jbmp":
+                jbmp()
+
+            if choice == "xjbmp":
+                xjbmp()
+
     chooseAgain = "yes"
     while chooseAgain:
         choice()
@@ -5658,6 +6099,9 @@ def main():
     t.close()
     p.close()
     j.close()
+    q.close()
+    k.close()
+    e.close()
 
 if __name__ == "__main__":
     main()
