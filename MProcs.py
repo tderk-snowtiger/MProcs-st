@@ -32,7 +32,7 @@ def main():
     print()
     print(file=z)
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.12.6.2.0 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.12.8.4.4 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -218,7 +218,7 @@ def main():
         print()
         print(" version | [blank input] for nano | profile | note / journal / save | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | search")
         print()
-        print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: cbmp, xcbmp, hbmp, xhbmp, jbmp, xjbmp")
+        print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: cbmp, xcbmp, hbmp, xhbmp, jbmp, xjbmp, fbmp, xfbmp")
         print()
         print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
         print()
@@ -5654,6 +5654,142 @@ def main():
         except KeyboardInterrupt:
             print("\nStopped by user.")
 
+    def fbmp():
+
+        time.sleep(.3)
+
+        print()
+        print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Filipino/Tagalog'")
+        print()
+        print("Ctrl+C To Stop")
+        print()
+        print("'FNTCCI (F/T)'")
+        print()
+
+        time.sleep(.3)
+
+        t_fcci = ["a", "e", "i", "o", "u", "ba", "be", "bi", "bo", "bu", "ka", "ke", "ki", "ko", "ku", "da", "de", "di", "do", "du", "ga", "ge", "gi", "go", "gu", "ha", "he", "hi", "ho", "hu", "la", "le", "li", "lo", "lu", "ma", "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu", "nga", "nge", "ngi", "ngo", "ngu", "pa", "pe", "pi", "po", "pu", "ra", "re", "ri", "ro", "ru", "sa", "se", "si", "so", "su", "ta", "te", "ti", "to", "tu", "wa", "we", "wi", "wo", "wu", "ya", "ye", "yi", "yo", "yu", ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+        
+        maroon = "^m^"
+
+        fnano = (t_fcci)
+
+        u = open("fbmp.txt", "a", buffering=1)
+
+        ct = datetime.datetime.now()
+
+        monitor = "fbmp-start:"
+        print(monitor, ct)
+        print(monitor, ct, file=u)
+        print()
+        print("*this saves to fbmp.txt*")
+        print()
+        print(file=u)
+
+        def generate_random_result():
+
+            ctm = datetime.datetime.now()
+
+            def generate_random_letters():
+                random1 = random.choice(string.ascii_letters)
+                random2 = random.choice(string.ascii_letters)
+                random3 = random.choice(string.ascii_letters)
+                letters = [random1, random2, random3]
+                return letters
+
+            random_letters = generate_random_letters()
+
+            sitch  = (round(random.random()*9999,4))
+
+            tcci = random.sample(fnano, random.randint(1,10))
+
+            result_text = "".join(tcci)
+
+            print(maroon, random_letters, sitch, result_text, ctm)
+            print(maroon, random_letters, sitch, result_text, ctm, file=u)
+
+            speak(result_text)
+
+            print()
+            print(file=u)
+            
+        def main_loop():
+            while True:
+                time.sleep(random.randint(0,6))
+                integer = (round(random.random()*18))
+                if integer > 10:
+                    if random.choice([True, False]):
+                        generate_random_result()
+
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
+    def xfbmp():
+
+        time.sleep(.3)
+
+        print()
+        print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Filipino/Tagalog'")
+        print()
+        print("Ctrl+C To Stop")
+        print()
+        print("'FNTCCI (F/T)'")
+        print()
+
+        time.sleep(.3)
+
+        t_fcci2 = ["a", "e", "i", "o", "u", "ba", "be", "bi", "bo", "bu", "ka", "ke", "ki", "ko", "ku", "da", "de", "di", "do", "du", "ga", "ge", "gi", "go", "gu", "ha", "he", "hi", "ho", "hu", "la", "le", "li", "lo", "lu", "ma", "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu", "nga", "nge", "ngi", "ngo", "ngu", "pa", "pe", "pi", "po", "pu", "ra", "re", "ri", "ro", "ru", "sa", "se", "si", "so", "su", "ta", "te", "ti", "to", "tu", "wa", "we", "wi", "wo", "wu", "ya", "ye", "yi", "yo", "yu", ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+
+        maroon = "^m^"
+
+        fnano2 = (t_fcci2)
+
+        ct = datetime.datetime.now()
+
+        monitor = "xfbmp-start:"
+        print(monitor, ct)
+        print()
+
+        def generate_random_result():
+
+            ctm = datetime.datetime.now()
+
+            def generate_random_letters():
+                random1 = random.choice(string.ascii_letters)
+                random2 = random.choice(string.ascii_letters)
+                random3 = random.choice(string.ascii_letters)
+                letters = [random1, random2, random3]
+                return letters
+
+            random_letters = generate_random_letters()
+
+            sitch  = (round(random.random()*9999,4))
+
+            tcci2 = random.sample(fnano2, random.randint(1,10))
+
+            result_text = "".join(tcci2)
+
+            print(maroon, random_letters, sitch, result_text, ctm)
+
+            speak(result_text)
+
+            print()
+            
+        def main_loop():
+            while True:
+                time.sleep(random.randint(0,6))
+                integer = (round(random.random()*18))
+                if integer > 10:
+                    if random.choice([True, False]):
+                        generate_random_result()
+
+        try:
+            main_loop()
+        except KeyboardInterrupt:
+            print("\nStopped by user.")
+
     def choice():
         choice = ''
         while choice !='pray' and choice !='slot' and choice !='search for items' and choice !='surf' and choice !='sleep' and choice !='eat' and choice !='meditate' and choice !='find coins' and choice !='draw card' and choice !='fly' and choice !='drink coffee' and choice !='drink tea' and choice !='surf' and choice !='dhammapada' and choice !='skate' and choice !='art' and choice !='give alms' and choice !='radio' and choice !='hack' and choice !='message' and choice !='brawl' and choice !='souls'and choice !='hipster tarot' and choice !='mp3' and choice !='spar' and choice !='train' and choice !='rest' and choice !='psalms' and choice !='haiku' and choice !='muslim prayer' and choice !='karate' and choice !='koans' and choice !='equips' and choice !='rpg' and choice !='archery' and choice !='color key' and choice !='doodling' and choice !='BUMP' and choice !='MA' and choice !='Magic' and choice !='commands' and choice !='ascii' and choice !='zen melody' and choice !='monopoly' and choice !='light incense' and choice  !='stats' and choice !='prayer' and choice !='progress' and choice !='collections' and choice !='football' and choice !='c' and choice !='map' and choice !='search' and choice !='print time' and choice !='entry' and choice !='posting' and choice !='koran' and choice !='heBrews' and choice !='Medicals' and choice !='M' and choice !='Clearance' and choice !='MiCasa' and choice !='stuff' and choice !='worship' and choice !='Earth Science' and choice !='SCI' and choice !='value' and choice !='psychology' and choice !='psyc' and choice !='Patient Simu' and choice !='biology' and choice !='B' and choice !='legal terms' and choice !='Law' and choice !='the heart sutra' and choice !='License' and choice !='police' and choice !='prad' and choice !='climb' and choice !='chemistry' and choice !='ch' and choice !='weapon start' and choice !='wstart' and choice !='teletubby' and choice !='note' and choice !='save' and choice !='journal' and choice !='version' and choice !='ai' and choice !='auto-mat' and choice !='AAM' and choice !='ID' and choice !='IDC' and choice !='echo' and choice !='monitor-start' and choice !='mstart' and choice !='change username' and choice !='username' and choice !='user' and choice !='fuzz' and choice !='message-scan' and choice !='scan' and choice !='monitor-search' and choice !='msearch' and choice !='tag' and choice !='atag' and choice !='a-tag' and choice !='acad-monitor' and choice !='astart' and choice !='acad-search' and choice !='asearch' and choice !='oscillator' and choice !='oscillate' and choice !='oscill' and choice !='amror' and choice !='game' and choice !='amsearch' and choice !='amror-search' and choice !='amror search' and choice !='profile' and choice !='Profile' and choice !='herbs' and choice !='herbals' and choice !='degree' and choice !='degrees' and choice !='major' and choice !='majors' and choice !='MedProc AI' and choice !='MAI' and choice !='frames' and choice !='fsearch' and choice !='ascsearch' and choice !='alerts' and choice !='Alerts' and choice !='burner-start' and choice !='burner start' and choice !='burner' and choice !='burn' and choice !='MAIc' and choice !='MPC' and choice !='mpc' and choice !='GES' and choice !='call' and choice !='time-monitor':
@@ -6084,6 +6220,12 @@ def main():
             if choice == "xjbmp":
                 xjbmp()
 
+            if choice == "fbmp":
+                fbmp()
+
+            if choice == "xfbmp":
+                xfbmp()
+
     chooseAgain = "yes"
     while chooseAgain:
         choice()
@@ -6102,6 +6244,7 @@ def main():
     q.close()
     k.close()
     e.close()
+    u.close()
 
 if __name__ == "__main__":
     main()
