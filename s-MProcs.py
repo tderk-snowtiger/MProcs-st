@@ -851,7 +851,6 @@ def main():
             time.sleep(8)
             print()
             print("Glorious is my Lord the most high, Glorious is my Lord the most high, Glorious is my Lord the most high")
-            print("Glorious is my Lord the most high, Glorious is my Lord the most high, Glorious is my Lord the most high", file=z)
             speech("Glorious is my Lord the most high, Glorious is my Lord the most high, Glorious is my Lord the most high")
             time.sleep(5)
             print()
@@ -2778,7 +2777,6 @@ def main():
                             hashh = random.sample(hashes, random.randint(1,1))
                             print(usr, hashh)
                             print()
-                            print(file=z)
                             time.sleep(.5)
 
             if True:
@@ -2793,7 +2791,6 @@ def main():
                             hashh = random.sample(hashes, random.randint(1,1))
                             print(usr, hashh)
                             print()
-                            print(file=z)
                             time.sleep(.5)
 
             if True:
@@ -2808,7 +2805,6 @@ def main():
                             hashh = random.sample(hashes, random.randint(1,1))
                             print(usr, hashh)
                             print()
-                            print(file=z)
                             time.sleep(.5)
 
             if True:
@@ -2823,7 +2819,6 @@ def main():
                             hashh = random.sample(hashes, random.randint(1,1))
                             print(usr, hashh)
                             print()
-                            print(file=z)
                             time.sleep(.5)
 
             if True:
@@ -3369,7 +3364,6 @@ def main():
                             hashh = random.sample(hashes, random.randint(1,1))
                             print(usr, hashh)
                             print()
-                            print(file=z)
                             time.sleep(.5)
 
             if True:
