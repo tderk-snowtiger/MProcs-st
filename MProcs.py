@@ -32,7 +32,7 @@ def main():
     print()
     print(file=z)
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-5.14.8.4.2 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.0.1.0.1 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -220,7 +220,7 @@ def main():
         print()
         print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: cbmp, xcbmp, hbmp, xhbmp, jbmp, xjbmp, fbmp, xfbmp")
         print()
-        print(" | zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
+        print(" | threads, zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
         print()
         print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}, monitor-search [msearch], acad-search [asearch]")
 
@@ -467,6 +467,84 @@ def main():
         ech = "echo:"
         print(ech, usr, echo, ct)
         print(ech, usr, echo, ct, file=z)
+
+    def worker_thread(thread_id, delay, stop_event):
+
+        def generate_random_letters():
+            random1 = random.choice(string.ascii_letters)
+            random2 = random.choice(string.ascii_letters)
+            random3 = random.choice(string.ascii_letters)
+            letters = [random1, random2, random3]
+            random.shuffle(letters)
+            return letters
+
+        try:
+            while not stop_event.is_set():
+                title = f"Thread-{thread_id}"
+                nano = diction
+                acad = acadlist                 
+                random_letters = generate_random_letters()
+                sitch  = (round(random.random() * 9999, 4))
+                
+                sample_size_nano = random.randint(1, min(7, len(nano)))
+                sample_size_acad = random.randint(1, min(7, len(acad)))
+
+                kchat = random.sample(nano, sample_size_nano)
+                kchat2 = random.sample(acad, sample_size_acad)
+            
+                ctm = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
+                print(f"{maroon} {title} {random_letters} {sitch:.4f} {kchat} {kchat2} {ctm}")
+                print()
+                stop_event.wait(delay)
+
+        except Exception as e:
+            print(f"Thread {thread_id} error: {e}")
+        finally:
+            print(f"\nThread {thread_id} finished")
+
+    def activate_threads(stop_event):
+        while True:
+            try:
+                num_threads = int(input("Number of threads: "))
+                if num_threads <= 0:
+                    print("Enter a positive integer")
+                    continue
+                break
+            except ValueError:
+                print("Invalid input")
+
+        while True:
+            try:
+                delay_seconds = float(input("Time buffer: "))
+                if delay_seconds <= 0:
+                    print("Enter a positive value")
+                    continue
+                break
+            except ValueError:
+                print("Invalid input")
+
+        print("\nStarting threads...")
+        print()
+        
+        threads = []
+        
+        for i in range(1, num_threads + 1):
+            t = threading.Thread(target=worker_thread, args=(i, delay_seconds, stop_event), daemon=True)
+            threads.append(t)
+            t.start()
+            print(f"Started Thread {i}")
+
+        print("\nThreads started: Ctrl+C to stop\n")
+        
+        try:
+            while True:
+                time.sleep(1) 
+        except KeyboardInterrupt:
+            print("\nStopping...")
+            stop_event.set()
+            for t in threads:
+                if t.is_alive():
+                    t.join(timeout=1) 
 
     def pray():
         ct = datetime.datetime.now()
@@ -6366,6 +6444,20 @@ def main():
 
             if choice == "type-text" or choice == "type text" or choice == "typetext":
                 text()
+
+            if choice == "threads" or choice == "Threads":
+                while True:
+
+                        thread_stop_event = threading.Event()
+
+                        try:
+                            activate_threads(thread_stop_event) 
+
+                        except Exception as e:
+                            print(f"An unhandled error occurred: {e}")
+                            thread_stop_event.set()
+
+                        main()
 
             if choice == "cbmp":
                 cbmp()
