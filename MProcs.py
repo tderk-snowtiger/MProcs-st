@@ -33,7 +33,7 @@ def main():
     print(file=z)
 
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.2.0.1.1 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.2.5.5.2 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -223,7 +223,7 @@ def main():
             print()
             print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: cbmp, xcbmp, hbmp, xhbmp, jbmp, xjbmp, fbmp, xfbmp")
             print()
-            print(" | threads, zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, map, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
+            print(" | map, threads, zuz [pp], call, message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
             print()
             print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}, monitor-search [msearch], acad-search [asearch]")
 
@@ -2583,16 +2583,22 @@ def main():
             print(usr, footballs, fball, ct, file=z)
 
         def mapp():
+            dd = list(diction)
+            while True:
+                try:
+                    number = int(input("Indicate number of (map) results: "))
+                except ValueError:
+                    print("Invalid value")
+                else:
+                    break
+            number
+            time.sleep(0)
             print()
-            print(file=z)
-            time.sleep(1.1)
-            dd = (diction)
-            nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
-            mape = random.sample(nano, 100)
+            mapped = random.sample(dd, number)
             ct = datetime.datetime.now()
-            mapd = "map: "
-            print(mapd, mape, ct)
-            print(usr, mapd, mape, ct, file=z)
+            mapd = "map:"
+            print(mapd, mapped, ct)
+            print(usr, mapd, mapped, ct, file=z)
 
         def auto_mat():
             while True:
