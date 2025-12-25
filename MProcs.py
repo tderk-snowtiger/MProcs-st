@@ -33,7 +33,7 @@ def main():
     print(file=z)
 
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.3.1.0.1 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.3.1.0.2 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -2766,6 +2766,8 @@ def main():
                     random3 = random.choice(string.ascii_letters)
                     letters = [random1, random2, random3]
                     return letters
+                speak("alert!")
+                time.sleep(2.9)
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
                 kchat = random.sample(nano, random.randint(1,7))
@@ -2821,7 +2823,8 @@ def main():
                     random3 = random.choice(string.ascii_letters)
                     letters = [random1, random2, random3]
                     return letters
-                time.sleep(buffer)
+                speak("alert!")
+                time.sleep(1.6)
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
                 kchat = random.sample(nano, random.randint(1,7))
@@ -2832,6 +2835,7 @@ def main():
                 speak(result_text)
                 print()
                 print(file=c)
+                time.sleep(buffer)
             
             def main_loop():
                 while True:
