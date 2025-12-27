@@ -25,11 +25,11 @@ def main():
     medicci = f"{RED}{maroon}{RESET}"
     dollar = "$"
     sign = f"{PURPLE}{dollar}{RESET}"
-    set_usr(medicci + "" + " " + "" + "[" + "" + user + "" + "]" + "" + " " + "" + sign + "" + " ")
+    set_usr(medicci + "" + " " + "" + "(" + "" + " " + "" + "" + user + "" + "" + " " + "" + ")" + "" + " " + "" + sign + "" + " ")
     print()
 
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.3.1.0.2-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.3.5.5.2-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -210,7 +210,7 @@ def main():
             print()
             print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: xcbmp, xhbmp, xjbmp, xfbmp")
             print()
-            print(" | map, threads, zuz [pp], call, time-call [TC], message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]")
+            print(" | speak [spk], map, threads, zuz [pp], call, time-call [TC], message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]")
             print()
             print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}")
 
@@ -306,7 +306,7 @@ def main():
             medicci = f"{RED}{maroon}{RESET}"
             dollar = "$"
             sign = f"{BLUE}{dollar}{RESET}"
-            set_usr(medicci + "" + " " + "" + "[" + "" + user + "" + "]" + "" + " " + "" + sign + "" + " ")
+            set_usr(medicci + "" + " " + "" + "(" + "" + " " + "" + "" + user + "" + "" + " " + "" + ")" + "" + " " + "" + sign + "" + " ")
             ct = datetime.datetime.now()
 
         def search():
@@ -2304,6 +2304,12 @@ def main():
             except KeyboardInterrupt:
                 print("\nStopped by user.")
 
+        def spheak():
+            sph = input("speak: ")
+            print()
+            print(sph)
+            speak(sph)
+
         def monitor_start():
             maroon = "^m^"
             nano = (diction)
@@ -2473,10 +2479,10 @@ def main():
                 sitch  = (round(random.random()*9999,4))
                 kchat = random.sample(nano, random.randint(1,7))
                 kchat2 = random.sample(acad, random.randint(1,7))
-                print(maroon, random_letters, sitch, kchat, kchat2, ctm)
-                print("_______________________________________")
                 random_result = [random.choice(nano)]
                 result_text = ", ".join(random_result)
+                print(maroon, random_letters, sitch, kchat, kchat2, result_text, ctm)
+                print("_______________________________________")
                 speak(result_text)
                 print()
 
@@ -4783,6 +4789,9 @@ def main():
                                 thread_stop_event.set()
 
                             mp()
+
+                if choice == "speak" or choice == "spk":
+                    spheak()
 
                 if choice == "xcbmp":
                     xcbmp()
