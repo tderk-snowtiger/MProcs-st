@@ -29,7 +29,7 @@ def main():
     print()
 
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.3.8.8.8-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-7.0.0.0.1-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -42,33 +42,11 @@ def main():
 
     version()
 
-    def alerts():
-        def generate_random_letters():
-            random1 = random.choice(string.ascii_letters)
-            random2 = random.choice(string.ascii_letters)
-            random3 = random.choice(string.ascii_letters)
-            random4 = random.choice(string.ascii_letters)
-            random5 = random.choice(string.ascii_letters)
-            letters = [random1, random2, random3, random4, random5]
-            random.shuffle(letters)
-            return letters
-        random_letters = generate_random_letters()
-        value = (round(random.random()*9999999999,10))
-        ct = datetime.datetime.now()
-        alerts = "Alerts:"
-        print(alerts, value, random_letters, ct)
-    alerts()
-    time.sleep(0)
-    print()
-    print("(Ctrl+C to stop a process)")
-    print()
-    print()
-    print ("type 'commands'")
+    katakana = ["ア", "イ", "ウ", "エ", "オ", "カ", "キ", "ク", "ケ", "コ", "サ", "シ", "ス", "セ", "ソ", "タ", "チ", "ツ", "テ", "ト", "ナ", "ニ", "ヌ", "ネ", "ノ", "ハ", "ヒ", "フ", "ヘ", "ホ", "マ", "ミ", "ム", "メ", "モ", "ヤ", "ユ", "ヨ", "ラ", "リ", "ル", "レ", "ロ", "ワ", "ヲ", "ン", "ガ", "ギ", "グ", "ゲ", "ゴ", "ザ", "ジ", "ズ", "ゼ", "ゾ", "ダ", "ヂ", "ヅ", "デ", "ド", "バ", "ビ", "ブ", "ベ", "ボ", "パ", "ピ", "プ", "ペ", "ポ", "キャ", "キュ", "キョ", "シャ", "シュ", "ショ", "チャ", "チュ", "チョ", "ニャ", "ニュ", "ニョ", "ヒャ", "ヒュ", "ヒョ", "ミャ", "ミュ", "ミョ", "リャ", "リュ", "リョ", "ギャ", "ギュ", "ギョ", "ジャ", "ジュ", "ジョ", "ビャ", "ビュ", "ビョ", "ピャ", "ピュ", "ピョ"]
 
-    def mp():
-        print()
+    jamo = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ", "ㄲ", "ㄸ", "ㅃ", "ㅆ", "ㅉ", "ㅏ", "ㅑ", "ㅓ", "ㅕ", "ㅗ", "ㅛ", "ㅜ", "ㅠ", "ㅡ", "ㅣ", "ㅐ", "ㅒ", "ㅔ", "ㅖ", "ㅘ", "ㅙ", "ㅚ", "ㅝ", "ㅞ", "ㅟ", "ㅢ"]
 
-        chi_chars = ["的", "一", "是", "在", "了", "有", "和", "人", "这", "中",
+    chi_chars = ["的", "一", "是", "在", "了", "有", "和", "人", "这", "中",
           "大", "为", "个", "上", "们", "来", "到", "国", "与", "地",
           "要", "就", "子", "说", "能", "对", "可", "也", "你", "之",
           "会", "家", "出", "将", "多", "然", "于", "从", "以", "都",
@@ -586,6 +564,38 @@ def main():
           "金", "融", "创", "新", "金", "融", "科", "技", "数", "字",
           "货", "币", "区"]
 
+    def alerts():
+        kk = (katakana)
+        j = (jamo)
+        cc = (chi_chars)
+        def generate_random_letters():
+            random1 = random.choice(string.ascii_letters)
+            random2 = random.choice(string.ascii_letters)
+            random3 = random.choice(string.ascii_letters)
+            random4 = random.choice(string.ascii_letters)
+            random5 = random.choice(string.ascii_letters)
+            letters = [random1, random2, random3, random4, random5]
+            random.shuffle(letters)
+            return letters
+        random_letters = generate_random_letters()
+        kkchar = random.sample(kk, random.randint(1,7))
+        hchar = random.sample(j, random.randint(1,7))
+        cchat = random.sample(cc, random.randint(1,5))
+        kkchar_str = ''.join(kkchar)
+        hchar_str = ''.join(hchar)
+        value = (round(random.random()*9999999999,10))
+        ct = datetime.datetime.now()
+        alerts = "Alerts:"
+        print(alerts, value, random_letters, kkchar_str, cchat, hchar_str, ct)
+    alerts()
+    time.sleep(0)
+    print()
+    print()
+    print ("type 'commands'")
+
+    def mp():
+        print()
+
         diction = ["a", "aa", "aaa", "aaron", "ab", "abandoned", "abc", "aberdeen", "abilities", "ability", "able", "aboriginal", "abortion", "about", "above", "abraham", "abroad", "abs", "absence", "absent", "absolute", "absolutely", "absorption", "abstract", "abstracts", "abu", "abuse", "ac", "academic", "academics", "academy", "acc", "accent", "accept", "acceptable", "acceptance", "accepted", "accepting", "accepts", "access", "accessed", "accessibility", "accessible", "accessing", "accessories", "accessory", "accident", "accidents", "accommodate", "accommodation", "accommodations", "accompanied", "accompanying", "accomplish", "accomplished", "accordance", "according", "accordingly", "account", "accountability", "accounting", "accounts", "accreditation", "accredited", "accuracy", "accurate", "accurately", "accused", "acdbentity", "ace", "acer", "achieve", "achieved", "achievement", "achievements", "achieving", "acid", "acids", "acknowledge", "acknowledged", "acm", "acne", "acoustic", "acquire", "acquired", "acquisition", "acquisitions", "acre", "acres", "acrobat", "across", "acrylic", "act", "acting", "action", "actions", "activated", "activation", "active", "actively", "activists", "activities", "activity", "actor", "actors", "actress", "acts", "actual", "actually", "acute", "ad", "ada", "adam", "adams", "adaptation", "adapted", "adapter", "adapters", "adaptive", "adaptor", "add", "added", "addiction", "adding", "addition", "additional", "additionally", "additions", "address", "addressed", "addresses", "addressing", "adds", "adelaide", "adequate", "adidas", "adipex", "adjacent", "adjust", "adjustable", "adjusted", "adjustment", "adjustments", "admin", "administered", "administration", "administrative", "administrator", "administrators", "admission", "admissions", "admit", "admitted", "adobe", "adolescent", "adopt", "adopted", "adoption", "adrian", "ads", "adsl", "adult", "adults", "advance", "advanced", "advancement", "advances", "advantage", "advantages", "adventure", "adventures", "adverse", "advert", "advertise", "advertisement", "advertisements", "advertiser", "advertisers", "advertising", "advice", "advise", "advised", "advisor", "advisors", "advisory", "advocacy", "advocate", "adware", "ae", "aerial", "aerospace", "af", "affair", "affairs", "affect", "affected", "affecting", "affects", "affiliate", "affiliated", "affiliates", "affiliation", "afford", "affordable", "afghanistan", "afraid", "africa", "african", "after", "afternoon", "afterwards", "ag", "again", "against", "age", "aged", "agencies", "agency", "agenda", "agent", "agents", "ages", "aggregate", "aggressive", "aging", "ago", "agree", "agreed", "agreement", "agreements", "agrees", "agricultural", "agriculture", "ah", "ahead", "ai", "aid", "aids", "aim", "aimed", "aims", "air", "aircraft", "airfare", "airline", "airlines", "airplane", "airport", "airports", "aj", "ak", "aka", "al", "ala", "alabama", "alan", "alarm", "alaska", "albania", "albany", "albert", "alberta", "album", "albums", "albuquerque", "alcohol", "alert", "alerts", "alex", "alexander", "alexandria", "alfred", "algebra", "algeria", "algorithm", "algorithms", "ali", "alias", "alice", "alien", "align", "alignment", "alike", "alive", "all", "allah", "allan", "alleged", "allen", "allergy", "alliance", "allied", "allocated", "allocation", "allow", "allowance", "allowed", "allowing", "allows", "alloy", "almost", "alone", "along", "alot", "alpha", "alphabetical", "alpine", "already", "also", "alt", "alter", "altered", "alternate", "alternative", "alternatively", "alternatives", "although", "alto", "aluminium", "aluminum", "alumni", "always", "am", "amanda", "amateur", "amazing", "amazon", "amazoncom", "amazoncouk", "ambassador", "amber", "ambien", "ambient", "amd", "amend", "amended", "amendment", "amendments", "amenities", "america", "american", "americans", "americas", "amino", "among", "amongst", "amount", "amounts", "amp", "ampland", "amplifier", "amsterdam", "amy", "an", "ana", "anaheim", "analog", "analyses", "analysis", "analyst", "analysts", "analytical", "analyze", "analyzed", "anatomy", "anchor", "ancient", "and", "andale", "anderson", "andorra", "andrea", "andreas", "andrew", "andrews", "andy", "angel", "angela", "angeles", "angels", "anger", "angle", "angola", "angry", "animal", "animals", "animated", "animation", "anime", "ann", "anna", "anne", "annex", "annie", "anniversary", "annotated", "annotation", "announce", "announced", "announcement", "announcements", "announces", "annoying", "annual", "annually", "anonymous", "another", "answer", "answered", "answering", "answers", "ant", "antarctica", "antenna", "anthony", "anthropology", "anti", "antibodies", "antibody", "anticipated", "antigua", "antique", "antiques", "antivirus", "antonio", "anxiety", "any", "anybody", "anymore", "anyone", "anything", "anytime", "anyway", "anywhere", "aol", "ap", "apache", "apart", "apartment", "apartments", "api", "apnic", "apollo", "app", "apparatus", "apparel", "apparent", "apparently", "appeal", "appeals", "appear", "appearance", "appeared", "appearing", "appears", "appendix", "apple", "appliance", "appliances", "applicable", "applicant", "applicants", "application", "applications", "applied", "applies", "apply", "applying", "appointed", "appointment", "appointments", "appraisal", "appreciate", "appreciated", "appreciation", "approach", "approaches", "appropriate", "appropriations", "approval", "approve", "approved", "approx", "approximate", "approximately", "apps", "apr", "april", "apt", "aqua", "aquarium", "aquatic", "ar", "arab", "arabia", "arabic", "arbitrary",\
         "arbitration", "arc", "arcade", "arch", "architect", "architects", "architectural", "architecture", "archive", "archived", "archives", "arctic", "are", "area", "areas", "arena", "arg", "argentina", "argue", "argued", "argument", "arguments", "arise", "arising", "arizona", "arkansas", "arlington", "arm", "armed", "armenia", "armor", "arms", "armstrong", "army", "arnold", "around", "arrange", "arranged", "arrangement", "arrangements", "array", "arrest", "arrested", "arrival", "arrivals", "arrive", "arrived", "arrives", "arrow", "art", "arthritis", "arthur", "article", "articles", "artificial", "artist", "artistic", "artists", "arts", "artwork", "aruba", "as", "asbestos", "ascii", "ash", "ashley", "asia", "asian", "aside", "asin", "ask", "asked", "asking", "asks", "asn", "asp", "aspect", "aspects", "aspnet", "ass", "assault", "assembled", "assembly", "assess", "assessed", "assessing", "assessment", "assessments", "asset", "assets", "assign", "assigned", "assignment", "assignments", "assist", "assistance", "assistant", "assisted", "assists", "associate", "associated", "associates", "association", "associations", "assume", "assumed", "assumes", "assuming", "assumption", "assumptions", "assurance", "assure", "assured", "asthma", "astrology", "astronomy", "asus", "at", "ata", "ate", "athens", "athletes", "athletic", "athletics", "ati", "atlanta", "atlantic", "atlas", "atm", "atmosphere", "atmospheric", "atom", "atomic", "attach", "attached", "attachment", "attachments", "attack", "attacked", "attacks", "attempt", "attempted", "attempting", "attempts", "attend", "attendance", "attended", "attending", "attention", "attitude", "attitudes", "attorney", "attorneys", "attract", "attraction", "attractions", "attractive", "attribute", "attributes", "au", "auburn", "auckland", "auction", "auctions", "aud", "audi", "audience", "audio", "audit", "auditor", "aug", "august", "aurora", "aus", "austin", "australia", "australian", "austria", "authentic", "authentication", "author", "authorities", "authority", "authorization", "authorized", "authors", "auto", "automated", "automatic", "automatically", "automation", "automobile", "automobiles", "automotive", "autos", "autumn", "av", "availability", "available", "avatar", "ave", "avenue", "average", "avg", "avi", "aviation", "avoid", "avoiding", "avon", "aw", "award", "awarded", "awards", "aware", "awareness", "away", "awesome", "awful", "axis", "aye", "az", "azerbaijan", "b", "ba", "babe", "babes", "babies", "baby", "bachelor", "back", "backed", "background", "backgrounds", "backing", "backup", "bacon", "bacteria", "bacterial", "bad", "badge", "badly", "bag", "baghdad", "bags", "bahamas", "bahrain", "bailey", "baker", "baking", "balance", "balanced", "bald", "bali", "ball", "ballet", "balloon", "ballot", "balls", "baltimore", "ban", "banana", "band", "bands", "bandwidth", "bang", "bangkok", "bangladesh", "bank", "banking", "bankruptcy", "banks", "banned", "banner", "banners", "baptist", "bar", "barbados", "barbara", "barbie", "barcelona", "bare", "barely", "bargain", "bargains", "barn", "barnes", "barrel", "barrier", "barriers", "barry", "bars", "base", "baseball", "based", "baseline", "basement", "basename", "bases", "basic", "basically", "basics", "basin", "basis", "basket", "basketball", "baskets", "bass", "bat", "batch", "bath", "bathroom", "bathrooms", "baths", "batman", "batteries", "battery", "battle", "battlefield", "bay", "bb", "bbc", "bbs", "bbw", "bc", "bd", "bdsm", "be", "beach", "beaches", "beads", "beam", "bean", "beans", "bear", "bearing", "bears", "beast", "beastality", "beastiality", "beat", "beatles", "beats", "beautiful", "beautifully", "beauty", "beaver", "became", "because", "become", "becomes", "becoming", "bed", "bedding", "bedford", "bedroom", "bedrooms", "beds", "bee", "beef", "been", "beer", "before", "began", "begin", "beginner", "beginners", "beginning", "begins", "begun", "behalf", "behavior", "behavioral", "behaviour", "behind", "beijing", "being", "beings", "belarus", "belfast", "belgium", "belief", "beliefs", "believe", "believed", "believes", "belize", "belkin", "bell", "belle", "belly", "belong", "belongs", "below", "belt", "belts", "ben", "bench", "benchmark", "bend", "beneath", "beneficial", "benefit", "benefits", "benjamin", "bennett", "benz", "berkeley", "berlin", "bermuda", "bernard", "berry", "beside", "besides", "best", "bestiality", "bestsellers", "bet", "beta", "beth", "better", "betting", "betty", "between", "beverage", "beverages", "beverly", "beyond", "bg", "bhutan", "bi", "bias", "bible", "biblical", "bibliographic", "bibliography", "bicycle", "bid", "bidder", "bidding", "bids", "big", "bigger", "biggest", "bike", "bikes", "bikini", "bill", "billing", "billion", "bills", "billy", "bin", "binary", "bind", "binding", "bingo", "bio", "biodiversity", "biographies", "biography", "biol", "biological", "biology", "bios", "biotechnology", "bird", "birds", "birmingham", "birth", "birthday", "bishop", "bit", "bitch", "bite", "bits", "biz", "bizarre", "bizrate", "bk", "bl", "black", "blackberry", "blackjack", "blacks", "blade", "blades", "blah", "blair", "blake", "blame", "blank", "blanket", "blast", "bleeding", "blend", "bless", "blessed", "blind", "blink", "block",\
         "blocked", "blocking", "blocks", "blog", "blogger", "bloggers", "blogging", "blogs", "blond", "blonde", "blood", "bloody", "bloom", "bloomberg", "blue", "blues", "bluetooth", "blvd", "bm", "bmw", "bo", "board", "boards", "boat", "boating", "boats", "bob", "bobby", "boc", "bodies", "body", "bold", "bolivia", "bolt", "bomb", "bon", "bond", "bondage", "bonds", "bone", "bones", "bonus", "boob", "boobs", "book", "booking", "bookings", "bookmark", "bookmarks", "books", "bookstore", "bool", "boolean", "boom", "boost", "boot", "booth", "boots", "booty", "border", "borders", "bored", "boring", "born", "borough", "bosnia", "boss", "boston", "both", "bother", "botswana", "bottle", "bottles", "bottom", "bought", "boulder", "boulevard", "bound", "boundaries", "boundary", "bouquet", "boutique", "bow", "bowl", "bowling", "box", "boxed", "boxes", "boxing", "boy", "boys", "bp", "br", "bra", "bracelet", "bracelets", "bracket", "brad", "bradford", "bradley", "brain", "brake", "brakes", "branch", "branches", "brand", "brandon", "brands", "bras", "brass", "brave", "brazil", "brazilian", "breach", "bread", "break", "breakdown", "breakfast", "breaking", "breaks", "breast", "breasts", "breath", "breathing", "breed", "breeding", "breeds", "brian", "brick", "bridal", "bride", "bridge", "bridges", "brief", "briefing", "briefly", "briefs", "bright", "brighton", "brilliant", "bring", "bringing", "brings", "brisbane", "bristol", "britain", "britannica", "british", "britney", "broad", "broadband", "broadcast", "broadcasting", "broader", "broadway", "brochure", "brochures", "broke", "broken", "broker", "brokers", "bronze", "brook", "brooklyn", "brooks", "bros", "brother", "brothers", "brought", "brown", "browse", "browser", "browsers", "browsing", "bruce", "brunei", "brunette", "brunswick", "brush", "brussels", "brutal", "bryan", "bryant", "bs", "bt", "bubble", "buck", "bucks", "budapest", "buddy", "budget", "budgets", "buf", "buffalo", "buffer", "bufing", "bug", "bugs", "build", "builder", "builders", "building", "buildings", "builds", "built", "bulgaria", "bulgarian", "bulk", "bull", "bullet", "bulletin", "bumper", "bunch", "bundle", "bunny", "burden", "bureau", "buried", "burke", "burlington", "burn", "burner", "burning", "burns", "burst", "burton", "bus", "buses", "bush", "business", "businesses", "busty", "busy", "but", "butler", "butt", "butter", "butterfly", "button", "buttons", "butts", "buy", "buyer", "buyers", "buying", "buys", "buzz", "bw", "by", "bye", "byte", "bytes", "c", "ca", "cab", "cabin", "cabinet", "cabinets", "cable", "cables", "cache", "cached", "cad", "cadillac", "cafe", "cage", "cake", "cakes", "cal", "calcium", "calculate", "calculated", "calculation", "calculations", "calculator", "calculators", "calendar", "calendars", "calgary", "calibration", "calif", "california", "call", "called", "calling", "calls", "calm", "calvin", "cam", "cambodia", "cambridge", "camcorder", "camcorders", "came", "camel", "camera", "cameras", "cameron", "cameroon", "camp", "campaign", "campaigns", "campbell", "camping", "camps", "campus", "cams", "can", "canada", "canadian", "canal", "canberra", "cancel", "cancellation", "cancelled", "cancer", "candidate", "candidates", "candle", "candles", "candy", "cannon", "canon", "cant", "canvas", "canyon", "cap", "capabilities", "capability", "capable", "capacity", "cape", "capital", "capitol", "caps", "captain", "capture", "captured", "car", "carb", "carbon", "card", "cardiac", "cardiff", "cardiovascular", "cards", "care", "career", "careers", "careful", "carefully", "carey", "cargo", "caribbean", "caring", "carl", "carlo", "carlos", "carmen", "carnival", "carol", "carolina", "caroline", "carpet", "carried", "carrier", "carriers", "carries", "carroll", "carry", "carrying", "cars", "cart", "carter", "cartoon", "cartoons", "cartridge", "cartridges", "cas", "casa", "case", "cases", "casey", "cash", "cashiers", "casino", "casinos", "casio", "cassette", "cast", "casting", "castle", "casual", "cat", "catalog", "catalogs", "catalogue", "catalyst", "catch", "categories", "category", "catering", "cathedral", "catherine", "catholic", "cats", "cattle", "caught", "cause", "caused", "causes", "causing", "caution", "cave", "cayman", "cb", "cbs", "cc", "ccd", "cd", "cdna", "cds", "cdt", "ce", "cedar", "ceiling", "celebrate", "celebration", "celebrities", "celebrity", "celebs", "cell", "cells", "cellular", "celtic", "cement", "cemetery", "census", "cent", "center", "centered", "centers", "central", "centre", "centres", "cents", "centuries", "century", "ceo", "ceramic", "ceremony", "certain", "certainly", "certificate", "certificates", "certification", "certified", "cest", "cet", "cf", "cfr", "cg", "cgi", "ch", "chad", "chain", "chains", "chair", "chairman", "chairs", "challenge", "challenged", "challenges", "challenging", "chamber", "chambers", "champagne", "champion", "champions", "championship", "championships", "chan", "chance", "chancellor", "chances", "change", "changed", "changelog", "changes", "changing", "channel", "channels", "chaos", "chapel", "chapter", "chapters", "char", "character", "characteristic", "characteristics",\
@@ -715,6 +725,28 @@ def main():
             star = "***"
             print(star, chchars_str, result, ct)
 
+        def kata():
+            dd = (diction)
+            kk = (katakana)
+            ct = datetime.datetime.now()
+            kkchar = random.sample(kk, random.randint(1,7))
+            kkchar_str = ''.join(kkchar)
+            nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
+            result = random.sample(nano, random.randint(1, 6))
+            tars = "~"
+            print(tars, kkchar_str, result, ct)
+
+        def hangu():
+            dd = (diction)
+            hang = (jamo)
+            ct = datetime.datetime.now()
+            hangchar = random.sample(hang, random.randint(1,14))
+            hangchar_str = ''.join(hangchar)
+            nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
+            result = random.sample(dd, random.randint(1, 6))
+            arts = "^"
+            print(arts, hangchar_str, result, ct)
+
         def tinie_N():
             an = (fcci)
             acad = (acadlist)
@@ -727,11 +759,11 @@ def main():
 
         def commands():
             print()
-            print(" version | [blank input] for nano | profile | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | fsearch ")
+            print(" version | [blank input] for nano | katakana [kata/b] | jamo [hangu/n] | profile | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | fsearch ")
             print()
             print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: xcbmp, xhbmp, xjbmp, xfbmp")
             print()
-            print(" | c-characters [cchar], ch-monitor [CHM], speak [spk], map, threads, zuz [pp], call, time-call [TC], message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]")
+            print(" | c-characters [cchar], ch-monitor [CHM], kata-monitor [KM], jamo-monitor [JM], speak [spk], map, threads, zuz [pp], call, time-call [TC], message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii, archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]")
             print()
             print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}")
 
@@ -2847,6 +2879,78 @@ def main():
             print()
             print(sph)
             speak(sph)
+
+        def kata_monitor():
+            maroon = "^m^"
+            nano = (katakana)
+            title = input("kata-monitor name: ")
+            ct = datetime.datetime.now()
+            monitor = "kata-monitor-start:"
+            print(usr, monitor, title, ct)
+            print()
+            def generate_random_result():
+                ctm = datetime.datetime.now()
+                def generate_random_letters():
+                    random1 = random.choice(string.ascii_letters)
+                    random2 = random.choice(string.ascii_letters)
+                    random3 = random.choice(string.ascii_letters)
+                    letters = [random1, random2, random3]
+                    return letters
+                random_letters = generate_random_letters()
+                sitch  = (round(random.random()*9999,4))
+                kkhat = random.sample(nano, random.randint(1,15))
+                kkhat_str = ''.join(kkhat)
+                print(maroon, kkhat_str, sitch, random_letters, ctm)
+                print()
+
+            def main_loop():
+                while True:
+                    time.sleep(random.randint(0,5))
+                    integer = (round(random.random()*25))
+                    if integer > 15:
+                        if random.choice([True, False]):
+                            generate_random_result()
+
+            try:
+                main_loop()
+            except KeyboardInterrupt:
+                print("\nStopped by user.")
+
+        def hangu_monitor():
+            maroon = "^m^"
+            nano = (jamo)
+            title = input("jamo-monitor name: ")
+            ct = datetime.datetime.now()
+            monitor = "jamo-monitor-start:"
+            print(usr, monitor, title, ct)
+            print()
+            def generate_random_result():
+                ctm = datetime.datetime.now()
+                def generate_random_letters():
+                    random1 = random.choice(string.ascii_letters)
+                    random2 = random.choice(string.ascii_letters)
+                    random3 = random.choice(string.ascii_letters)
+                    letters = [random1, random2, random3]
+                    return letters
+                random_letters = generate_random_letters()
+                sitch  = (round(random.random()*9999,4))
+                kkhat = random.sample(nano, random.randint(1,20))
+                kkhat_str = ''.join(kkhat)
+                print(maroon, kkhat_str, random_letters, sitch, ctm)
+                print()
+
+            def main_loop():
+                while True:
+                    time.sleep(random.randint(0,5))
+                    integer = (round(random.random()*25))
+                    if integer > 15:
+                        if random.choice([True, False]):
+                            generate_random_result()
+
+            try:
+                main_loop()
+            except KeyboardInterrupt:
+                print("\nStopped by user.")
 
         def ch_monitor():
             maroon = "^m^"
@@ -5067,6 +5171,18 @@ def main():
 
                 if choice == "":
                     nano()
+
+                if choice == "katakana" or choice == "kata" or choice == "b":
+                    kata()
+
+                if choice == "jamo" or choice == "hangu" or choice == "n":
+                    hangu()
+
+                if choice == "kata-monitor" or choice == "kata monitor" or choice == "katakana-monitor" or choice == "katakana monitor" or choice == "kk-monitor" or choice == "kk monitor" or choice == "KM":
+                    kata_monitor()
+
+                if choice == "jamo-monitor" or choice == "jamo monitor" or choice == "j-monitor" or choice == "JM":
+                    hangu_monitor()
 
                 if choice == "entry":
                     entry()
