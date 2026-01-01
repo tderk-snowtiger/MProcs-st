@@ -33,7 +33,7 @@ def main():
     print(file=z)
 
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.3.8.8.3 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-6.3.8.8.8 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -744,7 +744,7 @@ def main():
             print()
             print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: cbmp, xcbmp, hbmp, xhbmp, jbmp, xjbmp, fbmp, xfbmp")
             print()
-            print(" | c-characters [cchar], speak [spk], map, threads, zuz [pp], call, time-call [TC], message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
+            print(" | c-characters [cchar], ch-monitor [CHM], speak [spk], map, threads, zuz [pp], call, time-call [TC], message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]") 
             print()
             print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}, monitor-search [msearch], acad-search [asearch]")
 
@@ -3393,6 +3393,50 @@ def main():
             print(sph, file=z)
             speak(sph)
 
+        def ch_monitor():
+            maroon = "^m^"
+            nano = (chi_chars)
+            title = input("ch-monitor name: ")
+            l = open("ch-monitor-logs.txt", "a", buffering=1)
+            ct = datetime.datetime.now()
+            monitor = "ch-monitor-start:"
+            print(usr, monitor, title, ct)
+            print(usr, monitor, title, ct, file=z)
+            print(usr, monitor, title, ct, file=l)
+            print()
+            print(file=z)
+            print("*this saves to ch-monitor-logs.txt* Ctrl+C to stop")
+            print()
+            print(file=l)
+            def generate_random_result():
+                ctm = datetime.datetime.now()
+                def generate_random_letters():
+                    random1 = random.choice(string.ascii_letters)
+                    random2 = random.choice(string.ascii_letters)
+                    random3 = random.choice(string.ascii_letters)
+                    letters = [random1, random2, random3]
+                    return letters
+                random_letters = generate_random_letters()
+                sitch  = (round(random.random()*9999,4))
+                cchat = random.sample(nano, random.randint(1,12))
+                print(maroon, random_letters, sitch, cchat, ctm)
+                print(maroon, random_letters, sitch, cchat, ctm, file=l)
+                print()
+                print(file=l)
+
+            def main_loop():
+                while True:
+                    time.sleep(random.randint(0,5))
+                    integer = (round(random.random()*25))
+                    if integer > 15:
+                        if random.choice([True, False]):
+                            generate_random_result()
+
+            try:
+                main_loop()
+            except KeyboardInterrupt:
+                print("\nStopped by user.")
+
         def monitor_start():
             maroon = "^m^"
             nano = (diction)
@@ -3431,7 +3475,6 @@ def main():
                     if integer > 15:
                         if random.choice([True, False]):
                             generate_random_result()
-
 
             try:
                 main_loop()
@@ -6718,6 +6761,9 @@ def main():
                 if choice == "chinese characters" or choice == "c-characters" or choice == "cchar":
                     chichars()
 
+                if choice == "ch-monitor" or choice == "ch monitor" or choice == "CHM":
+                    ch_monitor()
+
                 if choice == "pray":
                     pray()
 
@@ -7145,6 +7191,7 @@ def main():
         e.close()
         u.close()
         o.close()
+        l.close()
 
     mp()
 
