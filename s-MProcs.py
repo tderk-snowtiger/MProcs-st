@@ -29,7 +29,7 @@ def main():
     print()
 
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-7.0.0.0.1-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-7.0.1.0.2-s by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
         title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
@@ -958,19 +958,28 @@ def main():
             try:
                 while not stop_event.is_set():
                     title = f"Thread-{thread_id}"
+                    hangu = jamo
+                    cc = chi_chars
+                    kk = katakana
                     nano = diction
                     acad = acadlist                 
                     random_letters = generate_random_letters()
                     sitch  = (round(random.random() * 9999, 4))
                     
+                    sample_size_hangu = random.randint(1, min(20, len(hangu)))
+                    sample_size_cc = random.randint(1, min(12, len(cc)))
+                    sample_size_kk = random.randint(1, min(15, len(kk)))
                     sample_size_nano = random.randint(1, min(7, len(nano)))
                     sample_size_acad = random.randint(1, min(7, len(acad)))
 
+                    hchat = random.sample(hangu, sample_size_hangu)
+                    cchat = random.sample(cc, sample_size_cc)
+                    kkhat = random.sample(kk, sample_size_kk)
                     kchat = random.sample(nano, sample_size_nano)
                     kchat2 = random.sample(acad, sample_size_acad)
                 
                     ctm = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
-                    print(f"{maroon} {title} {random_letters} {sitch:.4f} {kchat} {kchat2} {ctm}")
+                    print(f"{maroon} {title} {random_letters} {sitch:.4f} {hchat} {cchat} {kkhat} {kchat} {kchat2} {ctm}")
                     print()
                     stop_event.wait(delay)
 
