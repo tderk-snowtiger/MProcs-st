@@ -33,10 +33,10 @@ def main():
     print(file=z)
 
     def version():
-        title =  usr + "" + " " + "" + f"{RED}>>>{RESET} {ORANGE}I.S. (Incubator Studios) Outbeat Produce: MProcs-7.0.1.0.3 by tderk - Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
-        title2 = f"| {BLUE}Indicative: #USVU && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
-        title3 = f"{ORANGE}All Rights Reserved - Medicci.ca{RESET}"
-        title4 = f"- {RED}P0cket Un1-Ver$e{RESET}"
+        title =  usr + "" + " " + "" + f">>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-7.1.0.1.1{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title2 = f"| {BLUE}Indicative: @USVirtualUni && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
+        title3 = f"{ORANGE}All Rights Reserved{RESET} - {BLUE}Medicci.ca{RESET}"
+        title4 = f"- {RED}(P0cket Un1-Ver$e){RESET}"
         cdt = datetime.datetime.now()
         time = f"{GREEN}{cdt}{RESET}"
         print(title, time, title3, title4)
@@ -731,7 +731,7 @@ def main():
             dd = (diction)
             ddd = (chi_chars)
             ct = datetime.datetime.now()
-            cchar = random.sample(ddd, random.randint(1,5))
+            cchar = random.choices(ddd, k=random.randint(1,5))
             chchars_str = ''.join(cchar)
             nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
             result = random.sample(nano, random.randint(1, 6))
@@ -1492,7 +1492,7 @@ def main():
             number
             time.sleep(0)
             print()
-            medical = random.sample(dd, number)
+            medical = random.choices(dd, k=number)
             ct = datetime.datetime.now()
             med = "Medicals:"
             print(med, medical, ct)
@@ -2333,7 +2333,8 @@ def main():
             print("You sit and start to meditate...", ct)
             print(usr + "" + " " + "" + "You sit and start to meditate...", ct, file=z)
             time.sleep(number)
-            print("You finished meditating", ct)
+            ct2 = datetime.datetime.now()
+            print("You finished meditating", ct2)
             print(usr + "" + " " + "" + "You finished meditating", ct, file=z)
             time.sleep(3)
 
@@ -3178,7 +3179,7 @@ def main():
             number
             time.sleep(0)
             print()
-            mapped = random.sample(dd, number)
+            mapped = random.choices(dd, k=number)
             ct = datetime.datetime.now()
             mapd = "map:"
             print(mapd, mapped, ct)
@@ -3907,6 +3908,9 @@ def main():
                 print("\nStopped by user.")
 
         def msgs():
+            kk = (katakana)
+            j = (jamo)
+            cc = (chi_chars)
             while True:
                 try:
                     number = int(input("Indicate number of scans: "))
@@ -3939,11 +3943,16 @@ def main():
                             return letters
                         random_letters = generate_random_letters()
                         sitch  = (round(random.random()*9999,4))
-                        kchat = random.sample(nano, random.randint(0,27))
-                        kchat2 = random.sample(acad, random.randint(0,8))
+                        kkchar = random.choices(kk, k=random.randint(1,40))
+                        hchar = random.choices(j, k=random.randint(1,40))
+                        cchat = random.choices(cc, k=random.randint(1,40))
+                        kkchar_str = ''.join(kkchar)
+                        hchar_str = ''.join(hchar)
+                        kchat = random.choices(nano, k=random.randint(0,27))
+                        kchat2 = random.choices(acad, k=random.randint(0,8))
                         msg = "msg:"
-                        print(usr, msg, random_letters, sitch, kchat, kchat2, ctm)
-                        print(usr, msg, random_letters, sitch, kchat, kchat2, ctm, file=z)
+                        print(usr, msg, random_letters, sitch, kchat, kchat2, kkchar_str, cchat, hchar_str, ctm)
+                        print(usr, msg, random_letters, sitch, kchat, kchat2, kkchar_str, cchat, hchar_str, ctm, file=z)
                         print()
                         print(file=z)                   
             print()
@@ -4077,8 +4086,8 @@ def main():
                     return letters
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
-                kchat = random.sample(nano, random.randint(1,8))
-                kchat2 = random.sample(acad, random.randint(1,7))
+                kchat = random.choices(nano, k=random.randint(1,8))
+                kchat2 = random.choices(acad, k=random.randint(1,7))
                 print()
                 print(file=z)
                 print(tag, rtag, random_letters, sitch, kchat, kchat2, ctm)
@@ -4110,7 +4119,7 @@ def main():
                     return letters
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
-                nn = random.sample(an, random.randint(1,10))
+                nn = random.choices(an, k=random.randint(1,10))
                 wonyao_str = ''.join(nn)
                 acadl = random.sample(acad, random.randint(1,7))
                 print()
@@ -4207,8 +4216,8 @@ def main():
                                 return letters
                             random_letters = generate_random_letters()
                             sitch  = (round(random.random()*9999,4))
-                            kchat = random.sample(nano, random.randint(1,8))
-                            kchat2 = random.sample(acad, random.randint(1,7))
+                            kchat = random.choices(nano, k=random.randint(1,8))
+                            kchat2 = random.choices(acad, k=random.randint(1,7))
                             print()
                             print(file=z)
                             print(usr, random_letters, sitch, kchat2, kchat, ctm)
@@ -4840,8 +4849,8 @@ def main():
                                 return letters
                             random_letters = generate_random_letters()
                             sitch  = (round(random.random()*9999,4))
-                            kchat = random.sample(nano, random.randint(1,8))
-                            kchat2 = random.sample(acad, random.randint(1,7))
+                            kchat = random.choices(nano, k=random.randint(1,8))
+                            kchat2 = random.choices(acad, k=random.randint(1,7))
                             print()
                             print(file=z)
                             print(usr, random_letters, sitch, kchat2, kchat, ctm)
