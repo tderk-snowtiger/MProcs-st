@@ -29,7 +29,7 @@ def main():
     print()
 
     def version():
-        title =  usr + "" + " " + "" + f">>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-7.1.0.1.1-s{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f">>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-7.1.2.1.2-s{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: @USVirtualUni && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved{RESET} - {BLUE}Medicci.ca{RESET}"
         title4 = f"- {RED}(P0cket Un1-Ver$e){RESET}"
@@ -761,7 +761,7 @@ def main():
             print()
             print(" version | [blank input] for nano | katakana [kata/b] | jamo [hangu/n] | profile | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | fsearch ")
             print()
-            print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: xcbmp, xhbmp, xjbmp, xfbmp")
+            print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: xcbmp, xcbmpc, xhbmp, xhbmpc, xjbmp, xjbmpc, xfbmp")
             print()
             print(" | c-characters [cchar], ch-monitor [CHM], kata-monitor [KM], jamo-monitor [JM], speak [spk], map, threads, zuz [pp], call, time-call [TC], message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], police (prad), CAI Environments (CAI/GES), time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR]")
             print()
@@ -4895,6 +4895,70 @@ def main():
             except KeyboardInterrupt:
                 print("\nStopped by user.")
 
+        def xcbmpc():
+
+            time.sleep(.3)
+
+            print()
+            print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Chinese'")
+            print()
+            print("Ctrl+C To Stop")
+            print()
+            print("'FNTCCI (CC)'")
+            print()
+
+            time.sleep(.3)
+
+            c_fcci2 = chi_chars
+            
+            maroon = "^m^"
+
+            cnano2 = (c_fcci2)
+
+            ct = datetime.datetime.now()
+
+            monitor = "xcbmpc-start:"
+            print(monitor, ct)
+            print()
+
+            def generate_random_result():
+
+                ctm = datetime.datetime.now()
+
+                def generate_random_letters():
+                    random1 = random.choice(string.ascii_letters)
+                    random2 = random.choice(string.ascii_letters)
+                    random3 = random.choice(string.ascii_letters)
+                    letters = [random1, random2, random3]
+                    return letters
+
+                random_letters = generate_random_letters()
+
+                sitch  = (round(random.random()*9999,4))
+
+                cci2 = random.choices(cnano2, k=random.randint(1,25))
+
+                result_text = "".join(cci2)
+
+                print(maroon, random_letters, sitch, result_text, ctm)
+
+                speak(result_text)
+
+                print()
+                
+            def main_loop():
+                while True:
+                    time.sleep(random.randint(0,6))
+                    integer = (round(random.random()*18))
+                    if integer > 10:
+                        if random.choice([True, False]):
+                            generate_random_result()
+
+            try:
+                main_loop()
+            except KeyboardInterrupt:
+                print("\nStopped by user.")
+
         def xhbmp():
 
             time.sleep(.3)
@@ -4959,6 +5023,70 @@ def main():
             except KeyboardInterrupt:
                 print("\nStopped by user.")
 
+        def xhbmpc():
+
+            time.sleep(.3)
+
+            print()
+            print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Korean'")
+            print()
+            print("Ctrl+C To Stop")
+            print()
+            print("'FNTCCI (HC)'")
+            print()
+
+            time.sleep(.3)
+
+            h_fcci2 = jamo
+
+            maroon = "^m^"
+
+            hnano2 = (h_fcci2)
+
+            ct = datetime.datetime.now()
+
+            monitor = "xhbmpc-start:"
+            print(monitor, ct)
+            print()
+
+            def generate_random_result():
+
+                ctm = datetime.datetime.now()
+
+                def generate_random_letters():
+                    random1 = random.choice(string.ascii_letters)
+                    random2 = random.choice(string.ascii_letters)
+                    random3 = random.choice(string.ascii_letters)
+                    letters = [random1, random2, random3]
+                    return letters
+
+                random_letters = generate_random_letters()
+
+                sitch  = (round(random.random()*9999,4))
+
+                hcci2 = random.choices(hnano2, k=random.randint(1,25))
+
+                result_text = "".join(hcci2)
+
+                print(maroon, random_letters, sitch, result_text, ctm)
+
+                speak(result_text)
+
+                print()
+                
+            def main_loop():
+                while True:
+                    time.sleep(random.randint(0,6))
+                    integer = (round(random.random()*18))
+                    if integer > 10:
+                        if random.choice([True, False]):
+                            generate_random_result()
+
+            try:
+                main_loop()
+            except KeyboardInterrupt:
+                print("\nStopped by user.")
+
         def xjbmp():
 
             time.sleep(.3)
@@ -5001,6 +5129,70 @@ def main():
                 sitch  = (round(random.random()*9999,4))
 
                 jcci2 = random.choices(jnano2, k=random.randint(1,10))
+
+                result_text = "".join(jcci2)
+
+                print(maroon, random_letters, sitch, result_text, ctm)
+
+                speak(result_text)
+
+                print()
+                
+            def main_loop():
+                while True:
+                    time.sleep(random.randint(0,6))
+                    integer = (round(random.random()*18))
+                    if integer > 10:
+                        if random.choice([True, False]):
+                            generate_random_result()
+
+            try:
+                main_loop()
+            except KeyboardInterrupt:
+                print("\nStopped by user.")
+
+        def xjbmpc():
+
+            time.sleep(.3)
+
+            print()
+            print("DISCLAIMER: This works on Android and must have Termux and Termux-API installed from F-Droid and Google Text-to-Speech options set to 'Japanese'")
+            print()
+            print("Ctrl+C To Stop")
+            print()
+            print("'FNTCCI (JC)'")
+            print()
+
+            time.sleep(.3)
+
+            jfcci2 = katakana
+
+            maroon = "^m^"
+
+            jnano2 = (jfcci2)
+
+            ct = datetime.datetime.now()
+
+            monitor = "xjbmpc-start:"
+            print(monitor, ct)
+            print()
+
+            def generate_random_result():
+
+                ctm = datetime.datetime.now()
+
+                def generate_random_letters():
+                    random1 = random.choice(string.ascii_letters)
+                    random2 = random.choice(string.ascii_letters)
+                    random3 = random.choice(string.ascii_letters)
+                    letters = [random1, random2, random3]
+                    return letters
+
+                random_letters = generate_random_letters()
+
+                sitch  = (round(random.random()*9999,4))
+
+                jcci2 = random.choices(jnano2, k=random.randint(1,25))
 
                 result_text = "".join(jcci2)
 
@@ -5509,11 +5701,20 @@ def main():
                 if choice == "xcbmp":
                     xcbmp()
 
+                if choice == "xcbmpc":
+                    xcbmpc()
+
                 if choice == "xhbmp":
                     xhbmp()
 
+                if choice == "xhbmpc":
+                    xhbmpc()
+
                 if choice == "xjbmp":
                     xjbmp()
+
+                if choice == "xjbmpc":
+                    xjbmpc()
 
                 if choice == "xfbmp":
                     xfbmp()
