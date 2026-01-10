@@ -548,22 +548,22 @@ def main():
     def select_charset():
         global current_ddd
         while True:
-            choice = input("Choose # of Nano EST Charset - 1. Korean 2. Chinese 3. Japanese 4. None : ").strip()    
+            choice = input("Nano EST Charset - 1. Korean 2. Chinese 3. Japanese 4. None : ").strip()    
             if choice == '':
                 current_ddd = jamo
                 print("Defaulting to Korean")
-                time.sleep(1)
+                time.sleep(.5)
                 break
-            if choice == '1':
+            if choice == '1' or choice == 'Korean' or choice == 'korean':
                 current_ddd = jamo
                 break
-            elif choice == '2':
+            elif choice == '2' or choice == 'Chinese' or choice == 'chinese':
                 current_ddd = chi_chars
                 break
-            elif choice == '3':
+            elif choice == '3' or choice == 'Japanese' or choice == 'japanese':
                 current_ddd = katakana
                 break
-            elif choice == '4':
+            elif choice == '4'  or choice == 'None' or choice == 'none':
                 current_ddd = [""]
                 break
             else:
@@ -571,15 +571,15 @@ def main():
     select_charset()
     ###
     user = f"{GREEN}{new}{RESET}"
-    maroon = "^m^"
-    medicci = f"{RED}{maroon}{RESET}"
+    ST = " st"
+    medicci = f"{ST}"
     dollar = "$"
     sign = f"{PURPLE}{dollar}{RESET}"
     set_usr(medicci + "" + " " + "" + "(" + "" + " " + "" + "" + user + "" + "" + " " + "" + ")" + "" + " " + "" + sign + "" + " ")
     print()
 
     def version():
-        title =  usr + "" + " " + "" + f">>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-7.3.0.0.9-s{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"snowtiger >>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-8.0-s{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: @USVirtualUni && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved{RESET} - {BLUE}Medicci.ca{RESET}"
         title4 = f"- {RED}(P0cket Un1-Ver$e){RESET}"
@@ -1272,7 +1272,7 @@ def main():
             chchars_str = ''.join(cchar)
             nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
             result = random.sample(nano, random.randint(1, 6))
-            star = "***"
+            star = "&"
             print(star, chchars_str, result, ct)
 
         def kata():
@@ -1283,7 +1283,7 @@ def main():
             kkchar_str = ''.join(kkchar)
             nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
             result = random.sample(nano, random.randint(1, 6))
-            tars = "~"
+            tars = "~~"
             print(tars, kkchar_str, result, ct)
 
         def hangu():
@@ -1294,7 +1294,7 @@ def main():
             hangchar_str = ''.join(hangchar)
             nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
             result = random.sample(dd, random.randint(1, 6))
-            arts = "^"
+            arts = "^^"
             print(arts, hangchar_str, result, ct)
 
         def tinie_N():
@@ -1405,8 +1405,8 @@ def main():
                 usr = newUsr
             new = input("Session username: ")
             user = f"{GREEN}{new}{RESET}"
-            maroon = "^m^"
-            medicci = f"{RED}{maroon}{RESET}"
+            ST = " st"
+            medicci = f"{ST}"
             dollar = "$"
             sign = f"{BLUE}{dollar}{RESET}"
             set_usr(medicci + "" + " " + "" + "(" + "" + " " + "" + "" + user + "" + "" + " " + "" + ")" + "" + " " + "" + sign + "" + " ")
@@ -3353,7 +3353,7 @@ def main():
                 print("Install 'termux-api' (and the Android Termux:API app) or 'sudo apt install espeak / pkg install espeak'.")
 
         def call():
-            maroon = "^m^"
+            maroon = " st"
             nano = (diction)
             title = input("call name: ")
             print()
@@ -3390,7 +3390,7 @@ def main():
                 print("\nStopped by user.")
 
         def time_call():
-            maroon = "^m^"
+            maroon = " st"
             nano = (diction)
             title = input("time-call name: ")
             ct = datetime.datetime.now()
@@ -3441,7 +3441,7 @@ def main():
             speak(sph)
 
         def kata_monitor():
-            maroon = "^m^"
+            maroon = " st"
             nano = (katakana)
             title = input("kata-monitor name: ")
             ct = datetime.datetime.now()
@@ -3477,7 +3477,7 @@ def main():
                 print("\nStopped by user.")
 
         def hangu_monitor():
-            maroon = "^m^"
+            maroon = " st"
             nano = (jamo)
             title = input("jamo-monitor name: ")
             ct = datetime.datetime.now()
@@ -3513,7 +3513,7 @@ def main():
                 print("\nStopped by user.")
 
         def ch_monitor():
-            maroon = "^m^"
+            maroon = " st"
             nano = (chi_chars)
             title = input("ch-monitor name: ")
             ct = datetime.datetime.now()
@@ -3548,7 +3548,7 @@ def main():
                 print("\nStopped by user.")
 
         def monitor_start():
-            maroon = "^m^"
+            maroon = " st"
             nano = (diction)
             title = input("monitor name: ")
             print()
@@ -3580,7 +3580,7 @@ def main():
                 print("\nStopped by user.")
 
         def acad_monitor():
-            maroon = "^m^"
+            maroon = " st"
             nano = (diction)
             acad = (acadlist)
             title = input("a-monitor name: ")
@@ -3616,7 +3616,7 @@ def main():
                 print("\nStopped by user.")
 
         def fntcci_monitor():
-            maroon = "^m^"
+            maroon = " st"
             aono = (fcci)
             acad = (acadlist)
             title = input("FNTCCI-monitor name: ")
@@ -3648,7 +3648,7 @@ def main():
                 print("\nStopped by user.")
 
         def time_monitor():
-            maroon = "^m^"
+            maroon = " st"
             nano = (diction)
             acad = (acadlist)
             title = input("t-monitor name: ")
@@ -3689,7 +3689,7 @@ def main():
                 print("\nStopped by user.")
 
         def s_time_monitor():
-            maroon = "^m^"
+            maroon = " st"
             nano = (diction)
             acad = (acadlist)
             title = input("t-monitor name: ")
@@ -3733,7 +3733,7 @@ def main():
                 print("\nStopped by user.")
 
         def programs():
-            maroon = "^m^"
+            maroon = " st"
             nano = list(diction)
             acad = list(acadlist)
             medica = list(medicals1)
@@ -5397,7 +5397,7 @@ def main():
 
             c_fcci2 = ['a', 'ai', 'an', 'ang', 'ao', 'ba', 'bai', 'ban', 'bang', 'bao', 'bei', 'ben', 'beng', 'bi', 'bian', 'biao', 'bie', 'bin', 'bing', 'bo', 'bu', 'ca', 'cai', 'can', 'cang', 'cao', 'ce', 'cei', 'cen', 'ceng', 'cha', 'chai', 'chan', 'chang', 'chao', 'che', 'chen', 'cheng', 'chi', 'chong', 'chou', 'chu', 'chua', 'chuai', 'chuan', 'chuang', 'chui', 'chun', 'chuo', 'ci', 'cong', 'cou', 'cu', 'cuan', 'cui', 'cun', 'cuo', 'da', 'dai', 'dan', 'dang', 'dao', 'de', 'dei', 'den', 'deng', 'di', 'dia', 'dian', 'diao', 'die', 'ding', 'diu', 'dong', 'dou', 'du', 'duan', 'dui', 'dun', 'duo', 'e', 'ei', 'en', 'eng', 'er', 'fa', 'fan', 'fang', 'fei', 'fen', 'feng', 'fo', 'fou', 'fu', 'ga', 'gai', 'gan', 'gang', 'gao', 'ge', 'gei', 'gen', 'geng', 'gong', 'gou', 'gu', 'gua', 'guai', 'guan', 'guang', 'gui', 'gun', 'guo', 'ha', 'hai', 'han', 'hang', 'hao', 'he', 'hei', 'hen', 'heng', 'hong', 'hou', 'hu', 'hua', 'huai', 'huan', 'huang', 'hui', 'hun', 'huo', 'ji', 'jia', 'jian', 'jiang', 'jiao', 'jie', 'jin', 'jing', 'jiong', 'jiu', 'ju', 'juan', 'jue', 'jun', 'ka', 'kai', 'kan', 'kang', 'kao', 'ke', 'kei', 'ken', 'keng', 'kong', 'kou', 'ku', 'kua', 'kuai', 'kuan', 'kuang', 'kui', 'kun', 'kuo', 'la', 'lai', 'lan', 'lang', 'lao', 'le', 'lei', 'leng', 'li', 'lia', 'lian', 'liang', 'liao', 'lie', 'lin', 'ling', 'liu', 'long', 'lou', 'lu', 'luan', 'lun', 'luo', 'lü', 'lüe', 'ma', 'mai', 'man', 'mang', 'mao', 'me', 'mei', 'men', 'meng', 'mi', 'mian', 'miao', 'mie', 'min', 'ming', 'miu', 'mo', 'mou', 'mu', 'na', 'nai', 'nan', 'nang', 'nao', 'ne', 'nei', 'nen', 'neng', 'ni', 'nian', 'niang', 'niao', 'nie', 'nin', 'ning', 'niu', 'nong', 'nou', 'nu', 'nuan', 'nuo', 'nü', 'nüe', 'o', 'ou', 'pa', 'pai', 'pan', 'pang', 'pao', 'pei', 'pen', 'peng', 'pi', 'pian', 'piao', 'pie', 'pin', 'ping', 'po', 'pou', 'pu', 'qi', 'qia', 'qian', 'qiang', 'qiao', 'qie', 'qin', 'qing', 'qiong', 'qiu', 'qu', 'quan', 'que', 'qun', 'ran', 'rang', 'rao', 're', 'ren', 'reng', 'ri', 'rong', 'rou', 'ru', 'ruan', 'rui', 'run', 'ruo', 'sa', 'sai', 'san', 'sang', 'sao', 'se', 'sen', 'seng', 'sha', 'shai', 'shan', 'shang', 'shao', 'she', 'shei', 'shen', 'sheng', 'shi', 'shou', 'shu', 'shua', 'shuai', 'shuan', 'shuang', 'shui', 'shun', 'shuo', 'si', 'song', 'sou', 'su', 'suan', 'sui', 'sun', 'suo', 'ta', 'tai', 'tan', 'tang', 'tao', 'te', 'tei', 'teng', 'ti', 'tian', 'tiao', 'tie', 'ting', 'tong', 'tou', 'tu', 'tuan', 'tui', 'tun', 'tuo', 'wa', 'wai', 'wan', 'wang', 'wei', 'wen', 'weng', 'wo', 'wu', 'xi', 'xia', 'xian', 'xiang', 'xiao', 'xie', 'xin', 'xing', 'xiong', 'xiu', 'xu', 'xuan', 'xue', 'xun', 'ya', 'yan', 'yang', 'yao', 'ye', 'yi', 'yin', 'ying', 'yo', 'yong', 'you', 'yu', 'yuan', 'yue', 'yun', 'za', 'zai', 'zan', 'zang', 'zao', 'ze', 'zei', 'zen', 'zeng', 'zha', 'zhai', 'zhan', 'zhang', 'zhao', 'zhe', 'zhei', 'zhen', 'zheng', 'zhi', 'zhong', 'zhou', 'zhu', 'zhua', 'zhuai', 'zhuan', 'zhuang', 'zhui', 'zhun', 'zhuo', 'zi', 'zong', 'zou', 'zu', 'zuan', 'zui', 'zun', 'zuo', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
             
-            maroon = "^m^"
+            maroon = " st"
 
             cnano2 = (c_fcci2)
 
@@ -5461,7 +5461,7 @@ def main():
 
             c_fcci2 = chi_chars
             
-            maroon = "^m^"
+            maroon = " st"
 
             cnano2 = (c_fcci2)
 
@@ -5525,7 +5525,7 @@ def main():
 
             h_fcci2 = ["ga", "gya", "geo", "gyeo", "go", "gyo", "gu", "gyu", "geu", "gi", "gae", "gyae", "ge", "gye", "gwa", "gwae", "goe", "gwo", "gwe", "gwi", "gui", "kka", "kkya", "kkeo", "kkyeo", "kko", "kkyo", "kku", "kkyu", "kkeu", "kki", "kkae", "kkyae", "kke", "kkye", "kkwa", "kkwae", "kkoe", "kkwo", "kkwe", "kkwi", "kkui", "na", "nya", "neo", "nyeo", "no", "nyo", "nu", "nyu", "neu", "ni", "nae", "nyae", "ne", "nye", "nwa", "nwae", "noe", "nwo", "nwe", "nwi", "nui", "da", "dya", "deo", "dyeo", "do", "dyo", "du", "dyu", "deu", "di", "dae", "dyae", "de", "dye", "dwa", "dwae", "doe", "dwo", "dwe", "dwi", "dui", "tta", "ttya", "tteo", "ttyeo", "tto", "ttyo", "ttu", "ttyu", "tteu", "tti", "ttae", "ttyae", "tte", "ttye", "ttwa", "ttwae", "ttoe", "ttwo", "ttwe", "ttwi", "ttui", "ra", "rya", "reo", "ryeo", "ro", "ryo", "ru", "ryu", "reu", "ri", "rae", "ryae", "re", "rye", "rwa", "rwae", "roe", "rwo", "rwe", "rwi", "rui", "ma", "mya", "meo", "myeo", "mo", "myo", "mu", "myu", "meu", "mi", "mae", "myae", "me", "mye", "mwa", "mwae", "moe", "mwo", "mwe", "mwi", "mui", "ba", "bya", "beo", "byeo", "bo", "byo", "bu", "byu", "beu", "bi", "bae", "byae", "be", "bye", "bwa", "bwae", "boe", "bwo", "bwe", "bwi", "bui", "ppa", "ppya", "ppeo", "ppyeo", "ppo", "ppyo", "ppu", "ppyu", "ppeu", "ppi", "ppae", "ppyae", "ppe", "ppye", "ppwa", "ppwae", "ppoe", "ppwo", "ppwe", "ppwi", "ppui", "sa", "sya", "seo", "syeo", "so", "syo", "su", "syu", "seu", "si", "sae", "syae", "se", "sye", "swa", "swae", "soe", "swo", "swe", "swi", "sui", "ssa", "ssya", "sseo", "ssyeo", "sso", "ssyo", "ssu", "ssyu", "sseu", "ssi", "ssae", "ssyae", "sse", "ssye", "sswa", "sswae", "ssoe", "sswo", "sswe", "sswi", "ssui", "a", "ya", "eo", "yeo", "o", "yo", "u", "yu", "eu", "i", "ae", "yae", "e", "ye", "wa", "wae", "oe", "wo", "we", "wi", "ui", "ja", "jya", "jeo", "jyeo", "jo", "jyo", "ju", "jyu", "jeu", "ji", "jae", "jyae", "je", "jye", "jwa", "jwae", "joe", "jwo", "jwe", "jwi", "jui", "jja", "jjya", "jjeo", "jjyeo", "jjo", "jjyo", "jju", "jjyu", "jjeu", "jji", "jjae", "jjyae", "jje", "jjye", "jjwa", "jjwae", "jjoe", "jjwo", "jjwe", "jjwi", "jjui", "cha", "chya", "cheo", "chyeo", "cho", "chyo", "chu", "chyu", "cheu", "chi", "chae", "chyae", "che", "chye", "chwa", "chwae", "choe", "chwo", "chwe", "chwi", "chui", "ka", "kya", "keo", "kyeo", "ko", "kyo", "ku", "kyu", "keu", "ki", "kae", "kyae", "ke", "kye", "kwa", "kwae", "koe", "kwo", "kwe", "kwi", "kui", "ta", "tya", "teo", "tyeo", "to", "tyo", "tu", "tyu", "teu", "ti", "tae", "tyae", "te", "tye", "twa", "twae", "toe", "two", "twe", "twi", "tui", "pa", "pya", "peo", "pyeo", "po", "pyo", "pu", "pyu", "peu", "pi", "pae", "pyae", "pe", "pye", "pwa", "pwae", "poe", "pwo", "pwe", "pwi", "pui", "ha", "hya", "heo", "hyeo", "ho", "hyo", "hu", "hyu", "heu", "hi", "hae", "hyae", "he", "hye", "hwa", "hwae", "hoe", "hwo", "hwe", "hwi", "hui", ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
-            maroon = "^m^"
+            maroon = " st"
 
             hnano2 = (h_fcci2)
 
@@ -5589,7 +5589,7 @@ def main():
 
             h_fcci2 = jamo
 
-            maroon = "^m^"
+            maroon = " st"
 
             hnano2 = (h_fcci2)
 
@@ -5653,7 +5653,7 @@ def main():
 
             jfcci2 = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "kya", "kyu", "kyo", "ga", "gi", "gu", "ge", "go", "gya", "gyu", "gyo", "sa", "shi", "su", "se", "so", "sha", "shu", "sho", "za", "ji", "zu", "ze", "zo", "ja", "ju", "jo", "ta", "chi", "tsu", "te", "to", "cha", "chu", "cho", "da", "de", "do", "na", "ni", "nu", "ne", "no", "nya", "nyu", "nyo", "ha", "hi", "fu", "he", "ho", "hya", "hyu", "hyo", "ba", "bi", "bu", "be", "bo", "bya", "byu", "byo", "pa", "pi", "pu", "pe", "po", "pya", "pyu", "pyo", "ma", "mi", "mu", "me", "mo", "mya", "myu", "myo", "ya", "yu", "yo", "ra", "ri", "ru", "re", "ro", "rya", "ryu", "ryo", "wa", "wo", "n", ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
-            maroon = "^m^"
+            maroon = " st"
 
             jnano2 = (jfcci2)
 
@@ -5717,7 +5717,7 @@ def main():
 
             jfcci2 = katakana
 
-            maroon = "^m^"
+            maroon = " st"
 
             jnano2 = (jfcci2)
 
@@ -5781,7 +5781,7 @@ def main():
 
             t_fcci2 = ["a", "e", "i", "o", "u", "ba", "be", "bi", "bo", "bu", "ka", "ke", "ki", "ko", "ku", "da", "de", "di", "do", "du", "ga", "ge", "gi", "go", "gu", "ha", "he", "hi", "ho", "hu", "la", "le", "li", "lo", "lu", "ma", "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu", "nga", "nge", "ngi", "ngo", "ngu", "pa", "pe", "pi", "po", "pu", "ra", "re", "ri", "ro", "ru", "sa", "se", "si", "so", "su", "ta", "te", "ti", "to", "tu", "wa", "we", "wi", "wo", "wu", "ya", "ye", "yi", "yo", "yu", ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
-            maroon = "^m^"
+            maroon = " st"
 
             fnano2 = (t_fcci2)
 
