@@ -553,7 +553,7 @@ def main():
             if choice == '':
                 current_ddd = jamo
                 print("Defaulting to Korean")
-                time.sleep(.5)
+                time.sleep(.3)
                 break
             if choice == '1' or choice == 'Korean' or choice == 'korean':
                 current_ddd = jamo
@@ -580,7 +580,7 @@ def main():
     print()
 
     def version():
-        title =  usr + "" + " " + "" + f"snowtiger >>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-8.1-s{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"snowtiger >>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-8.1.1-s{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: @USVirtualUni && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved{RESET} - {BLUE}Medicci.ca{RESET}"
         title4 = f"- {RED}(P0cket Un1-Ver$e){RESET}"
@@ -1508,6 +1508,7 @@ def main():
 
             try:
                 while not stop_event.is_set():
+                    maroon = " st"
                     title = f"Thread-{thread_id}"
                     hangu = jamo
                     cc = chi_chars
