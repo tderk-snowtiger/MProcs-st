@@ -9,6 +9,9 @@ import platform
 import os
 import shutil
 
+omit_result = False
+current_ddd = [""]
+
 def main():
 
     katakana = ["ア", "イ", "ウ", "エ", "オ", "カ", "キ", "ク", "ケ", "コ", "サ", "シ", "ス", "セ", "ソ", "タ", "チ", "ツ", "テ", "ト", "ナ", "ニ", "ヌ", "ネ", "ノ", "ハ", "ヒ", "フ", "ヘ", "ホ", "マ", "ミ", "ム", "メ", "モ", "ヤ", "ユ", "ヨ", "ラ", "リ", "ル", "レ", "ロ", "ワ", "ヲ", "ン", "ガ", "ギ", "グ", "ゲ", "ゴ", "ザ", "ジ", "ズ", "ゼ", "ゾ", "ダ", "ヂ", "ヅ", "デ", "ド", "バ", "ビ", "ブ", "ベ", "ボ", "パ", "ピ", "プ", "ペ", "ポ", "キャ", "キュ", "キョ", "シャ", "シュ", "ショ", "チャ", "チュ", "チョ", "ニャ", "ニュ", "ニョ", "ヒャ", "ヒュ", "ヒョ", "ミャ", "ミュ", "ミョ", "リャ", "リュ", "リョ", "ギャ", "ギュ", "ギョ", "ジャ", "ジュ", "ジョ", "ビャ", "ビュ", "ビョ", "ピャ", "ピュ", "ピョ"]
@@ -547,25 +550,41 @@ def main():
     new = input("Set session username: ")
 
     def select_charset():
-        global current_ddd
+        global current_ddd, omit_result
         while True:
-            choice = input("Nano EST Charset - 1. Korean 2. Chinese 3. Japanese 4. None : ").strip()    
+            choice = input("Nano EST Charset - 1. Korean 2. Chinese 3. Japanese 4. None/English only - (Add/or 'A/a' to toggle English words) : ").strip()    
             if choice == '':
                 current_ddd = jamo
                 print("Defaulting to Korean")
                 time.sleep(.3)
                 break
-            if choice == '1' or choice == 'Korean' or choice == 'korean':
+            if choice == '1' or choice == 'Korean' or choice == 'korean' or choice == 'K':
                 current_ddd = jamo
                 break
-            elif choice == '2' or choice == 'Chinese' or choice == 'chinese':
+            elif choice == '2' or choice == 'Chinese' or choice == 'chinese' or choice == 'C':
                 current_ddd = chi_chars
                 break
-            elif choice == '3' or choice == 'Japanese' or choice == 'japanese':
+            elif choice == '3' or choice == 'Japanese' or choice == 'japanese' or choice == 'J':
                 current_ddd = katakana
                 break
             elif choice == '4'  or choice == 'None' or choice == 'none':
                 current_ddd = [""]
+                omit_result = False
+                break
+            elif choice == '1 a' or choice == '1 A' or choice == 'Korean a' or choice == 'Korean A' or choice == 'korean a' or choice == 'korean A' or choice == '1a' or choice == '1A' or choice == 'KoreanA' or choice == 'Koreana' or choice == 'koreanA' or choice == 'KA' or choice == " K A" or choice == " K a" or choice == " k a" or choice == " k A":
+                current_ddd = jamo
+                omit_result = not omit_result
+                break
+            elif choice == '2 a' or choice == '2 A' or choice == 'Chinese a' or choice == 'Chinese A' or choice == 'chinese a' or choice == 'chinese A' or choice == '2a' or choice == '2A' or choice == 'ChineseA' or choice == 'Chinesea' or choice == 'chineseA' or choice == 'CA' or choice == 'cA' or choice == "ca" or choice == "Ca" or choice == " C A" or choice == " C a" or choice == " c a" or choice == " c A":
+                current_ddd = chi_chars
+                omit_result = not omit_result
+                break
+            elif choice == '3 a' or choice == '3 A' or choice == 'Japanese a' or choice == 'Japanese A' or choice == 'japanese a' or choice == 'japanese A' or choice == '3a' or choice == '3A' or choice == 'JapaneseA' or choice == 'Japanesea' or choice == 'japaneseA' or choice == 'JA' or choice == 'jA' or choice == "ja" or choice == "Ja" or choice == " J A" or choice == " J a" or choice == " j a" or choice == " j A":
+                current_ddd = katakana
+                omit_result = not omit_result
+                break
+            elif choice == "A" or choice == "a": 
+                omit_result = not omit_result
                 break
             else:
                 print("Invalid input")
@@ -584,7 +603,7 @@ def main():
     print(file=z)
 
     def version():
-        title =  usr + "" + " " + "" + f"snowtiger >>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-8.1.1{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"snowtiger >>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-8.2{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: @USVirtualUni && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved{RESET} - {BLUE}Medicci.ca{RESET}"
         title4 = f"- {RED}(P0cket Un1-Ver$e){RESET}"
@@ -757,13 +776,17 @@ def main():
         fcci = ['a', 'ai', 'an', 'ang', 'ao', 'ba', 'bai', 'ban', 'bang', 'bao', 'bei', 'ben', 'beng', 'bi', 'bian', 'biao', 'bie', 'bin', 'bing', 'bo', 'bu', 'ca', 'cai', 'can', 'cang', 'cao', 'ce', 'cei', 'cen', 'ceng', 'cha', 'chai', 'chan', 'chang', 'chao', 'che', 'chen', 'cheng', 'chi', 'chong', 'chou', 'chu', 'chua', 'chuai', 'chuan', 'chuang', 'chui', 'chun', 'chuo', 'ci', 'cong', 'cou', 'cu', 'cuan', 'cui', 'cun', 'cuo', 'da', 'dai', 'dan', 'dang', 'dao', 'de', 'dei', 'den', 'deng', 'di', 'dia', 'dian', 'diao', 'die', 'ding', 'diu', 'dong', 'dou', 'du', 'duan', 'dui', 'dun', 'duo', 'e', 'ei', 'en', 'eng', 'er', 'fa', 'fan', 'fang', 'fei', 'fen', 'feng', 'fo', 'fou', 'fu', 'ga', 'gai', 'gan', 'gang', 'gao', 'ge', 'gei', 'gen', 'geng', 'gong', 'gou', 'gu', 'gua', 'guai', 'guan', 'guang', 'gui', 'gun', 'guo', 'ha', 'hai', 'han', 'hang', 'hao', 'he', 'hei', 'hen', 'heng', 'hong', 'hou', 'hu', 'hua', 'huai', 'huan', 'huang', 'hui', 'hun', 'huo', 'ji', 'jia', 'jian', 'jiang', 'jiao', 'jie', 'jin', 'jing', 'jiong', 'jiu', 'ju', 'juan', 'jue', 'jun', 'ka', 'kai', 'kan', 'kang', 'kao', 'ke', 'kei', 'ken', 'keng', 'kong', 'kou', 'ku', 'kua', 'kuai', 'kuan', 'kuang', 'kui', 'kun', 'kuo', 'la', 'lai', 'lan', 'lang', 'lao', 'le', 'lei', 'leng', 'li', 'lia', 'lian', 'liang', 'liao', 'lie', 'lin', 'ling', 'liu', 'long', 'lou', 'lu', 'luan', 'lun', 'luo', 'lü', 'lüe', 'ma', 'mai', 'man', 'mang', 'mao', 'me', 'mei', 'men', 'meng', 'mi', 'mian', 'miao', 'mie', 'min', 'ming', 'miu', 'mo', 'mou', 'mu', 'na', 'nai', 'nan', 'nang', 'nao', 'ne', 'nei', 'nen', 'neng', 'ni', 'nian', 'niang', 'niao', 'nie', 'nin', 'ning', 'niu', 'nong', 'nou', 'nu', 'nuan', 'nuo', 'nü', 'nüe', 'o', 'ou', 'pa', 'pai', 'pan', 'pang', 'pao', 'pei', 'pen', 'peng', 'pi', 'pian', 'piao', 'pie', 'pin', 'ping', 'po', 'pou', 'pu', 'qi', 'qia', 'qian', 'qiang', 'qiao', 'qie', 'qin', 'qing', 'qiong', 'qiu', 'qu', 'quan', 'que', 'qun', 'ran', 'rang', 'rao', 're', 'ren', 'reng', 'ri', 'rong', 'rou', 'ru', 'ruan', 'rui', 'run', 'ruo', 'sa', 'sai', 'san', 'sang', 'sao', 'se', 'sen', 'seng', 'sha', 'shai', 'shan', 'shang', 'shao', 'she', 'shei', 'shen', 'sheng', 'shi', 'shou', 'shu', 'shua', 'shuai', 'shuan', 'shuang', 'shui', 'shun', 'shuo', 'si', 'song', 'sou', 'su', 'suan', 'sui', 'sun', 'suo', 'ta', 'tai', 'tan', 'tang', 'tao', 'te', 'tei', 'teng', 'ti', 'tian', 'tiao', 'tie', 'ting', 'tong', 'tou', 'tu', 'tuan', 'tui', 'tun', 'tuo', 'wa', 'wai', 'wan', 'wang', 'wei', 'wen', 'weng', 'wo', 'wu', 'xi', 'xia', 'xian', 'xiang', 'xiao', 'xie', 'xin', 'xing', 'xiong', 'xiu', 'xu', 'xuan', 'xue', 'xun', 'ya', 'yan', 'yang', 'yao', 'ye', 'yi', 'yin', 'ying', 'yo', 'yong', 'you', 'yu', 'yuan', 'yue', 'yun', 'za', 'zai', 'zan', 'zang', 'zao', 'ze', 'zei', 'zen', 'zeng', 'zha', 'zhai', 'zhan', 'zhang', 'zhao', 'zhe', 'zhei', 'zhen', 'zheng', 'zhi', 'zhong', 'zhou', 'zhu', 'zhua', 'zhuai', 'zhuan', 'zhuang', 'zhui', 'zhun', 'zhuo', 'zi', 'zong', 'zou', 'zu', 'zuan', 'zui', 'zun', 'zuo', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
         def nano():
+            global omit_result
             dd = (diction)
             ddd = current_ddd
             ct = datetime.datetime.now()
             cchar = random.choices(ddd, k=random.randint(1,7))
             chchars_str = ''.join(cchar)
-            nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
-            result = random.sample(nano, random.randint(1, 6))
+            if omit_result:
+                result = ""
+            else:
+                nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
+                result = random.sample(nano, random.randint(1, 6))
             star = "&"
             print(star, chchars_str, result, ct)
             print(usr, star, chchars_str, result, ct, file=z)
@@ -805,11 +828,11 @@ def main():
 
         def commands():
             print()
-            print(" version | [blank input] for nano | nano characters [nanochars] | katakana [kata/b] | jamo [hangu/n] | profile | note / journal / save | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | search")
+            print(" version | [blank input] for nano | nano characters [nanochars/nnc] | katakana [kata/b] | jamo [hangu/n] | profile | note / journal / save | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | search")
             print()
             print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: cbmp, cmbpc, xcbmp, xcbmpc, hbmp, hbmpc, xhbmp, xhbmpc, jbmp, jbmpc, xjbmp, xjbmpc, fbmp, xfbmp")
             print()
-            print(" | c-characters [cchar], ch-monitor [CHM], kata-monitor [KM], jamo-monitor [JM], speak [spk], map, threads, zuz [pp], call, time-call [TC], message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR], generate string [gstring]") 
+            print(" | c-characters [cchar/cc], ch-monitor [CHM], kata-monitor [KM], jamo-monitor [JM], speak [spk], map, threads, zuz [pp], call, time-call [TC], message [lh], [echo], [fuzz], alerts, light incense, prayer, dhammapada, message-scan [scan], ascii [double space], ascii search [ascsearch/asc], archery, value, tag / atag, monitor-start [mstart], acad-monitor (astart), weapon start [wstart], oscillator/time-oscillator [oscill/toscill], MedProc AI [MAI], MedProcCont [MAIc/MPC], burner-start/time-burner [burn/tburn], burner-search [b-search], Medicals (M), Earth Science (SCI), psychology (psyc), Patient Simu, biology (B), chemistry (ch), legal terms (Law), change username [username/user], print time, (ai) auto-mat [AAM], [ID / IDC], the heart sutra, herbs/herbals, degree/major, frames [fps], frames search [fsearch], police (prad), CAI Environments (CAI/GES), amror (meditation game), amror-search [amsearch], time-monitor [tmonitor], speech-time-monitor [stmonitor], guard, Programs [PROGR], generate string [gstring]") 
             print()
             print(" | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, skate, art, give alms, radio, hack, brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, color key, doodling, BUMP, MA, Magic, zen melody, monopoly, stats, progress, collections, football, c, entry, posting, koran, heBrews, Clearance, MiCasa, stuff, worship, License, climb, teletubby, {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}, monitor-search [msearch], acad-search [asearch]")
 
@@ -7336,7 +7359,7 @@ def main():
                 if choice == "commands":
                     commands()
 
-                if choice == "nano chars" or choice == "nano characters" or choice == "nano-characters" or choice == "nanochars" or choice == "nano-chars":
+                if choice == "nano chars" or choice == "nano characters" or choice == "nano-characters" or choice == "nanochars" or choice == "nano-chars" or choice == "nnc" or choice == 'NNC':
                     select_charset()
 
                 if choice == "GES" or choice == "CAI" or choice == "CAI Environments" or choice == "CAI environments" or choice == "cai environments":
@@ -7372,7 +7395,7 @@ def main():
                 if choice == 'echo':
                     echo()
 
-                if choice == "chinese characters" or choice == "c-characters" or choice == "cchar":
+                if choice == "chinese characters" or choice == "c-characters" or choice == "cchar" or choice == "cc":
                     chichars()
 
                 if choice == "ch-monitor" or choice == "ch monitor" or choice == "CHM":
