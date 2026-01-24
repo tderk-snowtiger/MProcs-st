@@ -617,31 +617,6 @@ def main():
     print()
     print(file=z)
 
-    def version():
-        title =  usr + "" + " " + "" + f"snowtiger >>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-8.3{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
-        title2 = f"| {BLUE}Indicative: @USVirtualUni && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
-        title3 = f"{ORANGE}All Rights Reserved{RESET} - {BLUE}Medicci.ca{RESET}"
-        title4 = f"- {RED}(P0cket Un1-Ver$e){RESET}"
-        cdt = datetime.datetime.now()
-        time = f"{GREEN}{cdt}{RESET}"
-        print(title, time, title3, title4)
-        print()
-        prvrb = random.sample(proverbs, 1)
-        pr = " "
-        print(pr, prvrb)
-        print()
-        print(title2)
-        print()
-        print(title, time, title3, title4, file=z)
-        print(file=z)
-        print(pr, prvrb, file=z)
-        print(file=z)
-        print(title2, file=z)
-        print()
-        print(file=z)
-
-    version()
-
     def alerts():
         kk = (katakana)
         j = (jamo)
@@ -667,7 +642,33 @@ def main():
         alert = f"{PINK}{alerts}{RESET}"
         print(alert, value, random_letters, kkchar_str, cchat, hchar_str, ct)
         print(alert, value, random_letters, kkchar_str, cchat, hchar_str, ct, file=z)
-    alerts()
+
+    def version():
+        title =  usr + "" + " " + "" + f"snowtiger >>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-8.3.1{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title2 = f"| {BLUE}Indicative: @USVirtualUni && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
+        title3 = f"{ORANGE}All Rights Reserved{RESET} - {BLUE}Medicci.ca{RESET}"
+        title4 = f"- {RED}(P0cket Un1-Ver$e){RESET}"
+        cdt = datetime.datetime.now()
+        time = f"{GREEN}{cdt}{RESET}"
+        print(title, time, title3, title4)
+        print()
+        prvrb = random.sample(proverbs, 1)
+        pr = " "
+        print(pr, prvrb)
+        print()
+        print(title2)
+        print()
+        print(title, time, title3, title4, file=z)
+        print(file=z)
+        print(pr, prvrb, file=z)
+        print(file=z)
+        print(title2, file=z)
+        print()
+        print(file=z)
+        alerts()
+
+    version()
+
     time.sleep(0)
     print()
     print(file=z)
