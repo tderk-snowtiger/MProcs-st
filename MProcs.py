@@ -644,7 +644,7 @@ def main():
         print(alert, value, random_letters, kkchar_str, cchat, hchar_str, ct, file=z)
 
     def version():
-        title =  usr + "" + " " + "" + f"snowtiger >>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-8.3.5{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
+        title =  usr + "" + " " + "" + f"snowtiger >>> {ORANGE}I.S. (Incubator Studios) Outbeat Produce:{RESET} {GREEN}MProcs-8.4{RESET} {ORANGE}by tderk{RESET} - {ORANGE}Established Lpro.py (Life-pro) and Destiny [2024]{RESET}"
         title2 = f"| {BLUE}Indicative: @USVirtualUni && © Medicine, Computable (N_2025) && FNTCCI{RESET} |"
         title3 = f"{ORANGE}All Rights Reserved{RESET} - {BLUE}Medicci.ca{RESET}"
         title4 = f"- {RED}(P0cket Un1-Ver$e){RESET}"
@@ -757,11 +757,12 @@ def main():
             if omit_result:
                 result = ""
             else:
-                nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
-                result = random.sample(nano, random.randint(1, 6))
+                nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
+                result = "  ".join(random.sample(nano, random.randint(1, 9)))
             star = "&"
-            print(star, chchars_str, result, ct)
-            print(usr, star, chchars_str, result, ct, file=z)
+            dash = ""
+            print(star, dash, chchars_str, dash, result, dash, ct)
+            print(usr, star, dash, chchars_str, dash, result, dash, ct, file=z)
 
         def kata():
             dd = (diction)
@@ -769,8 +770,8 @@ def main():
             ct = datetime.datetime.now()
             kkchar = random.choices(kk, k=random.randint(1,7))
             kkchar_str = ''.join(kkchar)
-            nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
-            result = random.sample(nano, random.randint(1, 6))
+            nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
+            result = "  ".join(random.sample(nano, random.randint(1, 9)))
             tars = "~~"
             print(tars, kkchar_str, result, ct)
             print(usr, tars, kkchar_str, result, ct, file=z)
@@ -781,11 +782,23 @@ def main():
             ct = datetime.datetime.now()
             hangchar = random.choices(hang, k=random.randint(1,14))
             hangchar_str = ''.join(hangchar)
-            nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
-            result = random.sample(dd, random.randint(1, 6))
+            nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
+            result = "  ".join(random.sample(dd, random.randint(1, 9)))
             arts = "^^"
             print(arts, hangchar_str, result, ct)
             print(usr, arts, hangchar_str, result, ct, file=z)
+
+        def manton():
+            dd = (diction)
+            mac = (chi_chars)
+            ct = datetime.datetime.now()
+            macchar = random.choices(mac, k=random.randint(1,16))
+            macchar_str = ''.join(macchar)
+            nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd))
+            result = "  ".join(random.sample(dd, random.randint(1, 9)))
+            marts = "++"
+            print(marts, macchar_str, result, ct)
+            print(usr, marts, macchar_str, result, ct, file=z)
 
         def tinie_N():
             an = (fcci)
@@ -800,7 +813,7 @@ def main():
 
         def commands():
             print()
-            print(" version | [blank input] for nano | nano characters [nanochars/nnc] | katakana [kata/b] | jamo [hangu/n] | profile | note / journal / save | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | search")
+            print(" version | [blank input] for nano | nano characters [nanochars/nnc] | katakana [kata/b] | jamo [hangu/n] | chi [++] | profile | note / journal / save | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | search")
             print()
             print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: cbmp, cmbpc, xcbmp, xcbmpc, hbmp, hbmpc, xhbmp, xhbmpc, jbmp, jbmpc, xjbmp, xjbmpc, fbmp, xfbmp")
             print()
@@ -3403,7 +3416,7 @@ def main():
                 sitch  = (round(random.random()*9999,4))
                 kchat = random.sample(nano, random.randint(1,7))
                 random_result = random.choices(nano, k=random.randint(1,7))
-                result_text = ", ".join(random_result)
+                result_text = "  ".join(random_result)
                 print(maroon, random_letters, sitch, result_text, ctm)
                 print(maroon, random_letters, sitch, result_text, ctm, file=c)
                 speak(result_text)
@@ -3460,7 +3473,7 @@ def main():
                 sitch  = (round(random.random()*9999,4))
                 kchat = random.sample(nano, random.randint(1,7))
                 random_result = random.choices(nano, k=random.randint(1,7))
-                result_text = ", ".join(random_result)
+                result_text = "  ".join(random_result)
                 print(maroon, random_letters, sitch, result_text, ctm)
                 print(maroon, random_letters, sitch, result_text, ctm, file=c)
                 speak(result_text)
@@ -3666,7 +3679,7 @@ def main():
                     return letters
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
-                kchat = random.choices(nano, k=random.randint(1,7))
+                kchat = "  ".join(random.choices(nano, k=random.randint(1,9)))
                 print(maroon, random_letters, sitch, kchat, ctm)
                 print(maroon, random_letters, sitch, kchat, ctm, file=m)
                 print()
@@ -3712,7 +3725,7 @@ def main():
                     return letters
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
-                kchat = random.choices(nano, k=random.randint(1,7))
+                kchat = "  ".join(random.choices(nano, k=random.randint(1,9)))
                 kchat2 = random.choices(acad, k=random.randint(1,7))
                 print(maroon, random_letters, sitch, kchat, kchat2, ctm)
                 print(maroon, random_letters, sitch, kchat, kchat2, ctm, file=a)
@@ -3811,7 +3824,7 @@ def main():
                     return letters
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
-                kchat = random.choices(nano, k=random.randint(1,7))
+                kchat = "  ".join(random.choices(nano, k=random.randint(1,9)))
                 kchat2 = random.choices(acad, k=random.randint(1,7))
                 print(maroon, random_letters, sitch, kchat, kchat2, ctm)
                 print(maroon, random_letters, sitch, kchat, kchat2, ctm, file=t)
@@ -3865,7 +3878,7 @@ def main():
                     return letters
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
-                kchat = random.choices(nano, k=random.randint(1,7))
+                kchat = "  ".join(random.choices(nano, k=random.randint(1,9)))
                 kchat2 = random.choices(acad, k=random.randint(1,7))
                 random_result = [random.choice(nano)]
                 result_text = ", ".join(random_result)
@@ -4017,7 +4030,7 @@ def main():
                         cchat = random.choices(cc, k=random.randint(1,40))
                         kkchar_str = ''.join(kkchar)
                         hchar_str = ''.join(hchar)
-                        kchat = random.choices(nano, k=random.randint(0,27))
+                        kchat = "  ".join(random.choices(nano, k=random.randint(0,27)))
                         kchat2 = random.choices(acad, k=random.randint(0,8))
                         msg = "msg:"
                         print(usr, msg, random_letters, sitch, kchat, kchat2, kkchar_str, cchat, hchar_str, ctm)
@@ -4123,7 +4136,7 @@ def main():
                     return letters
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
-                kchat = random.sample(nano, random.randint(1,7))
+                kchat = "  ".join(random.sample(nano, random.randint(1,7)))
                 print()
                 print(file=z)
                 print(tag, rtag, random_letters, sitch, kchat, ctm)
@@ -4155,7 +4168,7 @@ def main():
                     return letters
                 random_letters = generate_random_letters()
                 sitch  = (round(random.random()*9999,4))
-                kchat = random.choices(nano, k=random.randint(1,8))
+                kchat = "  ".join(random.choices(nano, k=random.randint(1,8)))
                 kchat2 = random.choices(acad, k=random.randint(1,7))
                 print()
                 print(file=z)
@@ -7488,6 +7501,9 @@ def main():
 
                 if choice == "jamo" or choice == "hangu" or choice == "n":
                     hangu()
+
+                if choice == "chi" or choice == "CHI" or choice == "Chi" or choice == "++":
+                    manton()
 
                 if choice == "kata-monitor" or choice == "kata monitor" or choice == "katakana-monitor" or choice == "katakana monitor" or choice == "kk-monitor" or choice == "kk monitor" or choice == "KM":
                     kata_monitor()
