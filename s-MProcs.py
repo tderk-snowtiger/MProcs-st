@@ -793,7 +793,7 @@ def main():
 
         def commands():
             print()
-            print(" version | [blank input] for nano | nano characters [nanochars/nnc] | katakana [kata/b] | jamo [hangu/n] | profile | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | fsearch ")
+            print(" version | [blank input] for nano | nano characters [nanochars/nnc] | katakana [kata/b] | jamo [hangu/n] | chi [++] | profile | pwd / ls / cd / clear [cl] / mkdir / rm | type-text | fsearch ")
             print()
             print(" FNTCCI: tinien [single space/**], ntag, fcci-monitor [fstart/fcci] | synthesis: xcbmp, xcbmpc, xhbmp, xhbmpc, xjbmp, xjbmpc, xfbmp")
             print()
