@@ -5490,6 +5490,9 @@ def main():
                 if choice == "jamo" or choice == "hangu" or choice == "n":
                     hangu()
 
+                if choice == "chi" or choice == "CHI" or choice == "Chi" or choice == "++":
+                    manton()
+
                 if choice == "kata-monitor" or choice == "kata monitor" or choice == "katakana-monitor" or choice == "katakana monitor" or choice == "kk-monitor" or choice == "kk monitor" or choice == "KM":
                     kata_monitor()
 
