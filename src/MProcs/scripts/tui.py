@@ -261,6 +261,7 @@ class MProcsTUI:
         self.return_to_menu = False
         self.selected_app = None
         self.session_started = False
+        self.has_launched = False
         self.active_name = None
         self.running = True
         self.app_done = False
@@ -614,12 +615,13 @@ class MProcsTUI:
         self.menu_mode = False
         self.app_done = False
         self.set_app(self.selected_app)
-        if not self.session_started:
-            self._selection_q.put(idx)
+        self._selection_q.put(idx)
+        if self.session_started:
+            self.return_to_menu = True
         self._dirty = True
 
     def set_app(self, wrapper):
-        self.active_name = wrapper.name
+        self.active_name = wrapper.header_name or wrapper.name
 
     def _first_visible(self, total, count):
         if self.follow:
@@ -820,7 +822,9 @@ class MProcsTUI:
         std.refresh()
 
     def _app_entry(self, idx):
-        self.apps[idx].run(self)
+        first = not self.has_launched
+        self.has_launched = True
+        self.apps[idx].run(self, first=first)
 
     def _thread_wrapper(self):
         try:
@@ -834,10 +838,13 @@ class MProcsTUI:
                 self.session_started = True
                 self.app_done = False
                 self.menu_mode = False
+                self.return_to_menu = False
                 try:
                     self._app_entry(idx)
                 except SystemExit:
                     self._request_exit()
+                except _ReturnToMenu:
+                    pass
                 except KeyboardInterrupt:
                     pass
                 except BaseException:
@@ -847,6 +854,7 @@ class MProcsTUI:
                         pass
                 finally:
                     self._interrupt = False
+                    self.return_to_menu = False
                     self.app_done = True
                     self.menu_mode = True
                     self.session_started = False

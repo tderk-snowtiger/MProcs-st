@@ -334,6 +334,9 @@ def main():
             print(f"{star} {dash} {random_color}{chchars_str} {dash} {result}{RESET} {dash} {ct}")
             print(f"{usr} {star} {dash} {random_color}{chchars_str} {dash} {result}{RESET} {dash} {ct}", file=z)
 
+        if getattr(sys.modules.get(__name__), '_SWAP_NANO_MORN', False):
+            nano, morn = morn, nano
+
         def n1():
             global omit_result
             dd = (diction)

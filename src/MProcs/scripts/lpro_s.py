@@ -320,6 +320,9 @@ def main():
             random_color = get_random_color()
             print(f"{star} {dash} {random_color}{chchars_str} {dash} {result}{RESET} {dash} {ct}")
 
+        if getattr(sys.modules.get(__name__), '_SWAP_NANO_MORN', False):
+            nano, morn = morn, nano
+
         def n1():
             global omit_result
             dd = (diction)

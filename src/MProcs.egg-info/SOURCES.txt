@@ -9,7 +9,6 @@ src/MProcs.egg-info/requires.txt
 src/MProcs.egg-info/top_level.txt
 src/MProcs/scripts/__init__.py
 src/MProcs/scripts/ai_image.py
-src/MProcs/scripts/bible.txt
 src/MProcs/scripts/data_loader.py
 src/MProcs/scripts/deepseek_ai.py
 src/MProcs/scripts/keys.py

@@ -3,6 +3,7 @@ import importlib
 
 class AppWrapper:
     name = None
+    header_name = None
     package = None
 
     def __init__(self):
@@ -22,27 +23,39 @@ class AppWrapper:
                 self._lpro_s = importlib.import_module('MProcs.scripts.lpro_s')
         return self._lpro, self._lpro_s
 
-    def run(self, tui):
+    def run(self, tui, first=True):
         lpro, lpro_s = self._modules()
+        _morn_swap = (self.name == 'morn')
+        lpro._SWAP_NANO_MORN = _morn_swap
+        lpro_s._SWAP_NANO_MORN = _morn_swap
+        try:
+            self._run_app(tui, lpro, lpro_s, first=first)
+        finally:
+            lpro._SWAP_NANO_MORN = False
+            lpro_s._SWAP_NANO_MORN = False
+
+    def _run_app(self, tui, lpro, lpro_s, first=True):
         vc = self._vc()
         tui.set_app(self)
-        latest, available = None, False
-        try:
-            latest, available = vc.check_for_update(timeout=2)
-        except Exception:
-            latest = None
-        if latest is None:
-            print('%s: (offline)' % vc.PACKAGE_NAME)
-        elif available:
-            print('%s: Update available - %s' % (vc.PACKAGE_NAME, latest))
-        else:
-            print('%s: Up-to-date' % vc.PACKAGE_NAME)
+        if first:
+            latest, available = None, False
+            try:
+                latest, available = vc.check_for_update(timeout=2)
+            except Exception:
+                latest = None
+            if latest is None:
+                print('%s: (offline)' % vc.PACKAGE_NAME)
+            elif available:
+                print('%s: Update available - %s' % (vc.PACKAGE_NAME, latest))
+            else:
+                print('%s: Up-to-date' % vc.PACKAGE_NAME)
         session_usr = 'zeta'
         active = 's'
         while not tui.exit_requested:
             if active == 's':
                 tui.mode = 'not recording'
-                print('\nnot recording')
+                if first:
+                    print('\nnot recording')
                 try:
                     lpro_s.change_username(session_usr)
                 except Exception:
@@ -52,7 +65,8 @@ class AppWrapper:
                 active = 'l'
             else:
                 tui.mode = 'recording'
-                print('\nrecording')
+                if first:
+                    print('\nrecording')
                 try:
                     lpro.change_username(session_usr)
                 except Exception:
@@ -92,6 +106,22 @@ class AlokateWrapper(AppWrapper):
     package = 'alokate'
 
 
+class MornWrapper(AppWrapper):
+    name = 'morn'
+    package = 'MProcs'
+
+
+class DestinyWrapper(AppWrapper):
+    name = 'Destiny'
+    package = 'MProcs'
+
+
+class VanillaWrapper(AppWrapper):
+    name = 'Vanilla (Experimental)'
+    header_name = 'Vanilla'
+    package = 'MProcs'
+
+
 ALL_APPS = [
     MdcciWrapper(),
     NeonBunnyWrapper(),
@@ -99,4 +129,7 @@ ALL_APPS = [
     BumerangWrapper(),
     AlokateWrapper(),
     M0nkrpgWrapper(),
+    MornWrapper(),
+    DestinyWrapper(),
+    VanillaWrapper(),
 ]

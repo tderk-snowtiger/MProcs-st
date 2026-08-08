@@ -13,7 +13,7 @@ try:
     import importlib.metadata
     PACKAGE_VERSION = importlib.metadata.version(PACKAGE_NAME)
 except Exception:
-    PACKAGE_VERSION = "8.8"
+    PACKAGE_VERSION = "8.8.2"
 
 _latest_version = None
 _update_available = False
