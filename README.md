@@ -4,10 +4,11 @@ For Documentation Purposes
 
 # MProcs
 
+<img width="490" height="236" alt="Screenshot From 2026-08-06 08-57-01" src="https://github.com/user-attachments/assets/63c9015c-c040-4771-8789-b1f1c4399017" />
+
 Derived from NeonBunny. A Life program by tderk, originally LPro.py and Destiny [2024].
 
 Install/Update:
 
       pip install -U MProcs
 
-<img width="490" height="236" alt="Screenshot From 2026-08-06 08-57-01" src="https://github.com/user-attachments/assets/63c9015c-c040-4771-8789-b1f1c4399017" />
