@@ -4,7 +4,7 @@
 
 Derived from NeonBunny. A Life program by tderk, originally LPro.py and Destiny [2024].
 
-<img width="490" height="236" alt="Screenshot From 2026-08-06 08-57-01" src="https://github.com/user-attachments/assets/63c9015c-c040-4771-8789-b1f1c4399017" />
+<img width="924" height="413" alt="Screenshot From 2026-08-08 22-33-37" src="https://github.com/user-attachments/assets/603c1e23-f58d-45aa-a633-f581a3c99c66" />
 
 Install/Update:
 
