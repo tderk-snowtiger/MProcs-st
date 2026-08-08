@@ -1,3 +1,2 @@
-# this project has been migrated to
-# https://github.com/tderk-snowtiger/lpro
-# as LPRO, MProcs simplified
+Install/Update:
+      pip install -U MProcs
