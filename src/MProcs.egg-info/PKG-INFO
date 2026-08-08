@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: MProcs
+Version: 8.8
+Summary: MProcs - derived from NeonBunny
+Author-email: tderk <usvu.tech@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+
+# MProcs
+
+Derived from NeonBunny. A Life program by tderk, originally LPro.py and Destiny [2024].

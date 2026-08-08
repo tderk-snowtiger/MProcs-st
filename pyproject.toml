@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MProcs"
+version = "8.8"
+description = "MProcs - derived from NeonBunny"
+requires-python = ">=3.8"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "tderk", email = "usvu.tech@gmail.com" }
+]
+
+[project.scripts]
+MProcs = "MProcs.scripts.main:run"
+mprocs = "MProcs.scripts.main:run"
+lpro = "MProcs.scripts.lpro:main"
+lpro-s = "MProcs.scripts.lpro_s:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["MProcs*", "MProcs.*"] 
+exclude = ["tests*", "docs*", "venv*", "build*", "dist*", "*test*"]
+
+[tool.setuptools.package-data]
+"MProcs" = ["py.typed"] 
+"MProcs.scripts" = ["*.txt", "*.md", "*.json", "data/*", "logs/*"]
+
+dependencies = ["requests", "ddgs"]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8"]

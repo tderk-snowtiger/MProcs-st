@@ -1,0 +1,5 @@
+[console_scripts]
+MProcs = MProcs.scripts.main:run
+lpro = MProcs.scripts.lpro:main
+lpro-s = MProcs.scripts.lpro_s:main
+mprocs = MProcs.scripts.main:run
